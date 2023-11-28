@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+
+</head>
+<script>
+    // 引入header
+    fetch('./Header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    // 引入Motor-intro-product
+    fetch('./Motor-intro-product.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Motor-intro-product').innerHTML = html;
+        });
+
+    // 引入Motor-intro-content
+    fetch('./Motor-intro-content.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Motor-intro-content').innerHTML = html;
+        });
+
+    // 引入footer
+    fetch('./Footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
+
+<body>
+
+    <div id="header"></div>
+    <div id="Motor-intro-product"></div>
+    <div id="Motor-intro-content"></div>
+    <div id="footer"></div>
+
+
+
+
+</body>
+
+</html>

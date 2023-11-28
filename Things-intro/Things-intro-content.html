@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things-intro</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* --------麵包屑-------- */
+        .things-intro-bread {
+            width: 100%;
+            top: 0;
+
+            z-index: 4;
+            background-color: white;
+        }
+
+        .things-intro-bread a {
+            color: #000000;
+            font-size: 16px;
+            letter-spacing: 1.5px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            text-decoration: none;
+            display: inline-block;
+            padding: 20px;
+            margin-left: 277px;
+        }
+
+        .things-intro-bread a:hover {
+            color: #FF6B00;
+        }
+
+        /* --------安全帽-------- */
+
+
+        .things-container {
+            width: 1000px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+
+        .things-pic {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .main-helmet img {
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+
+        .things-tittle-pic {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .things-tittle-pic img {
+            width: 130px;
+        }
+
+        .things-arrow img {
+            width: 30px;
+        }
+
+
+        .things-title {
+            width: 100%;
+            margin: 30px;
+
+
+        }
+
+        /* --------安全帽右邊資訊-------- */
+        .things-h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            border-bottom: 1px solid #767474;
+            padding-bottom: 10px;
+        }
+
+        .things-content {
+            font-size: 16px;
+            font-weight: 300;
+            color: #000000;
+            letter-spacing: 1.5px;
+            line-height: 1.8em;
+            text-align: justify;
+            font-family: 'Noto Sans TC', sans-serif;
+
+            padding: 10px 0px;
+        }
+
+        .things-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #767474;
+            padding: 10px 0px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .things-price a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #3b3b3b;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+        }
+
+        .things-price a:hover {
+            color: #FF6B00;
+        }
+
+        /* --------價格-------- */
+        .things-price span:first-child {
+            font-size: 13px;
+            font-weight: 300;
+            color: #000000;
+            letter-spacing: 1px;
+            line-height: 1.6em;
+            text-align: justify;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* --------$3890-------- */
+        .things-price span:last-child {
+            font-size: 25px;
+            font-weight: 600;
+            color: #ff6b00;
+
+            line-height: 1.6em;
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #helmet-size {
+            width: 150px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: #7d7d7d;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #quality {
+            width: 150px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: #7d7d7d;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .things-btn {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .things-btn a {
+            border-radius: 5px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .things-btn a:first-child {
+            font-size: 13px;
+            text-align: center;
+            color: #7d7d7d;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            padding: 10px 20px;
+            border: 1px solid #767474;
+        }
+
+        .things-btn a:first-child:hover {
+            background-color: #ff6b00;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 1px solid #FF6B00;
+        }
+
+        /* --------橘色icon-------- */
+        .orange-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ff6b00;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .things-btn a:last-child {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .group span {
+            padding: 6px;
+            text-align: center;
+            display: block;
+            color: #ffffff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .inner {
+            width: 31px;
+            height: 21px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            padding: 3px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .inner::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 7px solid rgb(255, 255, 255);
+            border-top: 7px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            transform: rotate(35deg);
+            left: 3px;
+            top: 15px;
+        }
+
+        .inner .gray-circle {
+            content: "";
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 2px;
+        }
+
+        .things-btn a:last-child:hover {
+            box-shadow: 1 1 10px 10px #ff6b00;
+            transform: scale(1.15);
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- --------麵包屑--------  -->
+    <div class="things-intro-all">
+        <div class="things-intro-bread">
+            <a href="#">車輛配件 / 安全帽</a>
+        </div>
+    </div>
+    <!-- --------安全帽--------  -->
+
+    <div class="things-container">
+        <div class="things-pic">
+
+            <div class="main-helmet">
+                <img src="../Things-intro/img/helmet-1-1.svg" alt="helmet-1-1">
+            </div>
+
+            <div class="things-tittle-pic">
+                <a href="#">
+                    <div class="things-arrow"><img src="../Things-intro/img/motor-arrow-left.svg" alt="-arrow-left">
+                    </div>
+                </a>
+                <a href="#">
+                    <div><img src="../Things-intro/img/little-1.svg" alt="little-1"></div>
+                </a>
+                <a href="#">
+                    <div><img src="../Things-intro/img/little-2.svg" alt="little-2"></div>
+                </a>
+                <a href="#">
+                    <div><img src="../Things-intro/img/little-3.svg" alt="little-3"></div>
+                </a>
+                <a href="#">
+                    <div class="things-arrow"><img src="../Things-intro/img/motor-arrow-right.svg" alt="-arrow-right">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="things-title">
+            <div class="things-h1"><span>限定款 WOLFER MAN-曜石黑</span></div>
+            <div class="things-content">
+                <span>
+                    帽體:抗衝擊性ABS材質<br>
+                    釦環:雙D式雕刻安全釦環<br>
+                    鉚釘:銅洗黃金色鉚釘<br>
+                    內襯:涼感特級進口格紋布料、焦糖色耐磨皮革、全可拆洗<br>
+                    風鏡:透明色<br>
+                    重量:1250 ± 50g<br>
+                    認證:國家 CNS/美國 DOT 安全雙認證<br>
+                    頭圍尺寸:M (55-56cm)、L (57-58cm)、XL (59-60cm)，
+                    選購前請參考下列頭圍測量圖表。
+                </span>
+            </div>
+            <select name="city" id="helmet-size">
+                <option value="">尺寸</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <select name="city" id="quality">
+                <option value="">數量</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="4">5</option>
+                <option value="4">6</option>
+                <option value="4">7</option>
+            </select>
+            <div class="things-price">
+                <a href="#">產品頁碼</a>
+                <div><span>價格</span><span>NT$ 3890</span></div>
+            </div>
+            <div class="things-btn">
+                <a href="#">聯絡經銷</a>
+                <a href="#">
+                    <div class="orange-circle">
+                        <div class="group">
+                            <span>線上詢問</span>
+                            <div class="inner">
+                                <div class="gray-circle"></div>
+                                <div class="gray-circle"></div>
+                                <div class="gray-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-content</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        body {
+            width: 100%;
+            background:
+                linear-gradient(to bottom, rgba(0, 0, 0, 1)20%, transparent 40%),
+                linear-gradient(to top, rgba(0, 0, 0, 1)8%, transparent),
+                linear-gradient(to right, rgba(0, 0, 0, 0.5)10%, transparent 30%),
+                linear-gradient(to left, rgba(0, 0, 0, 0.5)10%, transparent 30%),
+                url(../Motor-intro/img/batthern.png),
+                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%),
+                linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+        }
+
+
+
+        .news-card-group {
+            margin: 100px 0px;
+        }
+
+        .news-card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 1200px;
+            margin: auto;
+            background-color: white;
+            margin-bottom: 50px;
+            box-shadow: -3px 3px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .news-card:hover {
+            box-shadow: 0 0 30px 0px #ff6b00;
+            transition: .5s;
+        }
+
+        .news-card a {
+            text-decoration: none;
+        }
+
+        .news-pic {
+            width: 530px;
+        }
+
+        .news-pic img {
+            width: 530px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .news-inf-group {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            box-sizing: border-box;
+        }
+
+        .news-title {
+            color: black;
+            font-size: 25px;
+            font-weight: 800;
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.3em;
+            text-align: justify;
+        }
+
+        .news-content {
+            color: rgb(32, 32, 32);
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 1px;
+            line-height: 1.5em;
+            text-align: justify;
+            margin-top: 10px;
+
+        }
+
+        .news-view-number {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 18px;
+            text-wrap: nowrap;
+            color: #747373;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            gap: 8px;
+            /* margin-top: 50px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news-card-group">
+        <!-- ----------News第一篇---------- -->
+        <div class="news-card">
+            <a href="#">
+                <div class="news-pic">
+                    <img src="../News/img/news-1.svg" alt="news-1">
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-inf-group">
+                    <div>
+                        <div class="news-title">
+                            <span>台日最強聯名！3-J.F.T. x Shakin' 本週日RIDE FREE 14正式發表</span>
+                        </div>
+                        <div class="news-content">
+                            <span>大飛是台灣彩繪圈非常具有代表性的人物，也是手工改裝圈許多店家唯一指定的彩繪師。幾年前他以3-J.F.T.之名創立了自己的品牌，並陸續推出好幾款與國外品牌或頂尖彩繪大師合作的安全帽。而繼7月推出的“叼菸鷹”Cley
+                                Smith安全帽後，這一回3-J.F.T.則是找來日本資深彩繪大師Shakin'合作推出了雙方聯名的安全帽！...</span>
+                        </div>
+                    </div>
+                    <div class="news-view-number">
+                        <img src="../News/img/view-eye.svg" alt="view-eye">
+                        <span>20000 views</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- ----------News第二篇---------- -->
+        <div class="news-card">
+            <a href="#">
+                <div class="news-pic">
+                    <img src="../News/img/news-2.svg" alt="news-2">
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-inf-group">
+                    <div>
+                        <div class="news-title">
+                            <span>懷舊風再現！經典復古檔車風靡回歸，復刻經典，奏響懷舊樂章</span>
+                        </div>
+                        <div class="news-content">
+                            <span>經典復古檔車風潮再度興起，經典車型經翻新升級，以優雅線條和懷舊設計重現當年風華，彷彿穿越時光隧道。這些復刻版檔車不僅擁有懷舊外表，更結合現代科技，呈現經典與時尚兼具的完美結合，成為車迷和收藏家的新寵。</span>
+                        </div>
+                    </div>
+                    <div class="news-view-number">
+                        <img src="../News/img/view-eye.svg" alt="view-eye">
+                        <span>20000 views</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- ----------News第三篇---------- -->
+        <div class="news-card">
+            <a href="#">
+                <div class="news-pic">
+                    <img src="../News/img/news-3.svg" alt="news-3">
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-inf-group">
+                    <div>
+                        <div class="news-title">
+                            <span>來自北台灣新北浮洲 為自由與經典打造的FUZHOU Motorcycles </span>
+                        </div>
+                        <div class="news-content">
+                            <span>美國除了眾所皆知的Harley-Davidson與FUZHOU Motorcycles之外，其實還存在著許多小規模、小產量的摩托車品牌，來自北印第安納州的Janus
+                                Motorcycles就是其中之一。這個品牌創立至今雖然只有十年歷史，但是他們的產品卻越來越受到復古車愛好者矚目，特別是當你要求外型必須充滿
+                                老味，引擎不用大卻得耐用，然後預算又非常有限的時候，FUZHOU Motorcycles肯定會是一個很不錯的選擇！</span>
+                        </div>
+                    </div>
+                    <div class="news-view-number">
+                        <img src="../News/img/view-eye.svg" alt="view-eye">
+                        <span>20000 views</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- ----------News第四篇---------- -->
+        <div class="news-card">
+            <a href="#">
+                <div class="news-pic">
+                    <img src="../News/img/news-4.svg" alt="news-4">
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-inf-group">
+                    <div>
+                        <div class="news-title">
+                            <span>魅力沙灘狂歡！檔車越野掀起海灘新風潮</span>
+                        </div>
+                        <div class="news-content">
+                            <span>
+                                復古檔車的熱潮延伸至沙灘越野，為愛好者帶來獨特的驚喜。經典款檔車在海灘上優雅穿梭，挑戰沙地的越野極限，成為沙灘新的風潮，吸引眾多沙灘愛好者投入這場狂歡。這種融合復古魅力和極限運動的趨勢，不僅展現了檔車文化的多樣性，也為沙灘生活注入了全新的活力。隨著檔車在沙灘上踏浪而行，每一個轉彎都是一場視覺和感官的饗宴，讓人沉浸在這片悠然的沙灘樂園中。</span>
+                        </div>
+                    </div>
+                    <div class="news-view-number">
+                        <img src="../News/img/view-eye.svg" alt="view-eye">
+                        <span>20000 views</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- ----------News第五篇---------- -->
+        <div class="news-card">
+            <a href="#">
+                <div class="news-pic">
+                    <img src="../News/img/news-5.svg" alt="news-5">
+                </div>
+            </a>
+            <a href="#">
+                <div class="news-inf-group">
+                    <div>
+                        <div class="news-title">
+                            <span>經典再現！懷舊檔車風潮掀起，熱愛復古的你不容錯過</span>
+                        </div>
+                        <div class="news-content">
+                            <span>
+                                懷舊的潮流下，檔車復古風潮風靡全球。經典複刻款式引發愛好者搶購熱潮，每輛檔車都是汽車歷史的活生生見證。復古車款成為熱愛懷舊的車迷追尋時光印記的完美選擇，尋找獨一無二的收藏品成為熱潮中的精彩一環。</span>
+                        </div>
+                    </div>
+                    <div class="news-view-number">
+                        <img src="../News/img/view-eye.svg" alt="view-eye">
+                        <span>20000 views</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

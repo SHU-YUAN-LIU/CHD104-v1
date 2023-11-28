@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor-container</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<style>
+    /* 最上面按鈕 */
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+
+    .motor-btn-group {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 1200px;
+        padding: 70px;
+    }
+
+    .motor-btn-group a {
+        text-decoration: none;
+        padding: 10px 30px;
+        border: 1px solid rgb(168, 168, 168);
+        border-radius: 5px;
+        color: rgb(168, 168, 168);
+        letter-spacing: 1.5px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .motor-btn-group a:hover {
+        border: 1px solid #FF6B00;
+        background-color: #FF6B00;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .label-title {
+        color: #000000;
+        letter-spacing: 1px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        border-bottom: 1px solid #ff964b;
+        width: 1200px;
+        display: block;
+        padding: 10px;
+        margin: auto;
+
+    }
+
+    .card-group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 80px;
+        /* margin-bottom: 80px; */
+        align-items: center;
+    }
+
+    .card {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        transition: opacity 0.5s;
+        /* 過度效果:平滑 */
+    }
+
+    .card img:hover {
+        opacity: 0.6;
+        /* 設置透明度 */
+    }
+
+
+    .card-group a {
+        text-decoration: none;
+        position: relative;
+    }
+
+    .pro-title {
+        color: #000000;
+        letter-spacing: 1px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .content {
+        color: #373737;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .rightleftbtn {
+        width: 1700px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .right img {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <!-- 最上面按鈕 -->
+    <div class="motor-btn-group">
+        <a href="#modern">MODERN CLASSIS</a>
+        <a href="#urbanity">URBANITY STYLE</a>
+        <a href="#street">STREET STYLE</a>
+        <a href="#old">OLD SCHOOL</a>
+    </div>
+    <!-- MODERN CLASSIS -->
+    <div id="modern"><span class="label-title">MODERN CLASSIS</span></div>
+
+    <div class="card-group">
+        <div class="card">
+            <a href="#"><img src="../Motor/img/modern-1.svg" alt="modern-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">BOBBER<br></span></a>
+                <a href="#"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/modern-2.svg" alt="modern-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">THRUXTON RS<br></span></a>
+                <a href="#"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/modern-3.svg" alt="modern-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">CLASSICS<br></span></a>
+                <a href="#"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+            </div>
+        </div>
+        <div class="rightleftbtn">
+            <a href="#" class="left"><img src="../Motor/img/motor-arrow-left.svg" alt="arrow-left"></a>
+            <a href="#" class="right"><img src="../Motor/img/motor-arrow-right.svg" alt="arrow-right"></a>
+        </div>
+    </div>
+    <!-- URBANITY STYLE  -->
+    <div id="urbanity"><span class="label-title">URBANITY STYLE</span></div>
+
+    <div class="card-group">
+        <div class="card">
+            <a href="#"><img src="../Motor/img/urbanity-1.svg" alt="urbanity-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">RETRO ROVER<br></span></a>
+                <a href="#"><span class="content">經典外觀搭載先進科技，融會貫通的精湛設計</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/urbanity-2.svg" alt="urbanity-2"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">TIMELESS CRUISER<br></span></a>
+                <a href="#"><span class="content">復古排氣管，散發獨特聲浪，締造典雅駕馭韻味</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/urbanity-3.svg" alt="urbanity-3"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">NTSOALGIA NOMAD<br></span></a>
+                <a href="#"><span class="content">城市之光，復古外觀，將懷舊魅力注入現代駕馭</span></a>
+            </div>
+        </div>
+        <div class="rightleftbtn">
+            <a href="#" class="left"><img src="../Motor/img/motor-arrow-left.svg" alt="arrow-left"></a>
+            <a href="#" class="right"><img src="../Motor/img/motor-arrow-right.svg" alt="arrow-right"></a>
+        </div>
+    </div>
+
+    <!-- STREET STYLE  -->
+    <div id="street"><span class="label-title">STREET STYLE</span></div>
+
+    <div class="card-group">
+        <div class="card">
+            <a href="#"><img src="../Motor/img/street-1.svg" alt="street-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">ANTIQUE CHARM<br></span></a>
+                <a href="#"><span class="content">復古細節，散發城市街頭的時尚氛圍</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/street-2.svg" alt="street-2"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">HERITAGE EXPLORER<br></span></a>
+                <a href="#"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/street-3.svg" alt="street-3"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">CONSTELLATION<br></span></a>
+                <a href="#"><span class="content">越野魅力，攜手拓展城市邊緣的奇幻冒險</span></a>
+            </div>
+        </div>
+        <div class="rightleftbtn">
+            <a href="#" class="left"><img src="../Motor/img/motor-arrow-left.svg" alt="arrow-left"></a>
+            <a href="#" class="right"><img src="../Motor/img/motor-arrow-right.svg" alt="arrow-right"></a>
+        </div>
+    </div>
+
+    <!-- OLD SCHOOL  -->
+    <div id="old"><span class="label-title">STREET STYLE</span></div>
+
+    <div class="card-group">
+        <div class="card">
+            <a href="#"><img src="../Motor/img/oldschool-1.svg" alt="oldschool-1"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">RETRO LEGENDS<br></span></a>
+                <a href="#"><span class="content">越野車型，穿越城市山川，挑戰都市之外的極限地形</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/oldschool-2.svg" alt="oldschool-2"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">DREAMERS<br></span></a>
+                <a href="#"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#"><img src="../Motor/img/oldschool-3.svg" alt="oldschool-3"></a>
+            <div class="information">
+                <a href="#"><span class="pro-title">NOSTALGIA NOMAD<br></span></a>
+                <a href="#"><span class="content">都會底蘊，越野激情，城市與荒野的極致融合</span></a>
+            </div>
+        </div>
+        <div class="rightleftbtn">
+            <a href="#" class="left"><img src="../Motor/img/motor-arrow-left.svg" alt="arrow-left"></a>
+            <a href="#" class="right"><img src="../Motor/img/motor-arrow-right.svg" alt="arrow-right"></a>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

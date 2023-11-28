@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOR</title>
+    <script>
+        // 引入header
+        fetch('./Header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+            });
+
+        // 引入Motor-Banner
+        fetch('./Motor-Banner.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('Motor-Banner').innerHTML = html;
+            });
+
+        // 引入Container-wolfer-style
+        fetch('./Motor-container.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('Motor-container').innerHTML = html;
+            });
+
+        // 引入footer
+        fetch('./Footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="Motor-Banner"></div>
+    <div id="Motor-container"></div>
+    <div id="footer"></div>
+
+</body>
+
+</html>

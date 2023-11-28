@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container(wolfer-style)</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        body {
+            background: linear-gradient(to top, #000000 100%, rgba(23, 23, 23, 0.8), #000000), linear-gradient(to right, #000000, rgba(20, 20, 20, 0.7), #000000);
+
+        }
+
+        .different-style {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+
+        .container-title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        span {
+            letter-spacing: 5px;
+        }
+
+        strong {
+            margin: 30px;
+            text-align: center;
+            width: 600px;
+            display: block;
+            color: #ffffff;
+            letter-spacing: 10px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .container-bar {
+            width: 200px;
+            height: 5px;
+            background-color: #FF6800;
+        }
+
+        .container-picture {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-pic {
+            width: 1500px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-item {
+            width: 655px;
+            height: 450;
+            margin: 15px;
+            box-shadow: 5px 5px 60px rgba(16, 16, 16, 0.5);
+            position: relative;
+        }
+
+        .container-item::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(65, 74, 85, 0.6);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.3);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+        }
+
+        .container-item:nth-child(1)::after {
+            content: "英倫復古風 \A MODERN CLASSICS";
+            /* 用/A換行 */
+            white-space: pre;
+            /* 保留换行符 */
+
+            position: absolute;
+            list-style: none;
+            color: #ffffff;
+            letter-spacing: 3px;
+            line-height: 130%;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            width: 0;
+            height: 0;
+            bottom: 23%;
+            left: 5%;
+        }
+
+        .container-item:nth-child(2)::after {
+            content: "都會城市風 \A urbanity style";
+            /* 用/A換行 */
+            white-space: pre;
+            /* 保留换行符 */
+
+            position: absolute;
+            list-style: none;
+            color: #ffffff;
+            letter-spacing: 3px;
+            line-height: 130%;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            width: 0;
+            height: 0;
+            bottom: 23%;
+            left: 5%;
+        }
+
+
+
+        .container-item:hover::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.4);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+        }
+
+        /* 輪播區 */
+
+        .con-carousel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+
+        .carousel-pic {
+            width: 100%;
+            height: 850px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-shadow: 0px 0px 50px rgba(30, 30, 30, 0.8);
+
+        }
+
+        .carousel-title2 {
+            width: 500px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-title2 strong {
+            font-size: 58px;
+            letter-spacing: 6px;
+            font-weight: 800;
+            text-shadow: 0px 0px 40px rgba(45, 45, 45, 0.7);
+        }
+
+        .carousel-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+        }
+
+
+        .rightleft {
+            width: 1700px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-more {
+            width: 200px;
+            padding: 20px 20px;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+        }
+
+        .btn-more:hover {
+            background-color: #FF6B00;
+            border: none;
+            width: 200px;
+            padding: 20px 20px;
+            border: transparent;
+            color: rgb(0, 0, 0);
+            border-radius: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+
+        }
+
+        /* 新聞卡片區 */
+        .news {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .card-group {
+            width: 1366px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card h2 {
+            color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            line-height: 1.4;
+        }
+
+        p {
+            color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            line-height: 1.7;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px;
+            background-color: #2B2525;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+            flex-grow: 1;
+        }
+
+        .card:hover {
+            background-color: rgba(255, 107, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="different-style">
+        <!-- 四種風格標題 -->
+        <div class="container-title">
+            <strong>探索你的<span>WOLFER STYLE</span></strong>
+            <div class="container-bar"></div>
+        </div>
+        <!-- 四種風格 -->
+        <div class="container-picture">
+            <div class="container-pic">
+                <a href="#" class="container-item">
+                    <img src="../Home/img/modern-classics.svg" alt="modern-classics">
+                </a>
+                <a href="#" class="container-item">
+                    <img src="../Home/img/urbanity-style.svg" alt="urbanity-style">
+                </a>
+            </div>
+        </div>
+        <div class="container-picture">
+            <div class="container-pic">
+                <a href="#" class="container-item">
+                    <img src="../Home/img/street-style.svg" alt="street-style"></a>
+                <a href="#" class="container-item">
+                    <img src="../Home/img/old-school.svg" alt="old-school"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 輪播區 -->
+
+    <div class="con-carousel">
+        <div class="carousel-pic">
+            <div>
+                <img src="../Home/img/carousel.svg" alt="let's wolfer">
+            </div>
+        </div>
+        <!-- 輪播區標題 -->
+        <div class="carousel-title">
+            <div class="carousel-title2">
+                <strong>LET'S WOLFER</strong>
+                <div class="btn-more">了解更多</div>
+            </div>
+            <div class="rightleft">
+                <div class="home-Carousel"><img src="../Home/img/Carousel-arrowleft.svg" alt="let's wolfer"></div>
+                <div class="home-Carousel"><img src="../Home/img/Carousel-arrowright.svg" alt="let's wolfer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 新聞區標題 -->
+    <div class="container-title">
+        <strong>WOLFER NEWS</strong>
+        <div class="container-bar"></div>
+    </div>
+    <!-- 新聞卡片區 -->
+    <div class="news">
+        <a href="">
+            <div class="card-group">
+                <div class="card">
+                    <img src="../Home/img/news-1.svg" alt="news">
+                    <h2>WOLFER新成員BRIAN X
+                        正式加入2022車系陣容</h2>
+                    <p title="想看就點進去阿!">身為Wolfer Motorcycle旗下訴求最年輕的一款產品，Wolfer自從問世以來就不斷衍生出多種版本，甚至還發展成一支陣容龐大......
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="../Home/img/news-2.svg" alt="news">
+                    <h2>最強聯名!3-J.F.T.xShakin本週日WOLFER正式發表</h2>
+                    <p title="想看就點進去阿!">大飛是台灣彩繪圈非常具有代表性的人物，也是手工改裝圈許多店家唯一指定的彩繪師。幾年前他以3-J.F.T.之名創立了自己的品牌.......</p>
+                </div>
+                <div class="card">
+                    <img src="/Home/img/news-3.svg" alt="news">
+                    <h2>魅力沙灘狂歡！檔車越野掀起海灘新風潮</h2>
+                    <p title="想看就點進去阿!">復古檔車風潮延伸至沙灘越野，為愛好者帶來獨特的驚喜。經典款檔車在海灘上優雅穿梭，挑戰沙地的越野極限，成為沙灘新的風潮，吸引......</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>

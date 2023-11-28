@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-same-model img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        span {
+            letter-spacing: 5px;
+        }
+
+        strong {
+            margin: 20px;
+            text-align: center;
+            width: 600px;
+            display: block;
+            color: #000000;
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 100px;
+
+        }
+
+        .bar {
+            width: 200px;
+            height: 5px;
+            background-color: #FF6800;
+        }
+
+        .brand-story p {
+            width: 1366px;
+            height: 210px;
+            text-align: justify;
+            letter-spacing: 3px;
+            line-height: 1.6em;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 30px;
+        }
+
+        .ceo {
+            width: 100%;
+            height: 500px;
+            display: flex;
+        }
+
+        .ceo img {
+            padding: 0;
+            height: 500px;
+        }
+
+        h1 {
+            margin: -8px 0px;
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 5px 0px;
+            color: #8A8585;
+            line-height: 1.5em;
+            letter-spacing: 2px;
+        }
+
+        .about-us-content {
+            margin: 20px 0px;
+        }
+
+        .bg-color {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+            background-color: #F2F2F2;
+        }
+
+        .introduce {
+            width: 530px;
+            padding: 50px;
+        }
+
+        .container-same-model {
+            width: 80%;
+            margin: auto;
+        }
+
+
+        .coo {
+            margin: 100px 0px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            /* border: 1px solid blue; */
+        }
+
+        .coo img {
+            height: 500px;
+            width: 800px;
+            object-fit: cover;
+        }
+
+        .coo-introduce-group {
+            display: flex;
+            align-items: flex-end;
+            text-align: justify;
+            margin: auto;
+        }
+
+        .coo-introduce {
+            width: 530px;
+            /* border: 1px solid blue; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <!-- 品牌故事 -->
+        <strong>品牌故事</strong>
+        <div class="bar"></div>
+        <div class="brand-story">
+            <p>我們是來自於新北浮洲一群喜愛復古機車車文化及手工設計製作相關商品的同伴．在時光的交匯處，誕生了一個獨一無二的復古機車品牌——「WOLFER」。品牌創辦人是一位對復古風格深深著迷的機車設計師，他憑藉對經典車款的熱愛，發現了復古風機車在現代的市場中的缺失。
+                「復古韻」的故事始於一次對舊時代的深切懷念，他希望能將那些經典的線條和質感重新注入現代機車設計中。每一輛「WOLFER」機車都是匠心獨運的結晶，融合了懷舊美學和現代科技，以創新手法為騎士們打造出獨一無二的行車體驗。品牌的使命是將過去的經典之美注入現代生活，成為騎士們追尋自由與風華的最佳伴侶。
+            </p>
+        </div>
+
+    </div>
+    <!-- 執行長 -->
+    <div class="ceo">
+
+        <img src="../AboutUs/img/SHU.LIU.png" alt="執行長">
+
+        <div class="bg-color">
+            <div class="introduce">
+                <div class="about-us-name">
+                    <p>執行長</p>
+                    <h1>SHU.LIU</h1>
+                </div>
+                <div class="about-us-content">
+                    <p>懷舊風格機車品牌的創辦人，憑藉對復古美學的熱愛，打造了一個匠心獨具的車系。我深信傳承經典，融匯創新，能夠為人們帶來獨特的行車體驗，將過去的風華再度展現在當下。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 同種排版 -->
+    <div class="container-same-model">
+        <!-- 營運長 -->
+        <div class="coo">
+            <div class="coo-introduce-group">
+                <div class="coo-introduce">
+                    <div class="about-us-name">
+                        <p>營運長</p>
+                        <h1>GINO.HUANG</h1>
+                    </div>
+                    <div class="about-us-content">
+                        <p>我擁有豐富的營運管理經驗，曾在不同行業打拼，致力於創造高效、具有競爭力的企業運作。
+                            我深信品牌的成功不僅來自出色的產品，更需要卓越的營運策略。我致力於協調各部門，優化流程，提高效能。透過我的領導，我希望將WOLFER打造成行業的佼佼者，為客戶提供卓越的產品和服務體驗。
+                            在這個競爭激烈的市場中，我將持續努力，與團隊攜手合作，挑戰業界的新高度。感謝您的支持，期待與您攜手共創WOLFER的輝煌未來。</p>
+                    </div>
+                </div>
+            </div>
+            <img src="../AboutUs/img/GINO.HUANG.png" alt="營運長">
+        </div>
+
+        <!-- 財務長 -->
+        <div class="coo">
+            <img src="../AboutUs/img/MING.LIU.png" alt="財務長">
+            <div class="coo-introduce-group">
+                <div class="coo-introduce">
+                    <div class="about-us-name">
+                        <p>財務長</p>
+                        <h1>MING.LIU</h1>
+                    </div>
+                    <div class="about-us-content">
+                        <p>我擁有豐富的財務管理經驗，致力於打造強健的財務體系，以支持品 牌的可持續發展。
+                            我的職責包括資本結構規劃、風險管理、財務報告及分析，以及制定有效的財務戰略。透過精確的數據分析和深入的財務規劃，我致力於確保品牌在財務層面的穩健運作，提高營運效率並最大程度地提高利潤。
+                            我深信透過卓越的財務管理，WOLFER將能夠在市場上取得更大的競爭優勢，為股東和利益相關者創造更多價值。我期待能在這個充滿挑戰和機遇的環境中，與團隊攜手共同推動WOLFER的繁榮發展。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 產品長 -->
+        <div class="coo">
+            <div class="coo-introduce-group">
+                <div class="coo-introduce">
+                    <div class="about-us-name">
+                        <p>產品長</p>
+                        <h1>MONICA.CHEN</h1>
+                    </div>
+                    <div class="about-us-content">
+                        <p>我的事業旅程一直致力於打造卓越的產品和品牌體驗。作為產品管理長，我的責任是確保WOLFER的產品線滿足市場需求並保持創新競爭力。
+                            我擁有豐富的產品開發和管理經驗，熟悉市場趨勢和消費者需求。我一直注重用戶反饋，通過深入了解客戶，提高產品的使用者體驗。這樣的方法不僅有助於提升產品的功能性，還確保了WOLFER在市場上的地位。
+                            我熱愛與團隊合作，共同推動產品創新和發展。透過結合創意思維和市場洞察，我期望能夠在WOLFER的成功故事中留下深遠的印記。感謝您的支持，期待與您一同見證WOLFER的不斷繁榮。</p>
+                    </div>
+                </div>
+            </div>
+            <img src="../AboutUs/img/MONICA.CHEN.png" alt="產品長">
+        </div>
+    </div>
+
+</body>
+
+</html>
