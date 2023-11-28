@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect-us-Banner</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .aboutus-banner {
+            width: 100%;
+            height: 550px;
+            position: relative;
+
+        }
+
+        .all-group {
+            position: relative;
+            z-index: 0;
+        }
+
+        #banner {
+            width: 100vw;
+            /* height: 100vh; */
+            background: url(../Contact-us/img/contact-us-banner.png);
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+        }
+
+        .banner-p {
+            display: block;
+            line-height: 50px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            text-shadow: 0 0 80px rgb(40, 20, 3);
+        }
+
+
+        /* absolute這樣設定之後好維護嗎?要怎樣改 */
+        .banner-title {
+            width: 1750px;
+            height: 550px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        .banner-pic {
+            margin-bottom: 20px;
+        }
+
+
+        .about-wolfer {
+            display: flex;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all-group">
+        <section id="banner">
+            <div class="banner-title">
+                <!-- 主標題 -->
+                <div class="about-wolfer">
+                    <p class="banner-p">PERSONAL MODIFICATION</p>
+                </div>
+                <!-- icon -->
+                <div class="icon">
+                    <a href="">
+                        <div class="banner-pic"><img src="../Home/img/fb-black.svg" alt="fb"></div>
+                    </a>
+                    <a href="">
+                        <div class="banner-pic"><img src="../Home/img/ig-black.svg" alt="ig"></div>
+                    </a>
+                    <a href="">
+                        <div class="banner-pic"><img src="../Home/img/line-black.svg" alt="line"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

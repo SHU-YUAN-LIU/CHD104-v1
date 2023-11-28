@@ -4,322 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact-us</title>
-    <link rel="stylesheet" href="reset.css">
-    <style>
-        body {
-            width: 100%;
-            background:
-                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 80%)no-repeat,
-                linear-gradient(to right, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
-                linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
-                url(../Motor-intro/img/batthern.png),
-                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
-                linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
-        }
-
-        .form-group {
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: auto;
-            gap: 20px;
-        }
-
-        .contact-us {
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding-bottom: 50px;
-            margin-top: 150px;
-            margin-bottom: 150px;
-            border: 1px solid#ff6a0070;
-            border-radius: 5px;
-            background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 1)90%);
-            box-shadow: 10px 10px 70px 40px rgb(0, 0, 0);
-        }
-
-        .contact-us-title {
-            font-size: 25px;
-            font-weight: 600;
-            font-family: 'Noto Sans TC', sans-serif;
-            letter-spacing: 4px;
-            color: white;
-            padding: 30px;
-        }
-
-        .form-group {
-            font-size: 16px;
-            font-weight: 300;
-            font-family: 'Noto Sans TC', sans-serif;
-            letter-spacing: 2px;
-            color: white;
-        }
-
-        .form-group label {
-            margin-bottom: 20px;
-        }
-
-        /* ----------姓名---------- */
-        .name {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: lefts;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .name input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .name input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        /* ----------電話---------- */
-        .tel {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: lefts;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .tel input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .tel input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        /* ----------電話---------- */
-        .email {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: lefts;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .email input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .email input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        /* ----------詢問主題---------- */
-        #multiple {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            text-indent: 1px;
-            text-overflow: '';
-        }
-
-        #multiple input {
-            box-sizing: border-box;
-            color: rgb(0, 0, 0);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        #multiple input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        /* ----------問題與意見---------- */
-        .option {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: lefts;
-            color: #ffffff;
-            letter-spacing: 1px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .option input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 100px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .option input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        /* .option input::placeholder {
-            text-align: left;
-            vertical-align: top;
-        } */
+    <title>Contact-us</title>
 
 
-        .con-btn-group {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .con-btn-group .con-btn:first-child {
-            border: 1px solid gray;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 15px 20px;
-            margin: 10;
-            border-radius: 3px;
-        }
-
-        .con-btn-group .con-btn:first-child:hover {
-            border: 1px solid rgb(233, 233, 233);
-            background-color: rgb(233, 233, 233);
-            color: black;
-            font-weight: 400;
-        }
-
-        .con-btn-group .con-btn:last-child {
-            border: 1px solid #ff6b00;
-            background-color: rgba(255, 107, 0, 0.5);
-            padding: 15px 20px;
-            margin: 10;
-            border-radius: 3px;
-        }
-
-        .con-btn-group .con-btn:last-child:hover {
-            border: 1px solid #ff6b00;
-            background-color: #ff6b00;
-            padding: 15px 20px;
-            margin: 10;
-            border-radius: 3px;
-        }
-    </style>
 </head>
-<div class="contact-us">
-    <div class="contact-us-title"><span>聯絡我們</span></div>
-    <div class="form-group">
-        <!-- ----------表格---------- -->
-        <div class="name-group">
-            <div class="name"><label for="">姓名<br></label></div>
-            <div class="name"><input type="text"></div>
-        </div>
-        <!-- ------------------------ -->
-        <div>
-            <div class="tel"><label for="">連絡電話<br></label></div>
+<script>
+    // 引入header
+    fetch('./Header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
 
-            <div class="tel"><input></div>
+    // 引入Contact-us-Banner
+    fetch('./Contact-us-Banner.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Contact-us-Banner').innerHTML = html;
+        });
 
-        </div>
-        <!-- ------------------------ -->
-        <div>
-            <div class="email"><label for="">電子信箱<br></label></div>
-            <div class="email"><input type="email"></div>
-        </div>
-        <!-- ------------------------ -->
-        <div class="question">
-            <select name="" id="multiple">
-                <option value="">詢問主題</option>
-                <option value="">品牌</option>
-                <option value="">商品</option>
-                <option value="">經銷</option>
-                <option value="">據點</option>
-            </select>
-        </div>
-        <!-- ------------------------ -->
-        <div>
-            <div class="option">
-                <label for="">問題與意見<br>
-                </label>
-            </div>
-            <div class="option">
-                <input type="text" placeholder="請寫下您的意見內容">
-            </div>
-        </div>
-        <label for="">
-            <input type="checkbox" id="agree">同意本網站使用個人資料
-        </label>
+    // 引入contact-us-content
+    fetch('./contact-us-content.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('contact-us-content').innerHTML = html;
+        });
 
-        <!-- ----------按鈕---------- -->
-        <div class="con-btn-group">
-
-            <div class="con-btn">
-                <span>重新填寫</span>
-            </div>
-            <div class="con-btn">
-                <span>確認送出</span>
-            </div>
-
-        </div>
-    </div>
-</div>
+    // 引入footer
+    fetch('./Footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
 
 <body>
+
+    <div id="header"></div>
+    <div id="Contact-us-Banner"></div>
+    <div id="contact-us-content"></div>
+    <div id="footer"></div>
+
+
+
 
 </body>
 
