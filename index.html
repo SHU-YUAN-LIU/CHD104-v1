@@ -8,10 +8,42 @@
 
 
 </head>
+<script>
+    // 引入header
+    fetch('./Header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    // 引入Container-product
+    fetch('./Home/Container-product.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Container-product').innerHTML = html;
+        });
+
+    // 引入Container-wolfer-style
+    fetch('./Home/Container-wolfer-style.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Container-wolfer-style').innerHTML = html;
+        });
+
+    // 引入footer
+    fetch('.Home/Footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
 
 <body>
 
-    123
+    <div id="header"></div>
+    <div id="Container-product"></div>
+    <div id="Container-wolfer-style"></div>
+    <div id="footer"></div>
 
 
 
