@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact-us</title>
+    <title><reserve-content></reserve-content></title>
     <link rel="stylesheet" href="reset.css">
     <style>
         body {
@@ -16,6 +16,7 @@
                 url(../Motor-intro/img/batthern.png),
                 radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
                 linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
+            color: white;
         }
 
         .form-group {
@@ -32,7 +33,7 @@
             color: white;
         }
 
-        .contact-us {
+        .reserve {
             width: 500px;
             display: flex;
             flex-direction: column;
@@ -48,7 +49,7 @@
             box-shadow: 10px 10px 70px 40px rgb(0, 0, 0);
         }
 
-        .contact-us-title {
+        .reserve-title {
             font-size: 25px;
             font-weight: 600;
             font-family: 'Noto Sans TC', sans-serif;
@@ -57,8 +58,33 @@
             padding: 30px;
         }
 
-        .form-group label {
-            margin-bottom: 20px;
+        /* ----------日期---------- */
+        .date {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: left;
+            color: #ffffff;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .date input {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            width: 300px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .date input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #a74703;
+            box-shadow: 0px 0px 0px 0.5px #a74703;
         }
 
         /* ----------姓名---------- */
@@ -110,7 +136,6 @@
             background-color: transparent;
             border: 1px solid gray;
             border-radius: 3px;
-
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -120,8 +145,8 @@
             box-shadow: 0px 0px 0px 0.5px #a74703;
         }
 
-        /* ----------電話---------- */
-        .email {
+        /* ----------信箱---------- */
+        .mail {
             margin-bottom: 8px;
             font-size: 15px;
             text-align: left;
@@ -130,7 +155,7 @@
             font-family: 'Noto Sans TC', sans-serif;
         }
 
-        .email input {
+        .mail input {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
             width: 300px;
@@ -143,7 +168,7 @@
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .email input:focus {
+        .mail input:focus {
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
@@ -184,45 +209,7 @@
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
 
-        /* ----------問題與意見---------- */
-        .option {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: left;
-            color: #ffffff;
-            letter-spacing: 1px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
 
-        .option input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 100px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-
-        }
-
-        .option input::placeholder {
-            text-align: left;
-            vertical-align: top;
-            padding: 10px
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .option input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-        }
-
-        .agree {
-            font-size: 13px;
-        }
 
         .con-btn-group {
             display: flex;
@@ -262,56 +249,107 @@
         }
     </style>
 </head>
-<div class="contact-us">
-    <div class="contact-us-title"><span>聯絡我們</span></div>
-    <div class="form-group">
-        <!-- ----------表格---------- -->
-        <div class="name-group">
-            <div class="name"><label for="">姓名<br></label></div>
-            <div class="name"><input type="text"></div>
-        </div>
-        <!-- ------------------------ -->
-        <div>
-            <div class="tel"><label for="">連絡電話<br></label></div>
 
-            <div class="tel"><input></div>
+<body>
 
+    <div class="reserve">
+        <!-- ----------請選擇您欲試乘的車款及據點---------- -->
+        <div class="reserve-title">
+            <div class="number">1</div>
+            <span>請選擇您欲試乘的車款及據點</span>
         </div>
-        <!-- ------------------------ -->
+        <!-- ----------下拉選單第一排---------- -->
         <div>
-            <div class="email"><label for="">電子信箱<br></label></div>
-            <div class="email"><input type="email"></div>
+            <div class="pull-list">
+                <label for=""> 選擇地區</label>
+                <select name="" id="multiple">
+                    <option value="" class="pull">新北市</option>
+                    <option value="" class="pull">桃園市</option>
+                    <option value="" class="pull">台中市</option>
+                    <option value="" class="pull">花蓮市</option>
+                    <option value="" class="pull">高雄市</option>
+                </select>
+            </div>
+            <div class="pull-list">
+                <label for=""> 選擇試騎地點</label>
+                <select name="" id="multiple">
+                    <option value="" class="pull">板橋門市</option>
+                    <option value="" class="pull">浮洲門市</option>
+                    <option value="" class="pull">新埔門市</option>
+                </select>
+            </div>
         </div>
-        <!-- ------------------------ -->
-        <div class="question">
+        <!-- ----------下拉選單第二三排---------- -->
+        <div class="pull-list">
+            <label for=""> 選擇試乘型號</label>
             <select name="" id="multiple">
-                <option value="" class="pull
-                ">詢問主題</option>
-                <option value="" class="pull
-                ">品牌</option>
-                <option value="" class="pull
-                ">商品</option>
-                <option value="" class="pull
-                ">經銷</option>
-                <option value="" class="pull
-                ">據點</option>
+                <option value="" class="pull">BOBBER</option>
+                <option value="" class="pull">THRUXTON RS</option>
+                <option value="" class="pull">CLASSICS</option>
+                <option value="" class="pull">Nostalgia Nomad</option>
+                <option value="" class="pull">Retro Rover</option>
+                <option value="" class="pull">Timeless Cruiser </option>
             </select>
         </div>
-        <!-- ------------------------ -->
+        <!-- ----------選擇試乘時間---------- -->
         <div>
-            <div class="option">
-                <label for="">問題與意見<br>
-                </label>
-            </div>
-            <div class="option">
-                <input type="text" placeholder="寫下您的意見">
-            </div>
+            <div class="date"><label for="date">選擇試乘時間</label></div>
+            <div class="date"><input type="date" id="date" name="date"></div>
         </div>
-        <label for="">
-            <input type="checkbox" id="agree">
-            <span class="agree">同意本網站使用個人資料</span>
-        </label>
+        <!-- ----------請填寫試乘者資料---------- -->
+        <div class="reserve-title">
+            <div class="number">2</div>
+            <span>請填寫試乘者資料</span>
+        </div>
 
+        <!-- ----------試乘者姓名---------- -->
+        <div class="name-group">
+            <div class="name"><label for="">試乘者姓名<br></label></div>
+            <div class="name"><input type="text"></div>
+        </div>
+        <!-- ----------試乘者性別---------- -->
+        <div>
+            試乘者性別:
+            <label>
+                <input type="radio" name="sex">
+                男
+            </label>
+            <label>
+                <input type="radio" name="sex">
+                女
+            </label>
+        </div>
+        <!-- ----------試乘者電話---------- -->
+        <div class="tel-group">
+            <div class="tel"><label for="">試乘者電話<br></label></div>
+            <div class="tel"><input type="tel" placeholder="請輸入數字共十碼"></div>
+        </div>
+        <!-- ----------試乘者信箱---------- -->
+        <div class="mail-group">
+            <div class="mail"><label for="">試乘者信箱<br></label></div>
+            <div class="mail"><input type="email"></div>
+        </div>
+        <!-- ----------是否持有普通重機駕照---------- -->
+        <div>
+            是否持有普通重機駕照:
+            <label>
+                <input type="radio" name="yes">
+                是
+            </label>
+            <label>
+                <input type="radio" name="no">
+                否
+            </label>
+        </div>
+        <!-- ----------我已詳細閱讀並同意試乘須知---------- -->
+        <label>
+            <input type="checkbox">
+            我已詳細閱讀並同意試乘須知
+        </label>
+        <label>
+            <input type="checkbox">
+            同意本網站使用個人資料
+        </label>
         <!-- ----------按鈕---------- -->
         <div class="con-btn-group">
 
@@ -325,12 +363,10 @@
                     <span>確認送出</span>
                 </div>
             </a>
-
         </div>
-    </div>
-</div>
 
-<body>
+    </div>
+
 
 </body>
 
