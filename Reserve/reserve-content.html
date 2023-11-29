@@ -58,6 +58,19 @@
             padding: 30px;
         }
 
+        .numder {
+            position: relative;
+        }
+
+        .numder::after {
+            content: "1";
+            width: 0;
+            height: 0;
+            position: absolute;
+            background-color: #ff6b00;
+            border-radius: 50%;
+        }
+
         /* ----------日期---------- */
         .date {
             margin-bottom: 8px;
