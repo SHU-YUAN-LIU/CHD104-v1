@@ -19,30 +19,17 @@
             color: white;
         }
 
-        .form-group {
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: auto;
-            gap: 20px;
-            font-size: 15px;
-            font-weight: 300;
-            font-family: 'Noto Sans TC', sans-serif;
-            letter-spacing: 2px;
-            color: white;
-        }
 
         .reserve {
-            width: 500px;
+            width: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin: auto;
             padding-bottom: 50px;
-            margin-top: 150px;
-            margin-bottom: 150px;
+            margin-top: 200px;
+            margin-bottom: 200px;
             border: 1px solid#ff6a0070;
             border-radius: 5px;
             background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 1)90%);
@@ -53,34 +40,45 @@
             font-size: 25px;
             font-weight: 600;
             font-family: 'Noto Sans TC', sans-serif;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             color: white;
-            padding: 30px;
+            padding: 60px;
         }
 
         .number {
             position: relative;
-
-
         }
 
         .number::after {
             content: "1";
-            width: 40px;
-            height: 40px;
-
+            width: 50px;
+            height: 50px;
+            left: -70px;
+            top: -12px;
             position: absolute;
             background-color: #ff6b00;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* transform: translateX(-50%); */
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .p-first-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pull-list-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* ----------日期---------- */
         .date {
-            margin-bottom: 8px;
             font-size: 15px;
             text-align: left;
             color: #ffffff;
@@ -91,10 +89,9 @@
         .date input {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
+            width: 150px;
             height: 40px;
-            border: none;
-            outline: none;
+
             background-color: transparent;
             border: 1px solid gray;
             border-radius: 3px;
@@ -102,10 +99,37 @@
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
         .date input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 107, 0, 0.5);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
         }
+
+        .date :hover {
+            background-color: rgba(255, 107, 0, 0.5);
+        }
+
+
+        /* ----------2.請填寫試乘者資料---------- */
+        .number2 {
+            position: relative;
+        }
+
+        .number2::after {
+            content: "2";
+            width: 50px;
+            height: 50px;
+            left: -70px;
+            top: -12px;
+            position: absolute;
+            background-color: #ff6b00;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
 
         /* ----------姓名---------- */
         .name {
@@ -194,11 +218,11 @@
             box-shadow: 0px 0px 0px 0.5px #a74703;
         }
 
-        /* ----------詢問主題---------- */
+        /* ----------選擇試乘型號---------- */
         #multiple {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
+            width: 150px;
             height: 40px;
             background-color: transparent;
             border: 1px solid gray;
@@ -211,7 +235,14 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             text-indent: 1px;
-            text-overflow: '';
+            margin-bottom: 20px;
+
+        }
+
+        .label-group .name-group,
+        .tel-group,
+        .mail-group {
+            margin-bottom: 20px;
         }
 
         #multiple:hover {
@@ -227,17 +258,26 @@
             color: rgb(255, 255, 255);
         }
 
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-
-
-
-        .con-btn-group {
+        .little-words {
             display: flex;
-            justify-content: space-between;
-
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 300px;
+            font-size: 13px;
+            letter-spacing: 2px;
         }
 
-        .con-btn-group a {
+        .little-words label {
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        .reserve-btn-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .reserve-btn-group a {
             text-decoration: none;
             color: white;
             padding: 15px 20px;
@@ -245,27 +285,32 @@
             border-radius: 3px;
         }
 
-        .con-btn-group a:first-child {
+        .reserve-btn-group a:first-child {
             border: 1px solid gray;
             background-color: rgba(255, 255, 255, 0.2);
             transition: .5s ease-in-out;
         }
 
-        .con-btn-group a:first-child:hover {
+        .reserve-btn-group a:first-child:hover {
             border: 1px solid gray;
             background-color: rgb(234, 234, 234);
             color: rgb(0, 0, 0);
         }
 
-        .con-btn-group a:last-child {
+        .reserve-btn-group a:last-child {
             border: 1px solid #ff6b00;
             background-color: rgba(255, 107, 0, 0.6);
             transition: .5s ease-in-out;
         }
 
-        .con-btn-group a:last-child:hover {
+        .reserve-btn-group a:last-child:hover {
             border: 1px solid #ff6b00;
             background-color: rgba(255, 107, 0, 1);
+        }
+
+        .reserve-bottom-group {
+            width: 300px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -279,110 +324,98 @@
             <span>請選擇您欲試乘的車款及據點</span>
         </div>
         <!-- ----------下拉選單第一排---------- -->
-        <div>
-            <div class="pull-list">
-                <label for=""> 選擇地區</label>
+        <div class="pull-list-group">
+            <div class="p-first-row">
+
                 <select name="" id="multiple">
+                    <option value="" class="pull">選擇地區</option>
                     <option value="" class="pull">新北市</option>
                     <option value="" class="pull">桃園市</option>
                     <option value="" class="pull">台中市</option>
                     <option value="" class="pull">花蓮市</option>
                     <option value="" class="pull">高雄市</option>
                 </select>
-            </div>
-            <div class="pull-list">
-                <label for=""> 選擇試騎地點</label>
+
+
                 <select name="" id="multiple">
+                    <option value="" class="pull">選擇試騎地點</option>
                     <option value="" class="pull">板橋門市</option>
                     <option value="" class="pull">浮洲門市</option>
                     <option value="" class="pull">新埔門市</option>
                 </select>
+
             </div>
-        </div>
-        <!-- ----------下拉選單第二三排---------- -->
-        <div class="pull-list">
-            <label for=""> 選擇試乘型號</label>
-            <select name="" id="multiple">
-                <option value="" class="pull">BOBBER</option>
-                <option value="" class="pull">THRUXTON RS</option>
-                <option value="" class="pull">CLASSICS</option>
-                <option value="" class="pull">Nostalgia Nomad</option>
-                <option value="" class="pull">Retro Rover</option>
-                <option value="" class="pull">Timeless Cruiser </option>
-            </select>
-        </div>
-        <!-- ----------選擇試乘時間---------- -->
-        <div>
-            <div class="date"><label for="date">選擇試乘時間</label></div>
-            <div class="date"><input type="date" id="date" name="date"></div>
+            <div class="p-first-row">
+
+                <select name="" id="multiple">
+                    <option value="" class="pull">選擇試乘型號</option>
+                    <option value="" class="pull">BOBBER</option>
+                    <option value="" class="pull">THRUXTON RS</option>
+                    <option value="" class="pull">CLASSICS</option>
+                    <option value="" class="pull">Nostalgia Nomad</option>
+                    <option value="" class="pull">Retro Rover</option>
+                    <option value="" class="pull">Timeless Cruiser</option>
+                </select>
+                <!-- ----------選擇試乘時間---------- -->
+                <div class="date"><input type="date" id="date" name="date"></div>
+            </div>
         </div>
         <!-- ----------請填寫試乘者資料---------- -->
         <div class="reserve-title">
-            <div class="number2">2</div>
+            <div class="number2"></div>
             <span>請填寫試乘者資料</span>
         </div>
 
-        <!-- ----------試乘者姓名---------- -->
-        <div class="name-group">
-            <div class="name"><label for="">試乘者姓名<br></label></div>
-            <div class="name"><input type="text"></div>
-        </div>
-        <!-- ----------試乘者性別---------- -->
-        <div>
-            試乘者性別:
-            <label>
-                <input type="radio" name="sex">
-                男
-            </label>
-            <label>
-                <input type="radio" name="sex">
-                女
-            </label>
-        </div>
-        <!-- ----------試乘者電話---------- -->
-        <div class="tel-group">
-            <div class="tel"><label for="">試乘者電話<br></label></div>
-            <div class="tel"><input type="tel" placeholder="請輸入數字共十碼"></div>
-        </div>
-        <!-- ----------試乘者信箱---------- -->
-        <div class="mail-group">
-            <div class="mail"><label for="">試乘者信箱<br></label></div>
-            <div class="mail"><input type="email"></div>
-        </div>
-        <!-- ----------是否持有普通重機駕照---------- -->
-        <div>
-            是否持有普通重機駕照:
-            <label>
-                <input type="radio" name="yes">
-                是
-            </label>
-            <label>
-                <input type="radio" name="no">
-                否
-            </label>
-        </div>
-        <!-- ----------我已詳細閱讀並同意試乘須知---------- -->
-        <label>
-            <input type="checkbox">
-            我已詳細閱讀並同意試乘須知
-        </label>
-        <label>
-            <input type="checkbox">
-            同意本網站使用個人資料
-        </label>
-        <!-- ----------按鈕---------- -->
-        <div class="con-btn-group">
-
-            <a href="#">
-                <div class="con-btn">
-                    <span>重新填寫</span>
+        <div class="reserve-bottom-group">
+            <!-- ----------試乘者姓名---------- -->
+            <div class="label-group">
+                <div class="name-group">
+                    <div class="name"><label for="">試乘者姓名<br></label></div>
+                    <div class="name"><input type="text"></div>
                 </div>
-            </a>
-            <a href="#">
-                <div class="con-btn">
-                    <span>確認送出</span>
+                <!-- ----------試乘者電話---------- -->
+                <div class="tel-group">
+                    <div class="tel"><label for="">試乘者電話<br></label></div>
+                    <div class="tel"><input type="tel" placeholder="請輸入數字共十碼"></div>
                 </div>
-            </a>
+                <!-- ----------試乘者信箱---------- -->
+                <div class="mail-group">
+                    <div class="mail"><label for="">試乘者信箱<br></label></div>
+                    <div class="mail"><input type="email"></div>
+                </div>
+            </div>
+            <div class="little-words">
+                <!-- ----------是否持有普通重機駕照---------- -->
+                <div>
+                    是否持有普通重機駕照:
+                    <label>
+                        <input type="radio" name="yes">
+                        是
+                    </label>
+                    <label>
+                        <input type="radio" name="no">
+                        否
+                    </label>
+                </div>
+                <!-- ----------我已詳細閱讀並同意試乘須知---------- -->
+                <label>
+                    <input type="checkbox">
+                    我已詳細閱讀並同意試乘須知
+                </label>
+            </div>
+            <!-- ----------按鈕---------- -->
+            <div class="reserve-btn-group">
+                <a href="#">
+                    <div class="reserve-btn">
+                        <span>重新填寫</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="reserve-btn">
+                        <span>確認送出</span>
+                    </div>
+                </a>
+            </div>
         </div>
 
     </div>
