@@ -16,42 +16,31 @@
                 url(../Motor-intro/img/batthern.png),
                 radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
                 linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
-
         }
 
         .form-group {
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: auto;
-            gap: 20px;
             font-size: 15px;
             font-weight: 300;
             font-family: 'Noto Sans TC', sans-serif;
             letter-spacing: 2px;
             color: white;
-            margin-top: 60px;
-        }
+            margin-top: 70px;
+            margin-bottom: 70px;
 
-        .form-group label {
-            margin-bottom: 20px;
         }
 
         .login {
             width: 500px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
             margin: auto;
-            padding-bottom: 50px;
             margin-top: 150px;
             margin-bottom: 150px;
             border: 1px solid#ff6a0070;
             border-radius: 5px;
             background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 1)90%);
             box-shadow: 10px 10px 70px 40px rgb(0, 0, 0);
+
         }
 
 
@@ -75,6 +64,7 @@
             background-color: transparent;
             border: 1px solid gray;
             border-radius: 3px;
+            margin-bottom: 20px;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -105,6 +95,7 @@
             background-color: transparent;
             border: 1px solid gray;
             border-radius: 3px;
+            margin-bottom: 20px;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -134,6 +125,7 @@
             background-color: transparent;
             border: 1px solid gray;
             border-radius: 3px;
+            margin-bottom: 20px;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -173,10 +165,10 @@
 
         .login-btn-bottom {
             display: flex;
-            justify-content: space-between;
+            align-content: space-between;
             flex-direction: column;
             align-items: center;
-            border: 2px solid rgb(110, 110, 255);
+
         }
 
         /* 或 */
@@ -185,9 +177,9 @@
             font-size: 12px;
             letter-spacing: 3px;
             font-family: 'Noto Sans TC', sans-serif;
-            margin: 5px 0px;
-            padding: 10px;
-            border-bottom: 1px solid rgb(255, 0, 0);
+            margin: 10px 0px;
+
+
         }
 
         /* 使用手機號碼登入/ 忘記密碼/註冊新帳號*/
@@ -195,11 +187,32 @@
             text-decoration: none;
             color: rgb(255, 255, 255);
             font-size: 12px;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             font-family: 'Noto Sans TC', sans-serif;
             display: inline-block;
             margin: 5px 0px;
+        }
 
+        .forget {
+            display: flex;
+            align-items: baseline;
+            align-content: space-between;
+        }
+
+        .forget div a {
+            color: white;
+        }
+
+        .forget div:first-child {
+            box-sizing: border-box;
+            width: 150px;
+            text-align: start;
+        }
+
+        .forget div:last-child {
+            box-sizing: border-box;
+            width: 150px;
+            text-align: end;
         }
     </style>
 </head>
@@ -246,10 +259,8 @@
                     </div>
                     <div class="forget">
 
-                        <a href="#">忘記密碼</a>
-
-
-                        <a href="#">註冊新帳號</a>
+                        <div><a href="#">忘記密碼</a></div>
+                        <div><a href="#">註冊新帳號</a></div>
 
                     </div>
                 </div>
