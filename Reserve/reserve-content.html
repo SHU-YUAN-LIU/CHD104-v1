@@ -58,17 +58,24 @@
             padding: 30px;
         }
 
-        .numder {
+        .number {
             position: relative;
+
+
         }
 
-        .numder::after {
+        .number::after {
             content: "1";
-            width: 0;
-            height: 0;
+            width: 40px;
+            height: 40px;
+
             position: absolute;
             background-color: #ff6b00;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* transform: translateX(-50%); */
         }
 
         /* ----------日期---------- */
@@ -268,7 +275,7 @@
     <div class="reserve">
         <!-- ----------請選擇您欲試乘的車款及據點---------- -->
         <div class="reserve-title">
-            <div class="number">1</div>
+            <div class="number"></div>
             <span>請選擇您欲試乘的車款及據點</span>
         </div>
         <!-- ----------下拉選單第一排---------- -->
@@ -311,7 +318,7 @@
         </div>
         <!-- ----------請填寫試乘者資料---------- -->
         <div class="reserve-title">
-            <div class="number">2</div>
+            <div class="number2">2</div>
             <span>請填寫試乘者資料</span>
         </div>
 
