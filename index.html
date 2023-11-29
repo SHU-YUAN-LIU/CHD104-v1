@@ -10,28 +10,28 @@
 </head>
 <script>
     // 引入header
-    fetch('../Home/Header.html')
+    fetch('./Header.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('header').innerHTML = html;
         });
 
     // 引入Container-product
-    fetch('../Home/Container-product.html')
+    fetch('./Container-product.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('Container-product').innerHTML = html;
         });
 
     // 引入Container-wolfer-style
-    fetch('../Home/Container-wolfer-style.html')
+    fetch('./Container-wolfer-style.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('Container-wolfer-style').innerHTML = html;
         });
 
     // 引入footer
-    fetch('../Home/Footer.html')
+    fetch('./Footer.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('footer').innerHTML = html;
