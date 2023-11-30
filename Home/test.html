@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Video Demo</title>
+    <style>
+        .videoPro {
+            position: relative;
+        }
+
+        .videoPro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 70%);
+            z-index: 10;
+        }
+
+        .video-container {
+            position: relative;
+            z-index: 20;
+            /* 确保视频在漸層上方 */
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 确保视频填充整个容器 */
+        }
+
+        .product-container {
+            position: relative;
+            z-index: 30;
+            /* 确保产品图像在漸層和视频上方 */
+        }
+
+        .product-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="videoPro">
+        <!-- 影片 -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="/Home/pexels_videos_2297636 (2160p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- 產品 -->
+        <div class="product-container">
+            <img src="/Home/img/bobber-orange.svg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
