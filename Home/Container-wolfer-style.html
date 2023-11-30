@@ -77,7 +77,7 @@
             position: relative;
         }
 
-        /* --------英倫復古風-------- */
+        /* --------英倫復古風(三角形)-------- */
         .container-item::before {
             content: "";
             position: absolute;
@@ -93,6 +93,7 @@
             left: 0;
         }
 
+        /* --------英倫復古風(文字)-------- */
         .container-item:nth-child(1)::after {
             content: "英倫復古風 \A MODERN CLASSICS";
             /* 用/A換行 */
@@ -110,6 +111,23 @@
             height: 0;
             bottom: 23%;
             left: 5%;
+        }
+
+        /* --------第一排兩個(三角形HOVER)-------- */
+        .container-item:hover::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.4);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+            transition: .5s ease-in-out;
         }
 
         /* --------都會城市風-------- */
@@ -132,24 +150,8 @@
             left: 5%;
         }
 
-        /* --------上面的三角形-------- */
-        .container-item:hover::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-right: 654.32px solid transparent;
-            /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(255, 107, 0, 0.9);
-            /* 底邊框實心，顏色可以根據需求修改 */
-            filter: brightness(0.4);
-            /* 色彩增值效果 */
-            bottom: 0;
-            left: 0;
-            transition: .5s ease-in-out;
-        }
 
-        /* --------街頭潮流-------- */
+        /* --------街頭潮流(文字)-------- */
         .container-item-2:nth-child(1)::after {
             content: "街頭潮流 \A street style";
             /* 用/A換行 */
@@ -167,6 +169,39 @@
             height: 0;
             bottom: 23%;
             left: 5%;
+        }
+
+        /* --------街頭潮流(三角形)-------- */
+        .container-item-2::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(65, 74, 85, 0.6);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.3);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+        }
+
+        /* --------第二排兩個(三角形HOVER)-------- */
+        .container-item-2:hover::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.4);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+            transition: .5s ease-in-out;
         }
 
         /* --------經典老靈魂-------- */
@@ -197,7 +232,7 @@
             height: 0;
             border-right: 654.32px solid transparent;
             /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(255, 107, 0, 0.9);
+            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
             /* 底邊框實心，顏色可以根據需求修改 */
             filter: brightness(0.4);
             /* 色彩增值效果 */
@@ -206,6 +241,14 @@
             transition: .5s ease-in-out;
         }
 
+        .container-item {
+            overflow: hidden;
+        }
+
+        .container-item img:hover {
+            transform: scale(1.2);
+
+        }
 
         /* 輪播區 */
 
@@ -345,7 +388,7 @@
         <!-- 四種風格 -->
         <div class="container-picture">
             <div class="container-pic">
-                <a href="#" class="container-item">
+                <a href="" class="container-item">
                     <img src="../Home/img/modern-classics.svg" alt="modern-classics">
                 </a>
                 <a href="#" class="container-item">

@@ -10,7 +10,7 @@
         body {
             width: 100%;
             background:
-                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 80%)no-repeat,
+                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 40%)no-repeat,
                 linear-gradient(to right, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
                 linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
                 url(../Motor-intro/img/batthern.png),
@@ -30,10 +30,11 @@
             font-family: 'Noto Sans TC', sans-serif;
             letter-spacing: 2px;
             color: white;
+
         }
 
         .contact-us {
-            width: 500px;
+            width: 800px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -88,6 +89,7 @@
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
         }
 
         /* ----------電話---------- */
@@ -118,6 +120,7 @@
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
         }
 
         /* ----------電話---------- */
@@ -147,6 +150,7 @@
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
         }
 
         /* ----------詢問主題---------- */
@@ -180,6 +184,7 @@
             border: 1px solid #ff6b00;
             box-shadow: 0px 0px 0px 0.5px #a74703;
             color: rgb(255, 255, 255);
+            transition: border-color 0.3s;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -194,7 +199,7 @@
             font-family: 'Noto Sans TC', sans-serif;
         }
 
-        .option input {
+        .option textarea {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
             width: 300px;
@@ -207,17 +212,18 @@
 
         }
 
-        .option input::placeholder {
+        .option textarea::placeholder {
             text-align: left;
             vertical-align: top;
             padding: 10px
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .option input:focus {
+        .option textarea:focus {
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid #a74703;
             box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
         }
 
         .agree {
@@ -304,7 +310,7 @@
                 </label>
             </div>
             <div class="option">
-                <input type="text" placeholder="寫下您的意見">
+                <textarea placeholder="請寫下您的意見..."></textarea>
             </div>
         </div>
         <label for="">
