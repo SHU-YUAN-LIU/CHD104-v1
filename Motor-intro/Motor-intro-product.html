@@ -188,18 +188,83 @@
             height: 800px;
             background-color: black;
         }
+
+
+        /* --------------------漸層-------------------- */
+        .video-bg {
+            position: relative;
+        }
+
+        .video-bg::after {
+            content: "";
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)70%);
+            mix-blend-mode: multiply;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .video-bg::before {
+            content: "";
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(to left, transparent, rgb(0, 0, 0)100%);
+            /* filter: saturate(200%); */
+            mix-blend-mode: overlay;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        /* 影片 */
+        .video-container {
+            width: 100%;
+            height: 830px;
+            object-fit: cover;
+            z-index: 1;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        /* 產品 */
+        .product-container {
+            position: absolute;
+            z-index: 3;
+            text-align: center;
+            color: #fff;
+            top: 80px;
+            left: 430px;
+            width: 1100px;
+        }
     </style>
 
 <body>
     <div class="motor-all">
         <div class="motor-bread"><a href="#">產品介紹 / MODERN CLASSIS</a></div>
         <div class="container">
-            <div class="container-product-pic">
-                <!-- 產品圖 -->
-                <img src="../Motor-intro/img/Product-first.svg" id="product" alt="Product-first">
-                <!-- 產品圖-背景 -->
-                <img src="../Motor-intro/img/product-bg.png" id="product-bg" alt="product-bg">
-                <div class="background"></div>
+            <div class="videoPro">
+
+
+                <!-- 影片 -->
+                <div class="video-bg">
+                    <video class="video-container" autoplay muted loop>
+                        <source
+                            src="https://shu-yuan-liu.github.io/CHD104-v1/Home/img/pexels_videos_2297636%20(2160p).mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- 產品 -->
+                <div class="product-container">
+                    <img src="img/Product-first.svg" alt="">
+                </div>
+
             </div>
             <div class="title">
                 <!-- 主標題 -->
