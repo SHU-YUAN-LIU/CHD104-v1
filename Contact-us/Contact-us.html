@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactUs</title>
+    <title>Contact-us</title>
 
 
 </head>
@@ -17,10 +17,10 @@
         });
 
     // 引入Contact-us-Banner
-    fetch('./ContactUs-Banner.html')
+    fetch('./Contact-us-Banner.html')
         .then(response => response.text())
         .then(html => {
-            document.getElementById('ContactUs-Banner').innerHTML = html;
+            document.getElementById('Contact-us-Banner').innerHTML = html;
         });
 
     // 引入contact-us-content
@@ -41,7 +41,7 @@
 <body>
 
     <div id="header"></div>
-    <div id="ContactUs-Banner"></div>
+    <div id="Contact-us-Banner"></div>
     <div id="contact-us-content"></div>
     <div id="footer"></div>
 
