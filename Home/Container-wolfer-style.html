@@ -255,33 +255,36 @@
             justify-content: space-between;
         }
 
-        .btn-more {
-            width: 200px;
-            padding: 20px 20px;
+
+
+        .btn-more a {
+            width: 80px;
+            padding: 15px 20px;
             border: 1px solid white;
             background-color: rgba(255, 255, 255, 0.2);
             color: white;
             border-radius: 3px;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
             letter-spacing: 2px;
             text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        .btn-more:hover {
+        .btn-more a:hover {
+            width: 80px;
+            padding: 15px 20px;
+            border: 1px solid #FF6B00;
             background-color: #FF6B00;
-            border: none;
-            width: 200px;
-            padding: 20px 20px;
-            border: transparent;
             color: rgb(0, 0, 0);
             border-radius: 3px;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
             letter-spacing: 2px;
-
         }
 
         /* 新聞卡片區 */
@@ -329,7 +332,7 @@
             width: 410px;
         }
 
-        card.img {
+        .card.img {
             object-fit: cover;
         }
 
@@ -379,7 +382,7 @@
         <div class="carousel-title">
             <div class="carousel-title2">
                 <strong>LET'S WOLFER</strong>
-                <div class="btn-more">了解更多</div>
+                <div class="btn-more"><a href="">了解更多</a></div>
             </div>
             <div class="rightleft">
                 <div class="home-Carousel"><img src="img/Carousel-arrowleft.svg" alt="let's wolfer"></div>
