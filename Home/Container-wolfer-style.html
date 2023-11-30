@@ -85,7 +85,7 @@
             height: 0;
             border-right: 654.32px solid transparent;
             /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(65, 74, 85, 0.6);
+            border-bottom: 200px solid rgba(65, 74, 85, 0.8);
             /* 底邊框實心，顏色可以根據需求修改 */
             filter: brightness(0.3);
             /* 色彩增值效果 */
@@ -96,9 +96,7 @@
         /* --------英倫復古風(文字)-------- */
         .container-item:nth-child(1)::after {
             content: "英倫復古風 \A MODERN CLASSICS";
-            /* 用/A換行 */
             white-space: pre;
-            /* 保留换行符 */
             position: absolute;
             list-style: none;
             color: #ffffff;
@@ -113,22 +111,19 @@
             left: 5%;
         }
 
-        /* --------第一排兩個(三角形HOVER)-------- */
-        .container-item:hover::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-right: 654.32px solid transparent;
-            /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
-            /* 底邊框實心，顏色可以根據需求修改 */
-            filter: brightness(0.4);
-            /* 色彩增值效果 */
-            bottom: 0;
-            left: 0;
-            transition: .5s ease-in-out;
+        .container-item,
+        .container-item-2 {
+            overflow: hidden;
         }
+
+        .container-item img:hover,
+        .container-item-2 img:hover {
+            transform: scale(1.2);
+            transition: .5s ease-in-out;
+
+        }
+
+
 
         /* --------都會城市風-------- */
         .container-item:nth-child(2)::after {
@@ -179,29 +174,12 @@
             height: 0;
             border-right: 654.32px solid transparent;
             /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(65, 74, 85, 0.6);
+            border-bottom: 200px solid rgba(56, 62, 69, 0.8);
             /* 底邊框實心，顏色可以根據需求修改 */
             filter: brightness(0.3);
             /* 色彩增值效果 */
             bottom: 0;
             left: 0;
-        }
-
-        /* --------第二排兩個(三角形HOVER)-------- */
-        .container-item-2:hover::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-right: 654.32px solid transparent;
-            /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
-            /* 底邊框實心，顏色可以根據需求修改 */
-            filter: brightness(0.4);
-            /* 色彩增值效果 */
-            bottom: 0;
-            left: 0;
-            transition: .5s ease-in-out;
         }
 
         /* --------經典老靈魂-------- */
@@ -224,31 +202,6 @@
             left: 5%;
         }
 
-        /* --------上面的三角形-------- */
-        .container-item-2:hover::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-right: 654.32px solid transparent;
-            /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(255, 107, 0, 0.8);
-            /* 底邊框實心，顏色可以根據需求修改 */
-            filter: brightness(0.4);
-            /* 色彩增值效果 */
-            bottom: 0;
-            left: 0;
-            transition: .5s ease-in-out;
-        }
-
-        .container-item {
-            overflow: hidden;
-        }
-
-        .container-item img:hover {
-            transform: scale(1.2);
-
-        }
 
         /* 輪播區 */
 

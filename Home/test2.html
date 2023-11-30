@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --------英倫復古風(三角形)-------- */
+        .container-item::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(65, 74, 85, 0.6);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.3);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+
+
+            content: "英倫復古風 \A MODERN CLASSICS";
+            /* 用/A換行 */
+            white-space: pre;
+            /* 保留换行符 */
+            position: absolute;
+            list-style: none;
+            color: #ffffff;
+            letter-spacing: 3px;
+            line-height: 130%;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            width: 0;
+            height: 0;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-picture">
+        <div class="container-pic">
+            <a href="" class="container-item">
+                <img src="../Home/img/modern-classics.svg" alt="modern-classics">
+            </a>
+            <a href="#" class="container-item">
+                <img src="../Home/img/urbanity-style.svg" alt="urbanity-style">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
