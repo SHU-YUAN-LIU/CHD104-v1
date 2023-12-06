@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="reset.css">
 
     <style>
-        /* img {
-            width: 100%;
-            vertical-align: middle;
-        } */
-
-        body {
+        /* body {
             background: linear-gradient(to top, #000000 100%, rgba(23, 23, 23, 0.8), #000000), linear-gradient(to right, #000000, rgba(20, 20, 20, 0.7), #000000);
 
+        } */
+        body {
+            width: 100%;
+            background:
+                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 40%)no-repeat,
+                linear-gradient(to right, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
+                linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
+                url(/img/batthern.png),
+                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
+                linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
+            color: white;
         }
 
         .different-style {
