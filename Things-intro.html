@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things-intro</title>
+
+
+</head>
+<script>
+    // 引入header
+    fetch('Header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    // 引入Things-intro-content
+    fetch('./Things-intro/Things-intro-content.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Things-intro-content').innerHTML = html;
+        });
+
+    // 引入Things-intro-content-2
+    fetch('./Things-intro/Things-intro-content-2.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('Things-intro-content-2').innerHTML = html;
+        });
+
+    // 引入footer
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
+
+<body>
+
+    <div id="header"></div>
+    <div id="Things-intro-content"></div>
+    <div id="Things-intro-content-2"></div>
+    <div id="footer"></div>
+
+
+
+
+</body>
+
+</html>
