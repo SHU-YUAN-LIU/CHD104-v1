@@ -26,10 +26,10 @@
         });
 
     // 引入Container
-    fetch('./Container.html')
+    fetch('./AboutUs-Container.html')
         .then(response => response.text())
         .then(html => {
-            document.getElementById('Container').innerHTML = html;
+            document.getElementById('AboutUs-Container').innerHTML = html;
         });
     // 引入footer
     fetch('./Footer.html')
@@ -43,7 +43,7 @@
 
     <div id="header"></div>
     <div id="AboutUs-Banner"></div>
-    <div id="Container"></div>
+    <div id="AboutUs-Container"></div>
     <div id="footer"></div>
 
 
