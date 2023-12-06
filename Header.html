@@ -7,11 +7,6 @@
     <title>Header</title>
     <link rel="stylesheet" href="reset.css">
     <style>
-        .nav img {
-            position: absolute;
-            left: 60px;
-        }
-
         .header {
             background-color: black;
             border-bottom: 3px solid #a73917;
@@ -20,26 +15,21 @@
             z-index: 5;
             height: 80px;
             width: 100%;
-            /* max-width: 1920px; */
-            /* position: relative; */
             position: fixed;
         }
 
         .nav {
             display: flex;
-            justify-content: space-between;
         }
 
         .navbar-group {
-            width: 100%;
+            width: 1200px;
             display: flex;
-            justify-content: space-between;
         }
 
         .navbar {
             align-items: center;
             display: flex;
-            justify-content: space-between;
         }
 
         .navbar {
@@ -47,47 +37,33 @@
         }
 
         .navbar ul {
-            list-style: none;
             display: flex;
-            flex: flex-end;
-            justify-content: space-between;
         }
 
         .navbar ul:last-child {
-            align-content: center;
-            margin-left: 80px;
+            margin-left: 70px;
         }
 
         .navbar ul .reserve {
-            width: 80px;
             border: 1px solid white;
             border-radius: 3px;
-            width: 80px;
+            width: 70px;
             text-align: center;
             letter-spacing: 1px;
         }
 
         .navbar ul .reserve:hover {
-            align-content: center;
             background-color: #FF6B00;
-            border-radius: 3px;
-            color: black;
             border: 1px solid #FF6B00;
         }
 
-        .navbar ul li:last-child {
-            margin-right: auto;
-        }
-
         .header-item {
-            transition: 0.3s;
             width: 80px;
             text-align: center;
             letter-spacing: 1px;
         }
 
         .navbar a {
-            display: inline-block;
             font-size: 16px;
             text-decoration: none;
             color: white;
@@ -96,7 +72,7 @@
 
         .navbar a:hover {
             box-shadow: 0 3px 0 #FF6B00;
-            transition: .5s ease-in-out;
+            transition: .3s ease-in-out;
         }
     </style>
 
@@ -105,11 +81,9 @@
 <body>
     <div class="header">
         <div class="nav">
-            <!-- logo -->
-
-            <a href=""><img src="img/logo.svg" alt="logo"></a>
-
             <div class="navbar-group">
+                <!-- logo -->
+                <a href=""><img src="img/logo.svg" alt="logo"></a>
                 <div class="navbar">
                     <ul>
                         <!-- 導覽列-中 -->
@@ -134,7 +108,7 @@
         </div>
     </div>
     <div class="header-hamburger">
-        <span></span>n
+        <span></span>
     </div>
 </body>
 
