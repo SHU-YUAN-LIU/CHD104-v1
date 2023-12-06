@@ -19,7 +19,7 @@
         });
 
     // 引入AboutUs-Banner
-    fetch('/AboutUs/AboutUs-Banner.html')
+    fetch('./AboutUs/AboutUs-Banner.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('AboutUs-Banner').innerHTML = html;
