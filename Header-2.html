@@ -10,10 +10,7 @@
         .nav {
             display: flex;
             justify-content: center;
-            width: 100%;
-        }
-
-        ul {
+            position: relative;
             width: 100%;
             height: 80px;
             background-color: rgb(0, 0, 0);
@@ -36,9 +33,9 @@
             border: 1px solid blue;
         }
 
-        .header-pic {
+        .nav img {
             position: absolute;
-            width: 8%;
+            left: 66px;
         }
     </style>
 </head>
@@ -47,9 +44,9 @@
     <div class="header">
         <div class="nav">
             <!-- logo -->
-            <div class="header-pic">
-                <img src="img/logo.svg" alt="logo">
-            </div>
+            <!-- <div class="nav-pic"> -->
+            <a href="#"><img src="img/logo.svg" alt="logo"></a>
+            <!-- </div> -->
             <div class="navbar-group">
                 <div class="navbar">
                     <ul>
@@ -65,8 +62,8 @@
                                 class="header-item">最新消息</a></li>
                         <li><a href="https://shu-yuan-liu.github.io/CHD104-v1/Contact-us/Contact-us.html"
                                 class="header-item">聯絡我們</a></li>
-
-
+                    </ul>
+                    <ul>
                         <!-- 導覽列-右-->
                         <li><a href="https://shu-yuan-liu.github.io/CHD104-v1/Reserve/Reserve.html"
                                 class="reserve">預約試乘</a></li>
