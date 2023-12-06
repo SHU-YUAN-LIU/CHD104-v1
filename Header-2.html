@@ -7,13 +7,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <style>
-        .nav {
-            display: flex;
-            justify-content: center;
-            position: relative;
+        .header {
             width: 100%;
-            height: 80px;
+            display: flex;
+
+            position: relative;
             background-color: rgb(0, 0, 0);
+        }
+
+        .nav {
+            margin: auto;
+
+
+        }
+
+        .navbar-group {
+            width: 1200px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
         }
 
         .navbar {
@@ -23,7 +35,7 @@
 
         .navbar ul {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
         }
 
         .navbar ul a {
@@ -44,9 +56,9 @@
     <div class="header">
         <div class="nav">
             <!-- logo -->
-            <!-- <div class="nav-pic"> -->
+
             <a href="#"><img src="img/logo.svg" alt="logo"></a>
-            <!-- </div> -->
+
             <div class="navbar-group">
                 <div class="navbar">
                     <ul>
