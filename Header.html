@@ -7,14 +7,9 @@
     <title>Header</title>
     <link rel="stylesheet" href="reset.css">
     <style>
-        img {
-            width: 100%;
-            vertical-align: middle;
-        }
-
-        .header-pic {
+        .nav img {
             position: absolute;
-            left: 50px;
+            left: 60px;
         }
 
         .header {
@@ -22,7 +17,6 @@
             border-bottom: 3px solid #a73917;
             justify-content: center;
             display: flex;
-
             z-index: 5;
             height: 80px;
             width: 100%;
@@ -32,7 +26,6 @@
         }
 
         .nav {
-            width: 1200px;
             display: flex;
             justify-content: space-between;
         }
@@ -47,7 +40,6 @@
             align-items: center;
             display: flex;
             justify-content: space-between;
-
         }
 
         .navbar {
@@ -81,7 +73,6 @@
             border-radius: 3px;
             color: black;
             border: 1px solid #FF6B00;
-
         }
 
         .navbar ul li:last-child {
@@ -100,12 +91,12 @@
             font-size: 16px;
             text-decoration: none;
             color: white;
-            padding: 15px;
+            padding: 12px;
         }
 
         .navbar a:hover {
             box-shadow: 0 3px 0 #FF6B00;
-            /* border-bottom: 3px solid #FF6B00; */
+            transition: .5s ease-in-out;
         }
     </style>
 
@@ -115,9 +106,9 @@
     <div class="header">
         <div class="nav">
             <!-- logo -->
-            <div class="header-pic">
-                <img src="img/logo.svg" alt="logo">
-            </div>
+
+            <a href=""><img src="img/logo.svg" alt="logo"></a>
+
             <div class="navbar-group">
                 <div class="navbar">
                     <ul>
@@ -141,6 +132,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="header-hamburger">
+        <span></span>n
     </div>
 </body>
 
