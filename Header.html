@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>ham</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +120,26 @@
             background-color: #fff;
             margin: 6px 0;
         }
+
+        .ham-pull-menu {
+            background-color: black;
+            width: 100%;
+
+        }
+
+        .ham-pull-menu ul {
+            margin: auto;
+        }
+
+        .ham-pull-menu a {
+            text-decoration: none;
+            color: white;
+            padding: 17px;
+            display: inline-block;
+            border: 1px solid blue;
+
+
+        }
     </style>
 
 </head>
@@ -150,11 +170,25 @@
         </div>
 
     </div>
+
+
     <!-- 漢堡 -->
     <div id="hamburgerMenu" onclick="hamburger()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
+    </div>
+    <div class="ham-pull-menu">
+        <ul>
+            <li><a href="index.html" class="ham-item">首頁</a></li>
+            <li><a href="AboutUs.html" class="ham-item">關於我們</a></li>
+            <li><a href="Motor.html" class="ham-item">產品介紹</a></li>
+            <li><a href="Things.html" class="ham-item">車輛配件</a></li>
+            <li><a href="News.html" class="ham-item">最新消息</a></li>
+            <li><a href="Contact-us.html" class="ham-item">聯絡我們</a></li>
+            <li><a href="Reserve.html" class="ham-item">預約試乘</a></li>
+            <li><a href="Login.html" class="ham-item">登入</a></li>
+        </ul>
     </div>
 
     <script>
