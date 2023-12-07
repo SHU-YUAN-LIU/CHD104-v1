@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="reset.css">
 
     <style>
-        body {
+        /* img {
             width: 100%;
-            background:
-                linear-gradient(to bottom, rgb(0, 0, 0, 1)20%, transparent 50%)no-repeat,
-                linear-gradient(to top, rgb(0, 0, 0, 1)20%, transparent 50%)no-repeat,
-                linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.95))no-repeat,
-                linear-gradient(to left, transparent 60%, rgba(0, 0, 0, 0.95))no-repeat,
-                url(img/batthern.png),
-                linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(43, 43, 43, 0.9), rgb(0, 0, 0, 1))no-repeat;
-            color: white;
+            vertical-align: middle;
+        } */
+
+        body {
+            background: linear-gradient(to top, #000000 100%, rgba(23, 23, 23, 0.8), #000000), linear-gradient(to right, #000000, rgba(20, 20, 20, 0.7), #000000);
+
         }
 
         .different-style {
@@ -57,30 +55,26 @@
             background-color: #FF6800;
         }
 
-        .container-picture {
+        .container-picture,
+        .container-picture-2 {
             display: flex;
             justify-content: center;
         }
 
-        .container-pic {
-            /* width: 78%; */
+        .container-pic,
+        .container-pic-2 {
+            width: 1500px;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-
         }
 
-        .container-item {
+        .container-item,
+        .container-item-2 {
             width: 655px;
             height: 450;
             margin: 15px;
-            box-shadow: 5px 5px 60px rgba(16, 16, 16, 0.95);
+            box-shadow: 5px 5px 60px rgba(16, 16, 16, 0.5);
             position: relative;
-        }
-
-        .container-item img {
-            width: 100%;
-            vertical-align: middle;
         }
 
         /* --------英倫復古風(三角形)-------- */
@@ -117,7 +111,21 @@
             left: 5%;
         }
 
-        /* --------都會城市風(文字)-------- */
+        .container-item,
+        .container-item-2 {
+            overflow: hidden;
+        }
+
+        .container-item img:hover,
+        .container-item-2 img:hover {
+            transform: scale(1.2);
+            transition: .5s ease-in-out;
+
+        }
+
+
+
+        /* --------都會城市風-------- */
         .container-item:nth-child(2)::after {
             content: "都會城市風 \A urbanity style";
             /* 用/A換行 */
@@ -137,8 +145,9 @@
             left: 5%;
         }
 
+
         /* --------街頭潮流(文字)-------- */
-        .container-item:nth-child(3)::after {
+        .container-item-2:nth-child(1)::after {
             content: "街頭潮流 \A street style";
             /* 用/A換行 */
             white-space: pre;
@@ -157,8 +166,24 @@
             left: 5%;
         }
 
-        /* --------經典老靈魂(文字)-------- */
-        .container-item:nth-child(4)::after {
+        /* --------街頭潮流(三角形)-------- */
+        .container-item-2::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 654.32px solid transparent;
+            /* 左邊框透明，形成斜邊 */
+            border-bottom: 200px solid rgba(56, 62, 69, 0.8);
+            /* 底邊框實心，顏色可以根據需求修改 */
+            filter: brightness(0.3);
+            /* 色彩增值效果 */
+            bottom: 0;
+            left: 0;
+        }
+
+        /* --------經典老靈魂-------- */
+        .container-item-2:nth-child(2)::after {
             content: "經典老靈魂 \A old school";
             /* 用/A換行 */
             white-space: pre;
@@ -177,51 +202,60 @@
             left: 5%;
         }
 
-        .container-item {
-            overflow: hidden;
-        }
-
-        .container-item img:hover {
-            transform: scale(1.2);
-            transition: .5s ease-in-out;
-
-        }
-
 
         /* 輪播區 */
-        .carousel-pic {
+
+        .con-carousel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             position: relative;
-            margin: 60px 0px;
+            margin-top: 200px;
+            margin-bottom: 100px;
         }
 
-        .carousel-container {
+        .carousel-pic {
             width: 100%;
-            margin: auto;
-            overflow: hidden;
-
-        }
-
-        .carousel-slide {
-            display: block;
-            /* 之後加入自動撥放疑似要用none */
-        }
-
-        .carousel-slide img {
-            width: 100%;
+            height: 850px;
+            position: relative;
             display: flex;
             justify-content: center;
             text-shadow: 0px 0px 50px rgba(30, 30, 30, 0.8);
+
         }
 
-        .carousel-title {
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(-50%, -50%);
+        .carousel-title2 {
+            width: 500px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
+        .carousel-title2 strong {
+            font-size: 58px;
+            letter-spacing: 6px;
+            font-weight: 800;
+            text-shadow: 0px 0px 40px rgba(45, 45, 45, 0.7);
+        }
+
+        .carousel-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+        }
+
+
+        .rightleft {
+            width: 1700px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
 
         .btn-more a {
             width: 80px;
@@ -238,7 +272,6 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 10px;
-            text-align: center;
         }
 
         .btn-more a:hover {
@@ -260,17 +293,10 @@
             justify-content: space-evenly;
         }
 
-        @media screen and (max-width: 1400px) {
-            .card-group {
-                flex-wrap: wrap;
-            }
-        }
-
         .card-group {
-            width: 1200px;
+            width: 1366px;
             display: flex;
             justify-content: space-evenly;
-            margin-bottom: 100px;
         }
 
         a {
@@ -287,13 +313,13 @@
             margin-top: 15px;
         }
 
-        .card p {
+        p {
             color: white;
             font-family: 'Noto Sans TC', sans-serif;
             font-size: 16px;
             letter-spacing: 3px;
             line-height: 1.4;
-            font-weight: 100;
+            font-weight: 300;
             padding: 20px 0px;
         }
 
@@ -302,9 +328,11 @@
             margin: 20px;
             background-color: #2B2525;
             box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+
+            width: 410px;
         }
 
-        .card img {
+        .card.img {
             object-fit: cover;
         }
 
@@ -324,38 +352,44 @@
         <!-- 四種風格 -->
         <div class="container-picture">
             <div class="container-pic">
-                <a href="Motor.html" class="container-item">
+                <a href="../Motor-intro/Motor-intro.html" class="container-item">
                     <img src="img/modern-classics.svg" alt="modern-classics">
                 </a>
-                <a href="Motor.html" class="container-item">
+                <a href="../Motor-intro/Motor-intro.html" class="container-item">
                     <img src="img/urbanity-style.svg" alt="urbanity-style">
                 </a>
-                <a href="Motor.html" class="container-item">
-                    <img src="img/street-style.png" alt="street-style">
-                </a>
-                <a href="Motor.html" class="container-item">
-                    <img src="img/old-school.svg" alt="old-school">
-                </a>
+            </div>
+        </div>
+
+        <div class="container-picture-2">
+            <div class="container-pic-2">
+                <a href="../Motor-intro/Motor-intro.html" class="container-item-2">
+                    <img src="img/street-style.png" alt="street-style"></a>
+                <a href="../Motor-intro/Motor-intro.html" class="container-item-2">
+                    <img src="img/old-school.svg" alt="old-school"></a>
             </div>
         </div>
     </div>
     <!-- 輪播區 -->
 
-    <div class="carousel-pic">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/carousel-1.jpg" alt="Image 1">
+    <div class="con-carousel">
+        <div class="carousel-pic">
+            <div>
+                <img src="img/carousel.png" alt="let's wolfer">
             </div>
-            <!-- 輪播區標題 -->
-            <!-- <div class="carousel-title">
+        </div>
+        <!-- 輪播區標題 -->
+        <div class="carousel-title">
+            <div class="carousel-title2">
                 <strong>LET'S WOLFER</strong>
                 <div class="btn-more"><a href="">了解更多</a></div>
-            </div> -->
+            </div>
+            <div class="rightleft">
+                <div class="home-Carousel"><img src="img/Carousel-arrowleft.svg" alt="let's wolfer"></div>
+                <div class="home-Carousel"><img src="img/Carousel-arrowright.svg" alt="let's wolfer"></div>
+            </div>
         </div>
-
     </div>
-
-    <!-- </div> -->
     <!-- 新聞區標題 -->
     <div class="container-title">
         <strong>WOLFER NEWS</strong>
@@ -385,6 +419,7 @@
             </div>
         </a>
     </div>
+
 </body>
 
 </html>

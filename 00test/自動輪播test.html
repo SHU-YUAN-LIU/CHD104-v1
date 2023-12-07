@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>自動輪播示例</title>
+    <style>
+        .carousel-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: none;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="carousel-1.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="carousel-2.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="carousel-3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to elements
+            const slides = document.querySelectorAll(".carousel-slide");
+
+            // Set initial slide index
+            let currentSlideIndex = 0;
+
+            // Function to show the current slide
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.display = "none";
+                });
+
+                // Display the current slide
+                slides[index].style.display = "block";
+            }
+
+            // Function to move to the next slide
+            function nextSlide() {
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                showSlide(currentSlideIndex);
+            }
+
+            // Automatically advance to the next slide every 3 seconds (adjust as needed)
+            setInterval(nextSlide, 3000);
+
+            // Show the initial slide
+            showSlide(currentSlideIndex);
+        });
+    </script>
+</body>
+
+</html>

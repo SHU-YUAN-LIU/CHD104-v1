@@ -31,12 +31,12 @@
         }
 
         .product-container img {
-            width: 1100px;
+            width: 950px;
         }
 
 
         .title {
-            width: 55%;
+            width: 1000px;
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -44,17 +44,14 @@
             top: 170px;
             left: 50%;
             transform: translateX(-50%);
-
-
         }
+
+
 
         .container-product-pic .img:nth-child(1) {
             z-index: 1;
         }
 
-        .icon {
-            height: 30%;
-        }
 
         .icon .pic {
             margin: 10px;
@@ -73,14 +70,16 @@
             letter-spacing: 5px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 600;
-            font-size: 55px;
+            font-size: 60px;
             text-shadow: 0px 0px 90px 50px black;
         }
 
         .btn-all {
-            width: 980px;
+            width: 1000px;
             position: absolute;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 780px;
             display: flex;
             z-index: 4;
             align-items: center;
@@ -90,9 +89,26 @@
             font-size: 16px;
             font-weight: 100;
             letter-spacing: 3px;
-            left: 50%;
-            top: 780px;
         }
+
+        @media screen and (max-width: 1400px) {
+
+            .title {
+                width: 800px;
+            }
+
+            .btn-all {
+                width: 800px;
+            }
+
+            .product-container img {
+                width: 900px;
+            }
+        }
+
+
+
+
 
         .btn {
             display: flex;
@@ -132,7 +148,7 @@
         }
 
         .home-btn-more {
-            padding: 15px 20px;
+            padding: 12px 20px;
             border: 1px solid white;
             border-radius: 3px;
             font-family: 'Noto Sans TC', sans-serif;
@@ -188,6 +204,56 @@
             left: 0;
             z-index: 2;
         }
+
+        @media screen and (max-width: 768px) {
+
+            .title {
+                width: 600px;
+            }
+
+            .btn-all {
+                width: 600px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .product-container img {
+                width: 680px;
+            }
+
+            .home-btn-more {
+                width: 600px;
+                box-sizing: border-box;
+            }
+
+            .btn {
+                width: 600px;
+            }
+
+            .btn-words {
+                font-weight: 200;
+                font-size: 15px;
+            }
+
+            .words span {
+                text-wrap: nowrap;
+            }
+
+            .pic img {
+                /* width: 35px; */
+                display: none;
+            }
+
+            .btn-red,
+            .btn-gray,
+            .btn-orange {
+                width: 35px;
+                height: 35px;
+                margin: 0px 0px;
+                margin-right: 15px
+            }
+        }
     </style>
 
 </head>
@@ -230,23 +296,25 @@
                 </a>
             </div>
         </div>
-        <!-- 產品下半部 -->
-        <div class="btn-all">
 
-            <div class="btn">
-                <a href="#">
-                    <div class="btn-red"></div>
-                </a>
-                <a href="#">
-                    <div class="btn-gray"></div>
-                </a>
-                <a href="#">
-                    <div class="btn-orange"></div>
-                </a>
-                <div class="btn-words">全新經典指標，重新詮釋何謂傑出的當代經典</div>
-            </div>
-            <div class="home-btn-more"> <a
-                    href="https://shu-yuan-liu.github.io/CHD104-v1/Motor-intro/Motor-intro.html">了解更多</a></div>
+    </div>
+    <!-- 產品下半部 -->
+    <div class="btn-all">
+
+        <div class="btn">
+            <a href="#">
+                <div class="btn-red"></div>
+            </a>
+            <a href="#">
+                <div class="btn-gray"></div>
+            </a>
+            <a href="#">
+                <div class="btn-orange"></div>
+            </a>
+            <div class="btn-words">全新經典指標，重新詮釋何謂傑出的當代經典</div>
+        </div>
+        <div class="home-btn-more">
+            <a href="Motor-intro.html">了解更多</a>
         </div>
     </div>
 </body>
