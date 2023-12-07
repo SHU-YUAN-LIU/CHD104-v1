@@ -13,18 +13,21 @@
             object-fit: cover;
             z-index: 1;
             position: relative;
-            top: 0;
-            left: 0;
+        }
+
+        .video-bg {
+            width: 100%;
+            position: relative;
         }
 
         /* 產品 */
         .product-container {
             position: absolute;
             z-index: 3;
-            text-align: center;
             color: #fff;
-            top: 20px;
-            left: 450px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .product-container img {
@@ -33,16 +36,13 @@
 
 
         .title {
-            width: 1000px;
+            width: 55%;
             display: flex;
             justify-content: space-between;
-            margin: 70px;
             position: absolute;
             z-index: 2;
-            top: 80px;
-            /* 元素的頂部與父層的頂部對齊 */
-            left: 900px;
-            /* 水平置中:使用 left: 50% 和 transform: translateX(-50%) 的組合 */
+            top: 170px;
+            left: 50%;
             transform: translateX(-50%);
 
 
@@ -61,7 +61,6 @@
         }
 
         .words p {
-            justify-content: flex-start;
             color: rgb(255, 255, 255);
             letter-spacing: 2px;
             font-family: 'Noto Sans TC', sans-serif;
@@ -70,9 +69,8 @@
         }
 
         .words span {
-            justify-content: flex-start;
             color: rgb(255, 255, 255);
-            letter-spacing: 2px;
+            letter-spacing: 5px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 600;
             font-size: 55px;
@@ -82,10 +80,6 @@
         .btn-all {
             width: 980px;
             position: absolute;
-            top: 720px;
-            /* 元素的頂部與父層的頂部對齊 */
-            left: 50%;
-            /* 水平置中:使用 left: 50% 和 transform: translateX(-50%) 的組合 */
             transform: translateX(-50%);
             display: flex;
             z-index: 4;
@@ -96,7 +90,8 @@
             font-size: 16px;
             font-weight: 100;
             letter-spacing: 3px;
-            top: 710px;
+            left: 50%;
+            top: 780px;
         }
 
         .btn {
@@ -201,20 +196,18 @@
 
     <div class="container">
         <div class="videoPro">
-
-
             <!-- 影片 -->
             <div class="video-bg">
                 <video class="video-container" autoplay muted loop>
                     <source src="img/pexels_videos_2297636 (2160p).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
+                <!-- 產品 -->
+                <div class="product-container">
+                    <img src="img/bobber-orange.png" alt="">
+                </div>
             </div>
 
-            <!-- 產品 -->
-            <div class="product-container">
-                <img src="img/bobber-orange.png" alt="">
-            </div>
+
 
         </div>
         <div class="title">
