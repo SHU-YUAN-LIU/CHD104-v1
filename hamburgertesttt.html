@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-header {
+            background-color: #aaa;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .logo img {
+            display: block;
+        }
+        #menu-switch {
+            display: none;
+        }
+        .hb {
+            width: 40px;
+            height: 40px;
+            background-color: #f00;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hb span {
+            width: 80%;
+            height: 2px;
+            margin: 3px auto;
+            background-color: #fff;
+        }
+        @media (width >= 768px) {
+            .hb {
+                display: none;
+            }
+        }
+        .main-nav {
+            display: none;
+            width: 100%;
+            background-color: #fa0;
+        }
+        #menu-switch:checked ~ .main-header .main-nav {
+            display: block;
+        }
+        @media (width >= 768px) {
+            .main-nav {
+                width: auto;
+                display: block;
+                background-color: transparent;
+            }
+        }
+        
+        .main-nav a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        @media (width >= 768px) {
+            .main-nav a {
+                display: inline-block;
+            }
+        }
+        .main-nav a + a {
+            border-top: 1px solid #fff;
+        }
+        @media (width >= 768px) {
+            .main-nav a + a {
+                border-top: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <div class="main-header">
+        <!-- -------------------------------- -->
+        <div class="logo">
+            <a href="#">
+                <img src="https://fakeimg.pl/80x40/200">
+            </a>
+        </div>
+        <!-- -------------------------------- -->
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- -------------------------------- -->
+        <nav class="main-nav">
+            <a href="javascript:;">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+        <!-- -------------------------------- -->
+    </div>
+
+
+    
+</body>
+</html>

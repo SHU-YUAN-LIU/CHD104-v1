@@ -41,6 +41,7 @@
             .nav {
                 width: 90.5%;
             }
+
         }
 
 
@@ -112,33 +113,49 @@
             .navbar {
                 display: none;
             }
+
+            .header {
+                height: 80px;
+            }
+
+
         }
 
         .bar {
             width: 30px;
             height: 3px;
             background-color: #fff;
-            margin: 6px 0;
+            margin: 6px auto;
         }
 
         .ham-pull-menu {
-            background-color: black;
-            width: 100%;
-
+            background-color: rgba(0, 0, 0, 0.95);
+            text-align: center;
+            display: block;
         }
 
-        .ham-pull-menu ul {
-            margin: auto;
+        .block {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .ham-pull-menu a {
             text-decoration: none;
             color: white;
             padding: 17px;
-            display: inline-block;
-            border: 1px solid blue;
+            display: block;
+            letter-spacing: 2px;
+        }
 
+        .ham-pull-menu a:hover {
+            background-color: #FF6B00;
+        }
 
+        .ham-pull-menu li+li {
+            border-top: 1px solid #fff;
         }
     </style>
 
@@ -178,7 +195,8 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
-    <div class="ham-pull-menu">
+
+    <div class="ham-pull-menu" id="hamPullMenu">
         <ul>
             <li><a href="index.html" class="ham-item">首頁</a></li>
             <li><a href="AboutUs.html" class="ham-item">關於我們</a></li>
@@ -191,18 +209,21 @@
         </ul>
     </div>
 
+
     <script>
         window.addEventListener("load", function () {
             //------btnHam漢堡按鈕被點按時
             document.getElementById("hamburgerMenu").onclick = function () {
                 //取得選單的參考
-                let nav = document.getElementById("hamburgerMenu");
+                let hamPullMenu = document.getElementById("hamPullMenu");
                 //---------------------------方法一, 檢測是否有hidden類, 再決定是要加入或移除
-                if (hamburgerMenu.classList.contains("hidden")) {
-                    hamburgerMenu.classList.remove("hidden");
-                    alert("123456");
+
+                if (hamPullMenu.classList.contains("hidden")) {
+                    hamPullMenu.classList.remove("hidden");
+                    hamPullMenu.classList.add("block");
                 } else {
-                    hamburgerMenu.classList.add("hidden");
+                    hamPullMenu.classList.add("hidden");
+                    hamPullMenu.classList.remove("block");
                 }
             };
         });
