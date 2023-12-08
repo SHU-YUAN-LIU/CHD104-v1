@@ -58,22 +58,11 @@
         }
 
         .container-picture {
-            display: flex;
-            justify-content: center;
-        }
-
-        .container-pic {
-            /* width: 78%; */
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
+            width: 1000px;
+            margin: auto;
         }
 
         .container-item {
-            width: 655px;
-            height: 450;
-            margin: 15px;
             box-shadow: 5px 5px 60px rgba(16, 16, 16, 0.95);
             position: relative;
         }
@@ -81,21 +70,36 @@
         .container-item img {
             width: 100%;
             vertical-align: middle;
+            object-fit: cover;
+        }
+
+        .container-pic {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 450px);
+            gap: 20px;
+        }
+
+        @media screen and (max-width:768px) {
+            .container-pic {
+                grid-template-columns: repeat(1, 450px);
+            }
+
+            .container-picture {
+                width: 100%;
+            }
         }
 
         /* --------英倫復古風(三角形)-------- */
         .container-item::before {
             content: "";
             position: absolute;
-            width: 0;
-            height: 0;
-            border-right: 654.32px solid transparent;
-            /* 左邊框透明，形成斜邊 */
-            border-bottom: 200px solid rgba(65, 74, 85, 0.8);
-            /* 底邊框實心，顏色可以根據需求修改 */
+            border-right: 450px solid transparent;
+            border-bottom: 150px solid rgba(65, 74, 85, 0.8);
             filter: brightness(0.3);
             /* 色彩增值效果 */
-            bottom: 0;
+            top: 11px;
+            /* 不知道為何 */
             left: 0;
         }
 
@@ -109,12 +113,12 @@
             letter-spacing: 3px;
             line-height: 130%;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 28px;
+            font-size: 23px;
             font-weight: 500;
             width: 0;
             height: 0;
-            bottom: 23%;
-            left: 5%;
+            top: 85px;
+            left: 25px;
         }
 
         /* --------都會城市風(文字)-------- */
@@ -129,12 +133,12 @@
             letter-spacing: 3px;
             line-height: 130%;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 28px;
+            font-size: 23px;
             font-weight: 500;
             width: 0;
             height: 0;
-            bottom: 23%;
-            left: 5%;
+            top: 85px;
+            left: 25px;
         }
 
         /* --------街頭潮流(文字)-------- */
@@ -149,12 +153,12 @@
             letter-spacing: 3px;
             line-height: 130%;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 28px;
+            font-size: 23px;
             font-weight: 500;
             width: 0;
             height: 0;
-            bottom: 23%;
-            left: 5%;
+            top: 85px;
+            left: 25px;
         }
 
         /* --------經典老靈魂(文字)-------- */
@@ -169,15 +173,15 @@
             letter-spacing: 3px;
             line-height: 130%;
             font-family: 'Noto Sans TC', sans-serif;
-            font-size: 28px;
+            font-size: 23px;
             font-weight: 500;
             width: 0;
             height: 0;
-            bottom: 23%;
-            left: 5%;
+            bottom: 85px;
+            left: 25px;
         }
 
-        .container-item {
+        .container-pic div {
             overflow: hidden;
         }
 
@@ -324,18 +328,26 @@
         <!-- 四種風格 -->
         <div class="container-picture">
             <div class="container-pic">
-                <a href="Motor.html" class="container-item">
-                    <img src="img/modern-classics.svg" alt="modern-classics">
-                </a>
-                <a href="Motor.html" class="container-item">
-                    <img src="img/urbanity-style.svg" alt="urbanity-style">
-                </a>
-                <a href="Motor.html" class="container-item">
-                    <img src="img/street-style.png" alt="street-style">
-                </a>
-                <a href="Motor.html" class="container-item">
-                    <img src="img/old-school.svg" alt="old-school">
-                </a>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/modern-classics.svg" alt="modern-classics">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/urbanity-style.svg" alt="urbanity-style">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/street-style.png" alt="street-style">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/old-school.svg" alt="old-school">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

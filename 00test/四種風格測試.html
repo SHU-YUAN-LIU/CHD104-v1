@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-picture {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .container-item img {
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+
+        .container-pic {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 450px);
+            gap: 20px;
+        }
+
+        @media screen and (max-width:768px) {
+            .container-pic {
+                grid-template-columns: repeat(1, 450px);
+            }
+
+            .container-picture {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="different-style">
+        <div class="container-picture">
+            <div class="container-pic">
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/modern-classics.svg" alt="modern-classics">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/urbanity-style.svg" alt="urbanity-style">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/street-style.png" alt="street-style">
+                    </a>
+                </div>
+                <div>
+                    <a href="Motor.html" class="container-item">
+                        <img src="../img/old-school.svg" alt="old-school">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
