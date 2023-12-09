@@ -80,17 +80,28 @@
             gap: 20px;
         }
 
+        .container-pic div {
+            overflow: hidden;
+        }
+
+        .container-item img:hover {
+            transform: scale(1.2);
+            transition: .5s ease-in-out;
+
+        }
+
         @media screen and (max-width:768px) {
             .container-pic {
-                grid-template-columns: repeat(1, 450px);
+                grid-template-columns: repeat(1, 350px);
             }
 
             .container-picture {
                 width: 100%;
             }
+
         }
 
-        /* --------英倫復古風(三角形)-------- */
+        /* --------(三角形)-------- */
         .container-item::before {
             content: "";
             position: absolute;
@@ -181,15 +192,7 @@
             left: 25px;
         }
 
-        .container-pic div {
-            overflow: hidden;
-        }
 
-        .container-item img:hover {
-            transform: scale(1.2);
-            transition: .5s ease-in-out;
-
-        }
 
 
         /* 輪播區 */
@@ -199,9 +202,11 @@
         }
 
         .carousel-container {
-            width: 100%;
+            height: 100%vh;
             margin: auto;
             overflow: hidden;
+
+            position: relative;
 
         }
 
@@ -359,10 +364,10 @@
                 <img src="img/carousel-1.jpg" alt="Image 1">
             </div>
             <!-- 輪播區標題 -->
-            <!-- <div class="carousel-title">
+            <div class="carousel-title">
                 <strong>LET'S WOLFER</strong>
                 <div class="btn-more"><a href="">了解更多</a></div>
-            </div> -->
+            </div>
         </div>
 
     </div>
