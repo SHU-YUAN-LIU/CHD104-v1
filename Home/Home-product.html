@@ -25,7 +25,7 @@
             position: absolute;
             z-index: 3;
             color: #fff;
-            top: 56%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -63,6 +63,7 @@
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 300;
             text-shadow: 0px 0px 80px black;
+            margin-bottom: 10px;
         }
 
         .words span {
@@ -79,7 +80,7 @@
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
-            top: 720px;
+            top: 780px;
             display: flex;
             z-index: 4;
             align-items: center;
@@ -248,10 +249,6 @@
                 text-wrap: wrap;
             }
 
-            .words span {
-                text-wrap: nowrap;
-            }
-
             .pic img {
                 /* width: 35px; */
                 display: none;
@@ -268,20 +265,26 @@
         }
 
         @media screen and (max-width: 576px) {
+            .video-container {
+                height: 680px;
+            }
 
             .title {
                 width: 300px;
+                top: 120px;
             }
 
             .btn-all {
-                width: 400px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
+                top: 580px;
+
             }
 
             .product-container img {
                 width: 380px;
+            }
+
+            .product-container {
+                top: 55%;
             }
 
             .home-btn-more {
@@ -305,7 +308,7 @@
             .btn-gray,
             .btn-orange {
                 width: 30px;
-                height: 30px;
+                height: 6px;
                 margin: 0px 0px;
                 margin-right: 15px
             }
@@ -336,8 +339,7 @@
             <!-- 主標題 -->
             <div class="words">
                 <p>全新經典指標</p>
-                <span>FCR<br></span>
-                <span>BOBBER</span>
+                <span>FCR<br>BOBBER</span>
             </div>
             <!-- icon -->
             <div class="icon">

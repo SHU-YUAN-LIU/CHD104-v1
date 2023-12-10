@@ -7,16 +7,22 @@
     <title>ham</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
         .body {
             font-family: 'Noto Sans TC', sans-serif;
             /* font-family: 'Roboto', sans-serif; */
 
         }
 
-        .header {
+        #header {
             background-color: black;
             border-bottom: 2px solid #a73917;
             justify-content: center;
@@ -149,7 +155,7 @@
                 display: none;
             }
 
-            .header {
+            #header {
                 height: 60px;
             }
 
@@ -157,15 +163,34 @@
                 width: 110px;
             }
         }
+
+        /* GO TO TOP */
+        .goToTop {
+            width: 55px;
+            height: 70px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            font-size: 16px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 7;
+            right: 30px;
+            bottom: 30px;
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="header">
+    <div id="header">
         <div class="nav">
             <!-- logo -->
-            <a href=""><img src="img/logo.svg" alt="logo"></a>
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
             <!-- 導覽列 -->
             <div class="navbar">
                 <ul>
@@ -205,6 +230,21 @@
             </ul>
         </div>
     </div>
+
+    <!-- go to top -->
+
+
+    <a href="#header">
+        <div class="goToTop">
+
+            <span class="material-symbols-outlined">
+                expand_less
+            </span>
+            <span>TOP</span>
+
+        </div>
+    </a>
+
 
 
 
