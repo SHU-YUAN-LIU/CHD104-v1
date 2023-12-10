@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 新聞卡片區 */
+        .news {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @media screen and (max-width: 1400px) {
+            .card-group {
+                flex-wrap: wrap;
+            }
+        }
+
+        .card-group {
+            width: 1200px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 100px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card h2 {
+            color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            line-height: 1.3;
+            margin-top: 15px;
+        }
+
+        .card p {
+            color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            line-height: 1.4;
+            font-weight: 100;
+            padding: 20px 0px;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px;
+            background-color: #2B2525;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            object-fit: cover;
+        }
+
+        .card:hover {
+            background-color: rgba(255, 107, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 新聞卡片區 -->
+    <div class="news">
+        <a href="News/News.html">
+            <div class="card-group">
+                <div class="card">
+                    <img src="img/news-1.svg" alt="news">
+                    <h2>WOLFER新成員BRIAN X
+                        正式加入2022車系陣容</h2>
+                    <p title="想看就點進去阿!">身為Wolfer Motorcycle旗下訴求最年輕的一款產品，Wolfer自從問世以來就不斷衍生出多種版本，甚至還發展成一支陣容龐大......
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="img/news-2.png" alt="news">
+                    <h2>最強聯名!3-J.F.T.xShakin本週日WOLFER正式發表</h2>
+                    <p title="想看就點進去阿!">大飛是台灣彩繪圈非常具有代表性的人物，也是手工改裝圈許多店家唯一指定的彩繪師。幾年前他以3-J.F.T.之名創立了自己的品牌.......</p>
+                </div>
+                <div class="card">
+                    <img src="img/news-3.png" alt="news">
+                    <h2>魅力沙灘狂歡！檔車越野掀起海灘新風潮</h2>
+                    <p title="想看就點進去阿!">復古檔車風潮延伸至沙灘越野，為愛好者帶來獨特的驚喜。經典款檔車在海灘上優雅穿梭，挑戰沙地的越野極限，成為沙灘新的風潮，吸引......</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

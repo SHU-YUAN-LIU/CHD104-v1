@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="reset.css">
 
     <style>
         .footer {
             background: linear-gradient(to bottom, #000000, rgb(21, 21, 21));
-            height: 200px;
-            padding: 80px 50px;
+            /* height: 200px; */
+            padding: 60px 50px;
         }
 
         .footer-logo {
@@ -51,11 +52,18 @@
 
             color: rgb(255, 255, 255);
             font-size: 13px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             line-height: 1.5em;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 100;
             padding: 2px 0px;
+        }
+
+        @media screen and(max-width:1440px) {
+            .footer-information {
+                display: none;
+
+            }
         }
     </style>
 </head>
