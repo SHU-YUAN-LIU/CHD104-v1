@@ -86,7 +86,7 @@
             text-decoration: none;
             color: white;
             padding: 15px;
-
+            letter-spacing: 2px;
         }
 
         .navbar a:hover {
@@ -105,7 +105,7 @@
             display: none;
         }
 
-        .bar {
+        .ham-bar {
             width: 30px;
             height: 3px;
             background-color: #fff;
@@ -163,26 +163,6 @@
                 width: 110px;
             }
         }
-
-        /* GO TO TOP */
-        .goToTop {
-            width: 45px;
-            height: 55px;
-            background-color: rgba(255, 107, 0, 0.9);
-            color: white;
-            font-size: 15px;
-            letter-spacing: 1px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-weight: 400;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            z-index: 7;
-            right: 30px;
-            bottom: 30px;
-        }
     </style>
 
 </head>
@@ -213,9 +193,9 @@
         </div>
         <!-- 漢堡 -->
         <div id="hamburgerMenu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <div class="ham-bar"></div>
+            <div class="ham-bar"></div>
+            <div class="ham-bar"></div>
         </div>
 
         <div class="ham-pull-menu" id="hamPullMenu">
@@ -231,24 +211,6 @@
             </ul>
         </div>
     </div>
-
-    <!-- go to top -->
-
-
-    <a href="#header">
-        <div class="goToTop">
-
-            <span class="material-symbols-outlined">
-                expand_less
-            </span>
-            <span>TOP</span>
-
-        </div>
-    </a>
-
-
-
-
 
 
     <script>

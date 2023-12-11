@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 
 <body>
+
+    <div id="header"></div>
+    <div id="Home-product"></div>
+    <div id="Home-wolfer-style"></div>
+    <div id="footer"></div>
     <script>
         // 引入header
         fetch('Header.html')
@@ -19,34 +22,27 @@
                 document.getElementById('header').innerHTML = html;
             });
 
-        // 引入Home-product
+        // // 引入Home-product
         fetch('./Home/Home-product.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('Home-product').innerHTML = html;
             });
 
-        // 引入Home-wolfer-style
+        // // 引入Home-wolfer-style
         fetch('./Home/Home-wolfer-style.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('Home-wolfer-style').innerHTML = html;
             });
 
-        // 引入footer
+        // // 引入footer
         fetch('Footer.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('footer').innerHTML = html;
             });
     </script>
-
-    <div id="header"></div>
-    <div id="Home-product"></div>
-    <div id="Home-wolfer-style"></div>
-    <div id="footer"></div>
-
-
 
 
 </body>
