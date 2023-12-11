@@ -8,16 +8,6 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container-same-model img {
-            width: 100%;
-            vertical-align: middle;
-        }
-
         .abt-title {
             width: 100%;
             display: flex;
@@ -25,10 +15,6 @@
             align-items: center;
             margin-bottom: 70px;
             margin-top: 70px;
-        }
-
-        span {
-            letter-spacing: 5px;
         }
 
         .abt-title span {
@@ -43,7 +29,6 @@
             font-size: 30px;
             font-weight: 600;
         }
-
 
         .bar {
             width: 100px;
@@ -69,13 +54,17 @@
             margin-bottom: 55px;
         }
 
+        /* 執行長 */
         .ceo {
             width: 100%;
             display: flex;
         }
 
+
+
         .ceo-pic {
-            height: 500px;
+            width: 100%;
+            height: 400px;
         }
 
         .ceo-pic img {
@@ -109,34 +98,56 @@
         .bg-color {
             display: flex;
             align-items: center;
-            width: 50%;
-            height: 500px;
+            width: 100%;
+            height: 400px;
             background-color: #F2F2F2;
         }
 
         .introduce {
             width: 530px;
             padding: 50px;
-        }
-
-        .container-same-model {
-            width: 80%;
             margin: auto;
         }
 
-
-        .coo {
-            margin: 100px 0px;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            /* border: 1px solid blue; */
+        /* 營運長 */
+        .container-same-model {
+            width: 1200px;
+            margin: auto;
+            box-sizing: border-box;
         }
 
-        .coo img {
-            height: 500px;
-            width: 800px;
+        .coo {
+            width: 100%;
+            margin: 100px 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:768px) {
+            .container-same-model {
+                width: 80%;
+            }
+
+            .ceo,
+            .coo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .coo-introduce {
+                width: 100%;
+            }
+        }
+
+        .coo-pic {
+            width: 50%;
+        }
+
+        .coo-pic img {
+            height: 100%;
+            width: 100%;
+            vertical-align: middle;
             object-fit: cover;
         }
 
@@ -200,12 +211,16 @@
                     </div>
                 </div>
             </div>
-            <img src="img/GINO.HUANG.png" alt="營運長">
+            <div class="coo-pic">
+                <img src="img/GINO.HUANG.png" alt="營運長">
+            </div>
         </div>
 
         <!-- 財務長 -->
         <div class="coo">
-            <img src="img/MING.LIU.png" alt="財務長">
+            <div class="coo-pic">
+                <img src="img/MING.LIU.png" alt="財務長">
+            </div>
             <div class="coo-introduce-group">
                 <div class="coo-introduce">
                     <div class="about-us-name">
@@ -236,7 +251,9 @@
                     </div>
                 </div>
             </div>
-            <img src="img/MONICA.CHEN.png" alt="產品長">
+            <div class="coo-pic">
+                <img src="img/MONICA.CHEN.png" alt="產品長">
+            </div>
         </div>
     </div>
 

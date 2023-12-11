@@ -29,7 +29,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.25);
             z-index: 2;
         }
 
@@ -44,13 +44,13 @@
         }
 
         .banner-words {
-            color: #ff6b00;
+            color: #ff6a00;
             letter-spacing: 8px;
             line-height: 1.1em;
             font-family: 'Noto Sans TC', sans-serif;
             font-size: 70px;
             font-weight: 800;
-            text-shadow: 0 0 80px rgb(40, 20, 3);
+            text-shadow: 0 0 60px rgb(60, 27, 0);
         }
 
         .banner-words p:last-child {
@@ -60,6 +60,16 @@
         .icon img {
             width: 40px;
             height: 40px;
+        }
+
+        @media screen and (max-width:768px) {
+            .icon img {
+                display: none;
+            }
+
+            .banner-words {
+                text-align: center;
+            }
         }
 
         .banner-title .icon {
@@ -140,17 +150,17 @@
                 <!-- 主標題 -->
                 <div class="banner-words">
                     <p>ABOUT</p>
-                    <p>WOLFER。</p>
+                    <p>WOLFER</p>
                 </div>
                 <!-- icon -->
                 <div class="icon">
-                    <a href="">
+                    <a href="https://www.facebook.com/?locale=zh_TW">
                         <div class="banner-pic"><img src="img/fb-black.svg" alt="fb"></div>
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/">
                         <div class="banner-pic"><img src="img/ig-black.svg" alt="ig"></div>
                     </a>
-                    <a href="">
+                    <a href="https://line.me/tw/">
                         <div class="banner-pic"><img src="img/line-black.svg" alt="line"></div>
                     </a>
                 </div>
