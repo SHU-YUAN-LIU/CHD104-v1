@@ -16,24 +16,22 @@
     <div id="footer"></div>
 
     <script>
-        // 引入header
-        // fetch('Header.html')
-        //     .then(response => response.text())
-        //     .then(html => {
-        //         document.getElementById('header').innerHTML = html;
-        //     });
+
         function doFirst() {
             $('#header').load('/Header.html')
             $('#Home-product').load('./Home/Home-product.html')
             $('#Home-wolfer-style').load('./Home/Home-wolfer-style.html')
             $('#footer').load('/Footer.html')
 
-            $('#hamburgerMenu').click(function () {
-                alert()
-            })
         }
         window.onload = doFirst
-
+        // 引入header
+        // fetch('Header.html')
+        //     .then(response => response.text())
+        //     .then(html => {
+        //         document.getElementById('header').innerHTML = html;
+        //     });
+        
         // // 引入Home-product
         // fetch('./Home/Home-product.html')
         //     .then(response => response.text())

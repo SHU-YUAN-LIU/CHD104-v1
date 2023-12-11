@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
-
+    <title>Motor-intro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 
 <body>
@@ -16,38 +15,15 @@
     <div id="Motor-intro-content"></div>
     <div id="footer"></div>
 
-
-
     <script>
-        // 引入header
-        fetch('Header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('header').innerHTML = html;
-            });
-
-        // 引入Motor-intro-product
-        fetch('./Motor-intro/Motor-intro-product.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('Motor-intro-product').innerHTML = html;
-            });
-
-        // 引入Motor-intro-content
-        fetch('./Motor-intro/Motor-intro-content.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('Motor-intro-content').innerHTML = html;
-            });
-
-        // 引入footer
-        fetch('Footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            });
+        function doFirst() {
+            $('#header').load('/Header.html')
+            $('#Motor-intro-product').load('./Motor-intro/Motor-intro-product.html')
+            $('#Motor-intro-content').load('./Motor-intro/Motor-intro-content.html')
+            $('#footer').load('/Footer.html')
+        }
+        window.onload = doFirst
     </script>
-
 </body>
 
 </html>

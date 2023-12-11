@@ -5,35 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOTOR</title>
-    <script>
-        // 引入header
-        fetch('Header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('header').innerHTML = html;
-            });
-
-        // 引入Motor-Banner
-        fetch('./Motor/Motor-Banner.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('Motor-Banner').innerHTML = html;
-            });
-
-        // 引入Motor/Motor-container
-        fetch('./Motor/Motor-container.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('Motor-container').innerHTML = html;
-            });
-
-        // 引入footer
-        fetch('Footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 
 <body>
@@ -42,6 +14,15 @@
     <div id="Motor-container"></div>
     <div id="footer"></div>
 
+    <script>
+        function doFirst() {
+            $('#header').load('/Header.html')
+            $('#Motor-Banner').load('./Motor/Motor-Banner.html')
+            $('#Motor-container').load('./Motor/Motor-container.html')
+            $('#footer').load('/Footer.html')
+        }
+        window.onload = doFirst
+    </script>
 </body>
 
 </html>

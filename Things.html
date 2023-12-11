@@ -5,38 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Things</title>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
-<script>
-    // 引入header
-    fetch('Header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header').innerHTML = html;
-        });
-
-    // 引入Things-Banner
-    fetch('./Things/Things-Banner.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('Things-Banner').innerHTML = html;
-        });
-
-    // 引入Things-content
-    fetch('./Things/Things-content.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('Things-content').innerHTML = html;
-        });
-
-    // 引入footer
-    fetch('Footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer').innerHTML = html;
-        });
-</script>
 
 <body>
 
@@ -44,9 +14,17 @@
     <div id="Things-Banner"></div>
     <div id="Things-content"></div>
     <div id="footer"></div>
+    <script>
 
+        function doFirst() {
+            $('#header').load('/Header.html')
+            $('#Things-Banner').load('./Things/Things-Banner.html')
+            $('#Things-content').load('./Things/Things-content.html')
+            $('#footer').load('/Footer.html')
 
-
+        }
+        window.onload = doFirst
+    </script>
 
 </body>
 
