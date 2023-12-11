@@ -216,7 +216,7 @@
     <script>
         window.addEventListener("load", function () {
             //------btnHam漢堡按鈕被點按時
-            document.getElementById("hamburgerMenu").onclick = function () {
+            document.getElementById("hamburgerMenu").onclick = () => {
                 console.log("dog");
                 //取得選單的參考
                 let hamPullMenu = document.getElementById("hamPullMenu");
