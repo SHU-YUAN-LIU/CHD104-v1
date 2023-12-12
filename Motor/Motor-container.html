@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor-container</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+
 </head>
 <style>
     /* 最上面按鈕 */
@@ -18,13 +23,15 @@
         display: flex;
         justify-content: space-between;
         margin: auto;
-        max-width: 1200px;
+        max-width: 65%;
         padding: 70px;
+        text-align: center;
+        gap: 20px;
     }
 
     .motor-btn-group a {
         text-decoration: none;
-        padding: 10px 30px;
+        padding: 10px 15px;
         border: 1px solid rgb(168, 168, 168);
         border-radius: 5px;
         color: rgb(168, 168, 168);
@@ -48,7 +55,7 @@
         font-size: 25px;
         font-weight: 500;
         border-bottom: 1px solid #ff964b;
-        width: 1200px;
+        width: 1000px;
         display: block;
         padding: 10px;
         margin: auto;
@@ -56,12 +63,15 @@
     }
 
     .card-group {
+        width: 1200px;
         display: flex;
         justify-content: center;
-        gap: 30px;
-        margin: 80px;
-        /* margin-bottom: 80px; */
         align-items: center;
+        gap: 50px;
+        margin: auto;
+        margin-bottom: 70px;
+        margin-top: 70px;
+
     }
 
     .card {
@@ -104,21 +114,14 @@
         font-weight: 400;
     }
 
-    .rightleftbtn {
-        width: 1700px;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-    }
+    @media screen and (max-width:768px) {
+        .motor-btn-group {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
 
-    .left img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .right img {
-        width: 50px;
-        height: 50px;
+        #modern {}
     }
 </style>
 
@@ -130,10 +133,18 @@
         <a href="#street">STREET STYLE</a>
         <a href="#old">OLD SCHOOL</a>
     </div>
+
     <!-- MODERN CLASSIS -->
-    <div id="modern"><span class="label-title">MODERN CLASSIS</span></div>
+    <div id="modern" class="label-title "><span>MODERN CLASSIS</span></div>
 
     <div class="card-group">
+        <!-- 箭頭 -->
+        <div class="right">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </a>
+        </div>
+        <!-- 箭頭 -->
         <div class="card">
             <a href="Motor-intro.html"><img src="img/modern-1.svg" alt="modern-1"></a>
             <div class="information">
@@ -155,15 +166,26 @@
                 <a href="#"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
             </div>
         </div>
-        <div class="rightleftbtn">
-            <a href="#" class="left"><img src="img/motor-arrow-left.svg" alt="arrow-left"></a>
-            <a href="#" class="right"><img src="img/motor-arrow-right.svg" alt="arrow-right"></a>
+        <!-- 箭頭 -->
+        <div class="left">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_right </span>
+            </a>
         </div>
+
+        <!-- 箭頭 -->
     </div>
     <!-- URBANITY STYLE  -->
-    <div id="urbanity"><span class="label-title">URBANITY STYLE</span></div>
+    <div id="urbanity" class="label-title"><span>URBANITY STYLE</span></div>
 
     <div class="card-group">
+        <!-- 箭頭 -->
+        <div class="right">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </a>
+        </div>
+        <!-- 箭頭 -->
         <div class="card">
             <a href="#"><img src="img/urbanity-1.svg" alt="urbanity-1"></a>
             <div class="information">
@@ -185,79 +207,96 @@
                 <a href="#"><span class="content">城市之光，復古外觀，將懷舊魅力注入現代駕馭</span></a>
             </div>
         </div>
-        <div class="rightleftbtn">
-            <a href="#" class="left"><img src="img/motor-arrow-left.svg" alt="arrow-left"></a>
-            <a href="#" class="right"><img src="img/motor-arrow-right.svg" alt="arrow-right"></a>
+        <!-- 箭頭 -->
+        <div class="left">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_right </span>
+            </a>
         </div>
+        <!-- 箭頭 -->
     </div>
 
     <!-- STREET STYLE  -->
-    <div id="street"><span class="label-title">STREET STYLE</span></div>
+    <div id="street" class="label-title"><span>STREET STYLE</span></div>
 
     <div class="card-group">
+        <!-- 箭頭 -->
+        <div class="right">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </a>
+        </div>
+        <!-- 箭頭 -->
         <div class="card">
-            <a href="#"><img src="img/street-1.svg" alt="street-1"></a>
+            <a href="#"><img src="img/street-1.png" alt="street-1"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">ANTIQUE CHARM<br></span></a>
                 <a href="#"><span class="content">復古細節，散發城市街頭的時尚氛圍</span></a>
             </div>
         </div>
         <div class="card">
-            <a href="#"><img src="img/street-2.svg" alt="street-2"></a>
+            <a href="#"><img src="img/street-2.png" alt="street-2"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">HERITAGE EXPLORER<br></span></a>
                 <a href="#"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
             </div>
         </div>
         <div class="card">
-            <a href="#"><img src="img/street-3.svg" alt="street-3"></a>
+            <a href="#"><img src="img/street-3.png" alt="street-3"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">CONSTELLATION<br></span></a>
                 <a href="#"><span class="content">越野魅力，攜手拓展城市邊緣的奇幻冒險</span></a>
             </div>
         </div>
-        <div class="rightleftbtn">
-            <a href="#" class="left"><img src="img/motor-arrow-left.svg" alt="arrow-left"></a>
-            <a href="#" class="right"><img src="img/motor-arrow-right.svg" alt="arrow-right"></a>
+        <!-- 箭頭 -->
+        <div class="left">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_right </span>
+            </a>
         </div>
+        <!-- 箭頭 -->
     </div>
 
     <!-- OLD SCHOOL  -->
-    <div id="old"><span class="label-title">OLD SCHOOL</span></div>
+    <div id="old" class="label-title"><span>OLD SCHOOL</span></div>
 
     <div class="card-group">
+        <!-- 箭頭 -->
+        <div class="right">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </a>
+        </div>
+        <!-- 箭頭 -->
         <div class="card">
-            <a href="#"><img src="img/oldschool-1.svg" alt="oldschool-1"></a>
+            <a href="#"><img src="img/oldschool-1.png" alt="oldschool-1"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">RETRO LEGENDS<br></span></a>
                 <a href="#"><span class="content">越野車型，穿越城市山川，挑戰都市之外的極限地形</span></a>
             </div>
         </div>
         <div class="card">
-            <a href="#"><img src="img/oldschool-2.svg" alt="oldschool-2"></a>
+            <a href="#"><img src="img/oldschool-2.png" alt="oldschool-2"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">DREAMERS<br></span></a>
                 <a href="#"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
             </div>
         </div>
         <div class="card">
-            <a href="#"><img src="img/oldschool-3.svg" alt="oldschool-3"></a>
+            <a href="#"><img src="img/oldschool-3.png" alt="oldschool-3"></a>
             <div class="information">
                 <a href="#"><span class="pro-title">NOSTALGIA NOMAD<br></span></a>
                 <a href="#"><span class="content">都會底蘊，越野激情，城市與荒野的極致融合</span></a>
             </div>
         </div>
-        <div class="rightleftbtn">
-            <a href="#" class="left"><img src="img/motor-arrow-left.svg" alt="arrow-left"></a>
-            <a href="#" class="right"><img src="img/motor-arrow-right.svg" alt="arrow-right"></a>
+        <!-- 箭頭 -->
+        <div class="left">
+            <a href="#">
+                <span class="material-symbols-outlined">chevron_right </span>
+            </a>
         </div>
+        <!-- 箭頭 -->
     </div>
-
-
-
-
-
-
 </body>
 
 </html>

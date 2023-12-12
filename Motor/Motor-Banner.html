@@ -62,15 +62,6 @@
             height: 40px;
         }
 
-        @media screen and (max-width:768px) {
-            .icon img {
-                display: none;
-            }
-
-            .banner-words {
-                text-align: center;
-            }
-        }
 
         .banner-title .icon {
             margin-bottom: auto;
@@ -80,6 +71,20 @@
             margin-bottom: 8px;
         }
 
+        @media screen and (max-width:768px) {
+            .icon img {
+                display: none;
+            }
+
+            .banner-words {
+                text-align: center;
+                letter-spacing: 1px;
+            }
+
+            #banner {
+                background: url(img/motor-banner.png) top center/cover no-repeat;
+            }
+        }
 
         /* GO TO TOP */
         .goToTop {
