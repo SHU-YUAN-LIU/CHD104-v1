@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
     <style>
         /* 影片 */
         .video-container {
@@ -13,77 +16,74 @@
             object-fit: cover;
             z-index: 1;
             position: relative;
-            top: 0;
-            left: 0;
+        }
+
+        .video-bg {
+            width: 100%;
+            position: relative;
         }
 
         /* 產品 */
         .product-container {
             position: absolute;
             z-index: 3;
-            text-align: center;
             color: #fff;
-            top: -30px;
-            left: 300px;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product-container img {
+            width: 950px;
         }
 
 
-
-        .title {
+        .pro-title {
             width: 1000px;
             display: flex;
             justify-content: space-between;
-            margin: 70px;
             position: absolute;
             z-index: 2;
-            top: 120px;
-            /* 元素的頂部與父層的頂部對齊 */
-            left: 900px;
-            /* 水平置中:使用 left: 50% 和 transform: translateX(-50%) 的組合 */
+            top: 170px;
+            left: 50%;
             transform: translateX(-50%);
-
-
         }
+
+
 
         .container-product-pic .img:nth-child(1) {
             z-index: 1;
         }
 
-        .icon {
-            height: 30%;
-        }
 
         .icon .pic {
             margin: 10px;
         }
 
         .words p {
-            justify-content: flex-start;
             color: rgb(255, 255, 255);
             letter-spacing: 2px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 300;
             text-shadow: 0px 0px 80px black;
+            margin-bottom: 10px;
         }
 
         .words span {
-            justify-content: flex-start;
             color: rgb(255, 255, 255);
-            letter-spacing: 2px;
+            letter-spacing: 5px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 600;
-            font-size: 55px;
+            font-size: 60px;
             text-shadow: 0px 0px 90px 50px black;
         }
 
         .btn-all {
-            width: 980px;
+            width: 1000px;
             position: absolute;
-            top: 720px;
-            /* 元素的頂部與父層的頂部對齊 */
+            transform: translate(-50%, -50%);
             left: 50%;
-            /* 水平置中:使用 left: 50% 和 transform: translateX(-50%) 的組合 */
-            transform: translateX(-50%);
+            top: 780px;
             display: flex;
             z-index: 4;
             align-items: center;
@@ -93,13 +93,33 @@
             font-size: 16px;
             font-weight: 100;
             letter-spacing: 3px;
-            top: 850px;
+        }
+
+        @media screen and (max-width: 1400px) {
+
+            .pro-title {
+                width: 800px;
+            }
+
+            .btn-all {
+                width: 800px;
+            }
+
+            .product-container img {
+                width: 900px;
+            }
+        }
+
+        .btn div {
+            display: flex;
+            align-items: center;
         }
 
         .btn {
             display: flex;
             align-items: center;
         }
+
 
         .btn-red {
             width: 40px;
@@ -128,33 +148,12 @@
             color: white;
         }
 
-        .home-btn-more a:hover {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
+
+
+        .container-product-bg {
+            height: 800px;
+            background-color: black;
         }
-
-        .home-btn-more {
-            padding: 15px 20px;
-            border: 1px solid white;
-            border-radius: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            text-align: center;
-
-        }
-
-        .home-btn-more:hover {
-            background-color: #FF6B00;
-            border: 1px solid #FF6B00;
-            border-radius: 3px;
-            color: rgb(0, 0, 0);
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            text-align: center;
-        }
-
 
 
         /* --------------------漸層-------------------- */
@@ -186,36 +185,154 @@
             left: 0;
             z-index: 2;
         }
+
+        @media screen and (max-width: 768px) {
+
+            .pro-title {
+                width: 600px;
+            }
+
+            .btn-all {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .btn div {
+                margin-bottom: 10px
+            }
+
+            .product-container img {
+                width: 680px;
+            }
+
+
+
+            .btn {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+            }
+
+            .btn-words {
+                font-weight: 200;
+                font-size: 15px;
+                text-wrap: wrap;
+            }
+
+            .pic img {
+                /* width: 35px; */
+                display: none;
+            }
+
+            .btn-red,
+            .btn-gray,
+            .btn-orange {
+                width: 35px;
+                height: 35px;
+                margin: 0px 0px;
+                margin-right: 15px
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .video-container {
+                height: 680px;
+            }
+
+            .pro-title {
+                width: 300px;
+                top: 120px;
+            }
+
+            .btn-all {
+                top: 580px;
+
+            }
+
+            .product-container img {
+                width: 380px;
+            }
+
+            .product-container {
+                top: 55%;
+            }
+
+
+            .words span {
+                font-weight: 600;
+                font-size: 50px;
+            }
+
+            .btn-words {
+                line-height: 1.3em;
+            }
+
+            .pic img {
+                display: none;
+            }
+
+            .btn-red,
+            .btn-gray,
+            .btn-orange {
+                width: 30px;
+                height: 6px;
+                margin: 0px 0px;
+                margin-right: 15px
+            }
+        }
+
+        /* GO TO TOP */
+        .goToTop {
+            width: 45px;
+            height: 55px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 7;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .goToTop span:last-child {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+        }
     </style>
 
 </head>
 
 <body>
-
+    <div id="goToTop-a"></div>
     <div class="container">
         <div class="videoPro">
-
-
             <!-- 影片 -->
             <div class="video-bg">
                 <video class="video-container" autoplay muted loop>
                     <source src="img/pexels_videos_2297636 (2160p).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
+                <!-- 產品 -->
+                <div class="product-container">
+                    <img src="img/Product-first.png" alt="">
+                </div>
             </div>
-
-            <!-- 產品 -->
-            <div class="product-container">
-                <img src="img/Product-first.svg" alt="">
-            </div>
-
         </div>
-        <div class="title">
+
+        <div class="pro-title">
             <!-- 主標題 -->
             <div class="words">
                 <p>全新經典指標</p>
-                <span>FCR<br></span>
-                <span>BOBBER</span>
+                <span>FCR<br>BOBBER</span>
             </div>
             <!-- icon -->
             <div class="icon">
@@ -230,10 +347,13 @@
                 </a>
             </div>
         </div>
-        <!-- 產品下半部 -->
-        <div class="btn-all">
 
-            <div class="btn">
+    </div>
+    <!-- 產品下半部 -->
+    <div class="btn-all">
+
+        <div class="btn">
+            <div>
                 <a href="#">
                     <div class="btn-red"></div>
                 </a>
@@ -243,11 +363,22 @@
                 <a href="#">
                     <div class="btn-orange"></div>
                 </a>
-                <div class="btn-words">全新經典指標，重新詮釋何謂傑出的當代經典</div>
             </div>
-            <div class="home-btn-more"> <a href="#">了解更多</a></div>
+            <div class="btn-words">全新經典指標，重新詮釋何謂傑出的當代經典</div>
         </div>
+
     </div>
+
+    <!-- go to top -->
+    <a href="#goToTop-a">
+        <div class="goToTop">
+            <span class="material-symbols-outlined">
+                expand_less
+            </span>
+            <span>TOP</span>
+        </div>
+    </a>
+
 </body>
 
 </html>
