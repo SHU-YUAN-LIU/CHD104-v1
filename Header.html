@@ -11,6 +11,11 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         html,
         body {
             scroll-behavior: smooth;
@@ -38,6 +43,7 @@
             width: 78%;
             display: flex;
             justify-content: space-between;
+            z-index: 6;
 
         }
 
@@ -119,6 +125,7 @@
             width: 100%;
             display: none;
             z-index: 4;
+            margin-top: 62px;
         }
 
         .block {
@@ -129,7 +136,7 @@
             display: none;
         }
 
-        .ham-pull-menu li a {
+        .ham-pull-menu ul li a {
             text-decoration: none;
             color: white;
             padding: 17px;
