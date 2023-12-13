@@ -9,35 +9,155 @@
 	* {
 		margin: 0px;
 		padding: 0px;
-		list-style: none;
 	}
 
-	.slider {
+	/* #sliderBoard {
 		width: 100%;
-		height: 600px;
+		margin: 100px;
+		border: 10px dashed #ccc;
+		overflow: hidden;
 	}
 
-	.slider-group {
+	#sliderBoard ul {
+		width: 1500px;
+
+		position: relative;
+		animation: slider 5s 3;
+	}
+
+	#sliderBoard li {
+		overflow: hidden;
+		height: 500px;
+		float: left;
+	} */
+	#sliderBoard {
+		animation: slider 5s 3;
+	}
+
+	#sliderBoard div {
 		display: flex;
+		width: 1200px;
+		overflow: hidden;
+		margin: auto;
 	}
 
-	.slider-group img {
+	#sliderBoard img {
 		width: 100%;
 		height: 100%;
+		vertical-align: middle;
 		object-fit: cover;
+
+	}
+
+	@keyframes slider {
+		0% {
+			left: 0px;
+		}
+
+		50% {
+			left: -600px;
+		}
+
+		75% {
+			left: -1200px;
+		}
 	}
 </style>
 
+
 <body>
+	<!-- <div>
+		<ul>
+			<li>
+				<img src="carousel-1.jpg" alt="Image 1">
+			</li>
+			<li>
+				<img src="carousel-2.jpg" alt="Image 1">
+			</li>
+			<li>
+				<img src="carousel-3.jpg" alt="Image 1">
+			</li>
 
-
+		</ul>
+		<div style="clear: both;"></div>
+	</div> -->
 	<div id="sliderBoard">
-		<div class="slider-group">
-
-			<div class="slider"><img src="carousel-1.jpg" alt="Image 1"></div>
-			<div class="slider"><img src="carousel-2.jpg" alt="Image 1"></div>
-			<div class="slider"><img src="carousel-3.jpg" alt="Image 1"></div>
+		<div>
+			<img src="carousel-1.jpg" alt="Image 1">
+			<img src="carousel-1.jpg" alt="Image 1">
+			<img src="carousel-1.jpg" alt="Image 1">
 		</div>
+		<!DOCTYPE html>
+		<html lang="en">
+
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<style>
+				@keyframes slider {
+					0% {
+						transform: translateX(0);
+					}
+
+					25% {
+						transform: translateX(-100%);
+					}
+
+					50% {
+						transform: translateX(-200%);
+					}
+
+					75% {
+						transform: translateX(-100%);
+					}
+
+					100% {
+						transform: translateX(0);
+					}
+				}
+
+				.slider-container {
+					width: 300px;
+					/* 輪播容器的寬度 */
+					overflow: hidden;
+					/* 隱藏超出容器範圍的部分 */
+					position: relative;
+				}
+
+				.slider {
+					display: flex;
+					/* 使用 Flexbox 佈局 */
+					animation: slider 5s infinite;
+					/* 5秒動畫，無限循環 */
+				}
+
+				.slide {
+					width: 100%;
+					flex: 0 0 100%;
+					/* 確保每張圖片佔滿容器寬度 */
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+					/* 保持圖片比例 */
+				}
+			</style>
+		</head>
+
+		<body>
+
+			<div class="slider-container">
+				<div class="slider">
+					<div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+					<div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+					<div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+				</div>
+			</div>
+
+		</body>
+
+		</html>
 	</div>
 </body>
 

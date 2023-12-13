@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes slider {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .slider-container {
+            width: 100%;
+            /* 輪播容器的寬度 */
+            overflow: hidden;
+            /* 隱藏超出容器範圍的部分 */
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            /* 使用 Flexbox 佈局 */
+            animation: slider 8s 5;
+            /* 5秒動畫，五次 */
+        }
+
+        .slide {
+            width: 100%;
+            flex: 0 0 100%;
+            /* 確保每張圖片佔滿容器寬度 */
+            /* flex-grow/basis/shrink 簡寫 */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            /* 保持圖片比例 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="carousel-1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="carousel-2.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="carousel-3.jpg" alt="Image 1"></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
