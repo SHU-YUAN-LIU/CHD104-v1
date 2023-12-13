@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
         @keyframes slider {
             0% {
                 transform: translateX(0);
@@ -18,16 +23,12 @@
                 transform: translateX(-200%);
             }
 
-            75% {
-                transform: translateX(-100%);
-            }
-
             100% {
                 transform: translateX(0);
             }
         }
 
-        .slider-container {
+        .carousel-container {
             width: 100%;
             /* 輪播容器的寬度 */
             overflow: hidden;
@@ -35,11 +36,11 @@
             position: relative;
         }
 
-        .slider {
+        .carousel-slide {
             display: flex;
             /* 使用 Flexbox 佈局 */
-            animation: slider 8s 5;
-            /* 5秒動畫，五次 */
+            animation: slider 20s 5;
+            /* 20豪秒，五次 */
         }
 
         .slide {
@@ -49,24 +50,35 @@
             /* flex-grow/basis/shrink 簡寫 */
         }
 
-        img {
+        .slide img {
             width: 100%;
-            height: auto;
+            /* height: auto; */
             /* 保持圖片比例 */
+            height: 800px;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
+    <div class="carousel-pic">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="slide"><img src="carousel-1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="carousel-2.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="carousel-3.jpg" alt="Image 1"></div>
+            </div>
+        </div>
+    </div>
 
-    <div class="slider-container">
+    <!-- <div class="slider-container">
         <div class="slider">
             <div class="slide"><img src="carousel-1.jpg" alt="Image 1"></div>
             <div class="slide"><img src="carousel-2.jpg" alt="Image 1"></div>
             <div class="slide"><img src="carousel-3.jpg" alt="Image 1"></div>
 
         </div>
-    </div>
+    </div> -->
 
 </body>
 

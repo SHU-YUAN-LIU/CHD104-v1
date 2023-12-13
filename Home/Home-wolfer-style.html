@@ -191,22 +191,7 @@
 
         /* 輪播區 */
         .carousel-pic {
-            margin: 60px 0px;
-        }
-
-        .carousel-slide {
-            display: block;
-            /* 之後加入自動撥放疑似要用none */
-            margin: auto;
-            /* width: 73%; */
-            position: relative;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 800px;
-            object-fit: cover;
-            box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.9);
+            box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.6);
         }
 
         .carousel-title {
@@ -220,6 +205,58 @@
             font-family: 'Noto Sans TC', sans-serif;
             font-size: 40px;
             font-weight: 600;
+        }
+
+        @keyframes slider {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+
+        .carousel-container {
+            width: 100%;
+            /* 輪播容器的寬度 */
+            overflow: hidden;
+            /* 隱藏超出容器範圍的部分 */
+            position: relative;
+        }
+
+        .carousel-slide {
+            display: flex;
+            /* 使用 Flexbox 佈局 */
+            animation: slider 16s 5;
+            /* 20豪秒，五次 */
+        }
+
+        .slide {
+            width: 100%;
+            flex: 0 0 100%;
+            /* 確保每張圖片佔滿容器寬度 */
+            /* flex-grow/basis/shrink 簡寫 */
+        }
+
+        .slide img {
+            width: 100%;
+            /* height: auto; */
+            /* 保持圖片比例 */
+            height: 800px;
+            object-fit: cover;
         }
 
         .btn-more a {
@@ -393,19 +430,22 @@
         </div>
     </div>
     <!-- 輪播區 -->
-
     <div class="carousel-pic">
         <div class="carousel-container">
             <div class="carousel-slide">
-                <img src="img/carousel-1.jpg" alt="Image 1">
-                <!-- 輪播區標題 -->
-                <div class="carousel-title">
-                    <span>LET'S WOLFER</span>
-                    <div class="btn-more"><a href="">了解更多</a></div>
-                </div>
+                <div class="slide"><img src="img/carousel-1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="img/carousel-2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="img/carousel-3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="img/carousel-4.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="img/carousel-5.jpg" alt="Image 5"></div>
+            </div>
+            <!-- 輪播區標題 -->
+            <div class="carousel-title">
+                <span>LET'S WOLFER</span>
+                <div class="btn-more"><a href="">了解更多</a></div>
             </div>
         </div>
-
+    </div>
     </div>
 
     <!-- </div> -->
