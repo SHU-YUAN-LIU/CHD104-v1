@@ -10,62 +10,62 @@
         body {
             width: 100%;
             background:
-                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 40%)no-repeat,
-                linear-gradient(to right, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
-                linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
+                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 30%)no-repeat,
+                linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.6))no-repeat,
+                linear-gradient(to left, transparent 60%, rgba(0, 0, 0, 0.6))no-repeat,
                 url(img/batthern.png),
-                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
+                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.6), transparent 25%)no-repeat,
                 linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
             color: white;
         }
 
-
+        /* ----------請選擇您欲試乘的車款及據點---------- */
         .reserve-content {
             width: 800px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             margin: auto;
             padding-bottom: 50px;
-            margin-top: 200px;
-            margin-bottom: 200px;
+            margin-top: 150px;
+            margin-bottom: 150px;
             border: 1px solid#ff6a0070;
-            border-radius: 5px;
-            background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 1)90%);
+            background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 0.6)90%);
             box-shadow: 10px 10px 70px 40px rgb(0, 0, 0);
         }
 
         .reserve-title {
+            width: 520px;
+            margin: auto;
+        }
+
+        /* ----------橘色圓形數字icon---------- */
+        .number {
             font-size: 25px;
             font-weight: 600;
             font-family: 'Noto Sans TC', sans-serif;
             letter-spacing: 5px;
-            color: white;
+            color: rgb(255, 255, 255);
+            text-align: center;
             padding: 60px;
-        }
-
-        .number {
             position: relative;
         }
 
         .number::after {
-            content: "1";
+            content: " 1";
             width: 50px;
             height: 50px;
-            left: -70px;
-            top: -12px;
-            position: absolute;
+
             background-color: #ff6b00;
             border-radius: 50%;
-
             font-size: 25px;
             font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-
+            position: absolute;
+            top: 50px;
+            left: 0;
         }
 
         .p-first-row {
@@ -80,169 +80,17 @@
             align-items: center;
         }
 
-        /* ----------日期---------- */
-        .date {
-            font-size: 15px;
-            text-align: left;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .date input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 150px;
-            height: 40px;
-
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .date input:focus {
-            background-color: rgba(255, 107, 0, 0.5);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-            transition: border-color 0.3s;
-        }
-
-        .date :hover {
-            background-color: rgba(255, 107, 0, 0.5);
-        }
-
-
-        /* ----------2.請填寫試乘者資料---------- */
-        .number2 {
-            position: relative;
-        }
-
-        .number2::after {
-            content: "2";
-            width: 50px;
-            height: 50px;
-            left: -70px;
-            top: -12px;
-            position: absolute;
-            background-color: #ff6b00;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-
-        /* ----------姓名---------- */
-        .name {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: left;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .name input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .name input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-            transition: border-color 0.3s;
-        }
-
-        /* ----------電話---------- */
-        .tel {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: left;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-
-        }
-
-        .tel input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .tel input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-            transition: border-color 0.3s;
-        }
-
-        /* ----------信箱---------- */
-        .mail {
-            margin-bottom: 8px;
-            font-size: 15px;
-            text-align: left;
-            color: #ffffff;
-            letter-spacing: 3px;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .mail input {
-            box-sizing: border-box;
-            color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            border: 1px solid gray;
-            border-radius: 3px;
-        }
-
-        /* :focus 選擇器調整輸入框在點擊的樣子 */
-        .mail input:focus {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid #a74703;
-            box-shadow: 0px 0px 0px 0.5px #a74703;
-            transition: border-color 0.3s;
-        }
-
         /* ----------選擇試乘型號---------- */
         #multiple {
-            box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 150px;
-            height: 40px;
+            width: 250px;
+            height: 50px;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
-            padding: 10px;
-            font-size: 15px;
+            font-size: 16px;
             letter-spacing: 2px;
             /* -----把預設樣式取消----- */
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            text-indent: 1px;
+            text-indent: 20px;
             margin-bottom: 20px;
 
         }
@@ -267,12 +115,163 @@
             transition: border-color 0.3s;
         }
 
+        /* ----------日期---------- */
+        .date {
+            font-size: 15px;
+            text-align: left;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .date input {
+            color: rgb(255, 255, 255);
+            width: 250px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid gray;
+            text-indent: 12px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            /* 顏色反轉，改變圖標顏色 */
+            /* filter: invert(0);不進行反轉，即保持原始顏色
+            filter: invert(0.5);反轉一半，即將顏色混合一半
+            filter: invert(1);完全反轉，即將所有顏色完全顛倒 */
+            /* 選擇了type 屬性為 "date" 的 <input> 元素 */
+
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .date input:focus {
+            background-color: rgba(255, 107, 0, 0.5);
+            border: 1px solid #a74703;
+            box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
+        }
+
+        .date :hover {
+            background-color: rgba(255, 107, 0, 0.5);
+        }
+
+
+        /* ----------2.請填寫試乘者資料---------- */
+        .number2 {
+            font-size: 25px;
+            font-weight: 600;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 5px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 60px;
+            position: relative;
+        }
+
+        .number2::after {
+            content: " 2";
+            width: 50px;
+            height: 50px;
+
+            background-color: #ff6b00;
+            border-radius: 50%;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+
+        /* ----------姓名---------- */
+        .name {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: left;
+            color: #ffffff;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .name input {
+            color: rgb(255, 255, 255);
+            width: 520px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid gray;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .name input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #a74703;
+            box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
+        }
+
+        /* ----------電話---------- */
+        .tel {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: left;
+            color: #ffffff;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+
+        }
+
+        .tel input {
+            color: rgb(255, 255, 255);
+            width: 520px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid gray;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .tel input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #a74703;
+            box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
+        }
+
+        /* ----------信箱---------- */
+        .mail {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: left;
+            color: #ffffff;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .mail input {
+            color: rgb(255, 255, 255);
+            width: 520px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid gray;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .mail input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #a74703;
+            box-shadow: 0px 0px 0px 0.5px #a74703;
+            transition: border-color 0.3s;
+        }
+
+
+
         .little-words {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            width: 300px;
-            font-size: 13px;
+            font-size: 14px;
             letter-spacing: 2px;
         }
 
@@ -289,9 +288,9 @@
         .reserve-btn-group a {
             text-decoration: none;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 50px;
             margin: 10;
-            border-radius: 3px;
+            text-align: center;
         }
 
         .reserve-btn-group a:first-child {
@@ -318,8 +317,85 @@
         }
 
         .reserve-bottom-group {
-            width: 300px;
+            width: 520px;
             margin-bottom: 20px;
+            /* margin-top: 20px; */
+        }
+
+        @media screen and (max-width:992px) {
+            .reserve-content {
+                width: 350px;
+            }
+
+            .date input {
+                border-radius: 0%;
+            }
+
+
+            .p-first-row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .number,
+            .number2 {
+                /* font-size: 20px; */
+                line-height: 1.5em
+            }
+
+            .number::after,
+            .number2::after {
+                width: 30px;
+                height: 30px;
+                top: 60px;
+                left: 20px;
+                font-size: 16px;
+            }
+
+            .reserve-title {
+                width: 300px;
+            }
+
+            #multiple {
+                width: 300px;
+            }
+
+            .date input,
+            .name input,
+            .tel input,
+            .mail input,
+            .reserve-bottom-group {
+                width: 300px;
+            }
+
+            .reserve-btn-group {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            #banner {
+                background: url(/img/reserve-banner.png)80% 105%/cover no-repeat;
+            }
+
+            .reserve-content {
+                border: none;
+                background: none;
+                box-shadow: none;
+            }
+
+            body {
+                background:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 1)20%, transparent 70%)no-repeat,
+                    linear-gradient(to top, rgba(0, 0, 0, 1)20%, transparent 70%)no-repeat,
+                    linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.8))no-repeat,
+                    linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.8))no-repeat,
+                    url(img/batthern.png),
+                    radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.6), transparent 25%)no-repeat,
+                    linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
+            }
         }
     </style>
 </head>
@@ -329,8 +405,7 @@
     <div class="reserve-content">
         <!-- ----------請選擇您欲試乘的車款及據點---------- -->
         <div class="reserve-title">
-            <div class="number"></div>
-            <span>請選擇您欲試乘的車款及據點</span>
+            <div class="number">選擇您欲試乘的車款及據點</div>
         </div>
         <!-- ----------下拉選單第一排---------- -->
         <div class="pull-list-group">
@@ -366,13 +441,14 @@
                     <option value="" class="pull">Timeless Cruiser</option>
                 </select>
                 <!-- ----------選擇試乘時間---------- -->
-                <div class="date"><input type="date" id="date" name="date"></div>
+                <div class="date">
+                    <input type="date" id="date" name="date">
+                </div>
             </div>
         </div>
         <!-- ----------請填寫試乘者資料---------- -->
         <div class="reserve-title">
-            <div class="number2"></div>
-            <span>請填寫試乘者資料</span>
+            <div class="number2">請填寫試乘者資料</div>
         </div>
 
         <div class="reserve-bottom-group">
@@ -398,11 +474,11 @@
                 <div>
                     是否持有普通重機駕照:
                     <label>
-                        <input type="radio" name="yes">
+                        <input type="radio" name="approval">
                         是
                     </label>
                     <label>
-                        <input type="radio" name="no">
+                        <input type="radio" name="approval">
                         否
                     </label>
                 </div>

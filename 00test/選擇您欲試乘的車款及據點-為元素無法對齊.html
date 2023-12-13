@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .reserve-title {
+        width: 520px;
+        margin: auto;
+    }
+
+    .number {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: 'Noto Sans TC', sans-serif;
+        letter-spacing: 5px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 60px;
+        position: relative;
+    }
+
+    .number::after {
+        content: " 1";
+        width: 50px;
+        height: 50px;
+
+        background-color: #ff6b00;
+        border-radius: 50%;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 53px;
+        left: 0;
+    }
+</style>
+
+<body>
+    <!-- ----------請選擇您欲試乘的車款及據點---------- -->
+    <div class="reserve-title">
+        <div class="number">選擇欲試乘的車款及據點</div>
+    </div>
+    <!-- ----------請填寫試乘者資料---------- -->
+    <div class="reserve-title">
+        <div class="number">請填寫試乘者的資料</div>
+    </div>
+</body>
+
+</html>

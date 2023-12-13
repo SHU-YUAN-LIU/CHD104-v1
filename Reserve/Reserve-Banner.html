@@ -4,89 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News-Banner </title>
+    <title>Reserve-Banner </title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <style>
-        .aboutus-banner {
+        #banner {
             width: 100%;
             height: 550px;
-            position: relative;
-
-        }
-
-        .all-group {
-            position: relative;
-            z-index: 0;
-        }
-
-        #banner {
-            /* width: 100vw; */
-            /* height: 100vh; */
-            background: url(img/reserve-banner.png);
-            background-repeat: no-repeat;
+            background: url(/img/reserve-banner.png)50%/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
             background-size: cover;
+            /* 為了讓banner往下不要被fixed的導覽列遮住 */
+            padding-top: 82px;
+            position: relative;
+            z-index: 1;
         }
 
-        .banner-p {
-            display: block;
-            line-height: 50px;
-            color: rgb(255, 255, 255);
-            letter-spacing: 2px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 40px;
-            font-weight: 600;
-            text-shadow: 0 0 80px rgb(40, 20, 3);
+        #banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: 2;
         }
 
-
-        .banner-title {
-            width: 1750px;
-            height: 550px;
-            padding: 40px;
+        #banner .banner-title {
+            width: 90%;
+            height: 450px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .banner-words {
+            color: #ff6a00;
+            letter-spacing: 8px;
+            line-height: 1.1em;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 70px;
+            font-weight: 800;
+            text-shadow: 0 0 60px rgb(60, 27, 0);
+        }
+
+        .banner-words p:last-child {
+            color: rgb(255, 255, 255);
         }
 
         .icon img {
             width: 40px;
             height: 40px;
-            margin-bottom: 15px;
         }
 
-        .banner-title .about-wolfer {
-            margin-top: 500px;
+        @media screen and (max-width:768px) {
+            .icon img {
+                display: none;
+            }
+
+            #banner {
+                background: url(/img/reserve-banner.png)150% 500%/cover no-repeat;
+            }
+
+            .banner-words {
+                text-align: center;
+                letter-spacing: 3px;
+            }
+
+            #banner .banner-title {
+                justify-content: center;
+            }
+        }
+
+        .banner-title .icon {
+            margin-bottom: auto;
+        }
+
+        .banner-pic {
+            margin-bottom: 8px;
+        }
+
+
+        /* GO TO TOP */
+        .goToTop {
+            width: 45px;
+            height: 55px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 7;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .goToTop span:last-child {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
         }
     </style>
 </head>
 
 <body>
+    <div id="goToTop-a"></div>
     <div class="all-group">
         <section id="banner">
             <div class="banner-title">
                 <!-- 主標題 -->
-                <div class="about-wolfer">
-                    <p class="banner-p">RESERVE</p>
+                <div class="banner-words">
+                    <p>RESERVE</p>
+                    <p>WOLFER</p>
                 </div>
                 <!-- icon -->
                 <div class="icon">
-                    <a href="">
+                    <a href="https://www.facebook.com/TibaMe/?locale=zh_TW">
                         <div class="banner-pic"><img src="img/fb-black.svg" alt="fb"></div>
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/tibame_wiedu/">
                         <div class="banner-pic"><img src="img/ig-black.svg" alt="ig"></div>
                     </a>
-                    <a href="">
+                    <a href="https://page.line.me/750htowt?openQrModal=true">
                         <div class="banner-pic"><img src="img/line-black.svg" alt="line"></div>
                     </a>
                 </div>
             </div>
         </section>
-
     </div>
+    <!-- go to top -->
+    <a href="#goToTop-a">
+        <div class="goToTop">
+            <span class="material-symbols-outlined">
+                expand_less
+            </span>
+            <span>TOP</span>
+        </div>
+    </a>
 </body>
 
 </html>
