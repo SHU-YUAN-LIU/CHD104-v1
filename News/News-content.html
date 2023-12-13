@@ -10,13 +10,13 @@
         body {
             width: 100%;
             background:
-                linear-gradient(to bottom, rgba(0, 0, 0, 1)25%, transparent 40%),
-                linear-gradient(to top, rgba(0, 0, 0, 1)8%, transparent),
-                linear-gradient(to right, rgba(0, 0, 0, 0.5)10%, transparent 20%),
-                linear-gradient(to left, rgba(0, 0, 0, 0.5)10%, transparent 20%),
+                linear-gradient(to bottom, rgb(0, 0, 0, 1)20%, transparent 80%)no-repeat,
+                linear-gradient(to top, rgb(0, 0, 0, 0.8), transparent 50%)no-repeat,
+                linear-gradient(to right, transparent 90%, rgba(0, 0, 0, 0.8))no-repeat,
+                linear-gradient(to left, transparent 90%, rgba(0, 0, 0, 0.8))no-repeat,
                 url(img/batthern.png),
-                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.8), transparent 25%),
-                linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+                radial-gradient(circle at 10% 80%, rgba(255, 85, 0, 0.6), transparent 20%),
+                linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(43, 43, 43, 0.9), rgb(0, 0, 0, 1))no-repeat;
         }
 
         .news-card-group {
@@ -45,21 +45,22 @@
 
         .news-pic {
             width: 530px;
+            height: 300px;
         }
 
         .news-pic img {
-            width: 530px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            object-position: 65% 80%;
             vertical-align: middle;
         }
 
         .news-inf-group {
-            padding: 25px;
+            padding: 0px 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 300px;
             box-sizing: border-box;
         }
 
@@ -88,7 +89,6 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 18px;
             text-wrap: nowrap;
             color: #747373;
             font-size: 15px;
@@ -96,7 +96,34 @@
             letter-spacing: 1px;
             font-family: 'Noto Sans TC', sans-serif;
             gap: 8px;
-            /* margin-top: 50px; */
+            margin-top: 20px;
+        }
+
+
+        @media screen and (max-width:1200px) {
+            .news-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 350px;
+            }
+
+            .news-pic {
+                width: 350px;
+            }
+
+            .news-pic img {
+                object-position: 10% 50%;
+            }
+
+            .news-inf-group {
+                padding: 20px;
+            }
+
+            .news-title {
+                font-size: 20px;
+            }
+
         }
     </style>
 </head>
@@ -107,7 +134,7 @@
         <div class="news-card">
             <a href="#">
                 <div class="news-pic">
-                    <img src="img/news-1.png" alt="news-1">
+                    <img src="/img/news-1.jpg" alt="news-1">
                 </div>
             </a>
             <a href="#">
@@ -132,7 +159,7 @@
         <div class="news-card">
             <a href="#">
                 <div class="news-pic">
-                    <img src="img/news-2.png" alt="news-2">
+                    <img src="img/news-2.jpg" alt="news-2">
                 </div>
             </a>
             <a href="#">
@@ -168,7 +195,7 @@
                         <div class="news-content">
                             <span>美國除了眾所皆知的Harley-Davidson與FUZHOU Motorcycles之外，其實還存在著許多小規模、小產量的摩托車品牌，來自北印第安納州的Janus
                                 Motorcycles就是其中之一。這個品牌創立至今雖然只有十年歷史，但是他們的產品卻越來越受到復古車愛好者矚目，特別是當你要求外型必須充滿
-                                老味，引擎不用大卻得耐用，然後預算又非常有限的時候，FUZHOU Motorcycles肯定會是一個很不錯的選擇！</span>
+                                老味...</span>
                         </div>
                     </div>
                     <div class="news-view-number">
@@ -193,7 +220,7 @@
                         </div>
                         <div class="news-content">
                             <span>
-                                復古檔車的熱潮延伸至沙灘越野，為愛好者帶來獨特的驚喜。經典款檔車在海灘上優雅穿梭，挑戰沙地的越野極限，成為沙灘新的風潮，吸引眾多沙灘愛好者投入這場狂歡。這種融合復古魅力和極限運動的趨勢，不僅展現了檔車文化的多樣性，也為沙灘生活注入了全新的活力。隨著檔車在沙灘上踏浪而行，每一個轉彎都是一場視覺和感官的饗宴，讓人沉浸在這片悠然的沙灘樂園中。</span>
+                                復古檔車的熱潮延伸至沙灘越野，為愛好者帶來獨特的驚喜。經典款檔車在海灘上優雅穿梭，挑戰沙地的越野極限，成為沙灘新的風潮，吸引眾多沙灘愛好者投入這場狂歡。這種融合復古魅力和極限運動的趨勢，不僅展現了檔車文化的多樣性，也為沙灘生活注入了全新的活力。隨著...</span>
                         </div>
                     </div>
                     <div class="news-view-number">
@@ -207,7 +234,7 @@
         <div class="news-card">
             <a href="#">
                 <div class="news-pic">
-                    <img src="img/news-5.png" alt="news-5">
+                    <img src="img/news-5.jpg" alt="news-5">
                 </div>
             </a>
             <a href="#">
