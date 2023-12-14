@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="reset.css">
     <style>
         /* --------麵包屑-------- */
-        .things-intro-bread {
+        .things-intro-all {
             width: 100%;
             top: 30px;
             position: absolute;
             z-index: 4;
-            background-color: white;
         }
 
-        .things-intro-bread a {
+        .things-intro-bread span {
             color: #000000;
             font-size: 16px;
             letter-spacing: 1.5px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 300;
-            text-decoration: none;
             display: inline-block;
             padding: 20px;
             margin-left: 277px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
-        .things-intro-bread a:hover {
+        .things-intro-bread span a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 300;
+        }
+
+        .things-intro-bread span a:hover {
             color: #FF6B00;
         }
 
@@ -37,9 +41,9 @@
 
 
         .things-container {
-            width: 1000px;
+            width: 800px;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
             margin: auto;
             gap: 30px;
         }
@@ -48,6 +52,10 @@
         .things-pic {
             width: 100%;
             margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .things-title {
@@ -55,8 +63,14 @@
             margin-top: 150px;
         }
 
+        .main-helmet {
+            width: 390px;
+
+        }
+
         .main-helmet img {
             width: 100%;
+            height: 100%;
             vertical-align: middle;
             object-fit: cover;
         }
@@ -101,25 +115,13 @@
         .things-price {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             border-top: 1px solid #767474;
-            padding: 10px 0px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            padding-top: 30px;
+            margin-top: 30px;
         }
 
-        .things-price a {
-            text-decoration: none;
-            font-size: 13px;
-            color: #3b3b3b;
-            letter-spacing: 1px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-weight: 300;
-        }
 
-        .things-price a:hover {
-            color: #FF6B00;
-        }
 
         /* --------價格-------- */
         .things-price span:first-child {
@@ -134,7 +136,7 @@
 
         /* --------$3890-------- */
         .things-price span:last-child {
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 600;
             color: #ff6b00;
 
@@ -143,10 +145,17 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        .sizeQuality {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        /* ----------尺寸按鈕---------- */
         #helmet-size {
             width: 150px;
-            padding: 5px;
-            font-size: 16px;
+            height: 40px;
+            font-size: 15px;
             border: 1px solid #ccc;
             text-align: center;
             color: #7d7d7d;
@@ -154,112 +163,111 @@
             font-family: 'Noto Sans TC', sans-serif;
         }
 
-        #quality {
+        /* ----------加加減減按鈕---------- */
+        .btn-group input {
+            width: 50px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: #7d7d7d;
+            font-family: 'Noto Sans TC', sans-serif;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .btn-group {
             width: 150px;
-            padding: 5px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            text-align: center;
-            color: #7d7d7d;
-            letter-spacing: 1px;
-            font-family: 'Noto Sans TC', sans-serif;
+            display: flex;
         }
 
-        .things-btn {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            gap: 10px;
-        }
+        /* ----------聯絡經銷按鈕---------- */
 
         .things-btn a {
-            border-radius: 5px;
-            margin-left: 10px;
             text-decoration: none;
-        }
-
-        .things-btn a:first-child {
             font-size: 13px;
             text-align: center;
             color: #7d7d7d;
             letter-spacing: 1px;
             font-family: 'Noto Sans TC', sans-serif;
-            padding: 10px 20px;
-            border: 1px solid #767474;
+            padding: 15px 40px;
+            border: 1px solid #ccc;
         }
 
-        .things-btn a:first-child:hover {
+        .things-btn a:hover {
             background-color: #ff6b00;
             color: #ffffff;
-            padding: 10px 20px;
             border: 1px solid #FF6B00;
         }
 
-        /* --------橘色icon-------- */
-        .orange-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #ff6b00;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        @media screen and (max-width:992px) {
 
-        .things-btn a:last-child {
-            transition: transform 0.5s ease-in-out;
-        }
 
-        .group span {
-            padding: 6px;
-            text-align: center;
-            display: block;
-            color: #ffffff;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-        }
+            .things-intro-bread span {}
 
-        .inner {
-            width: 31px;
-            height: 21px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 50%;
-            padding: 3px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+            .things-container {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-around;
+                margin: auto;
+            }
 
-        .inner::before {
-            content: "";
-            width: 0;
-            height: 0;
-            border-left: 7px solid rgb(255, 255, 255);
-            border-top: 7px solid transparent;
-            border-bottom: 10px solid transparent;
-            position: absolute;
-            transform: rotate(35deg);
-            left: 3px;
-            top: 15px;
-        }
+            .things-intro-bread span {
+                margin-left: 30px;
+            }
 
-        .inner .gray-circle {
-            content: "";
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            background-color: gray;
-            margin: 2px;
-        }
+            .things-title {
+                margin-top: 30px;
+            }
 
-        .things-btn a:last-child:hover {
-            box-shadow: 1 1 10px 10px #ff6b00;
-            transform: scale(1.15);
-            transition: .5s;
+            .things-pic {
+                width: 300px;
+            }
+
+            .things-tittle-pic img {
+                width: 100%;
+            }
+
+            .main-helmet {
+                width: 300px;
+            }
+
+            .sizeQuality {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .things-price {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .things-price div {
+                margin-bottom: 30px;
+            }
+
+            #helmet-size {
+                background-color: white;
+                border-radius: 0;
+            }
+
+            #helmet-size {
+                width: 300px;
+                margin-bottom: 10px;
+            }
+
+            .btn-group input {
+                padding: 9px;
+            }
+
+            #btnMinus0,
+            #qty0,
+            #btnPlus0 {
+                border-radius: 0;
+            }
         }
     </style>
 </head>
@@ -268,7 +276,7 @@
     <!-- --------麵包屑--------  -->
     <div class="things-intro-all">
         <div class="things-intro-bread">
-            <a href="#">車輛配件 / 安全帽</a>
+            <span> 車輛配件 /<a href="#"> 安全帽</a></span>
         </div>
     </div>
     <!-- --------安全帽--------  -->
@@ -281,10 +289,7 @@
             </div>
 
             <div class="things-tittle-pic">
-                <a href="#">
-                    <div class="things-arrow"><img src="img/motor-arrow-left.svg" alt="-arrow-left">
-                    </div>
-                </a>
+
                 <a href="#">
                     <div><img src="img/little-1.svg" alt="little-1"></div>
                 </a>
@@ -294,10 +299,7 @@
                 <a href="#">
                     <div><img src="img/little-3.svg" alt="little-3"></div>
                 </a>
-                <a href="#">
-                    <div class="things-arrow"><img src="img/motor-arrow-right.svg" alt="-arrow-right">
-                    </div>
-                </a>
+
             </div>
 
         </div>
@@ -316,44 +318,54 @@
                     選購前請參考下列頭圍測量圖表。
                 </span>
             </div>
-            <select name="city" id="helmet-size">
-                <option value="">尺寸</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
-            <select name="city" id="quality">
-                <option value="">數量</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="4">5</option>
-                <option value="4">6</option>
-                <option value="4">7</option>
-            </select>
+            <div class="sizeQuality">
+                <select name="city" id="helmet-size">
+                    <option value="">尺寸</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <div class="btn-group">
+                    <input type="button" value="-" id="btnMinus0">
+                    <input type="text" value="0" id="qty0">
+                    <input type="button" value="+" id="btnPlus0">
+                </div>
+            </div>
             <div class="things-price">
-                <a href="#">產品頁碼</a>
-                <div><span>價格</span><span>NT$ 3890</span></div>
+                <div><span>價格 </span><span>NT$ 3890</span></div>
+                <div class="things-btn">
+                    <a href="Things-map.html">聯絡經銷</a>
+                </div>
             </div>
-            <div class="things-btn">
-                <a href="Things-map.html">聯絡經銷</a>
-                <a href="#">
-                    <div class="orange-circle">
-                        <div class="group">
-                            <span>線上詢問</span>
-                            <div class="inner">
-                                <div class="gray-circle"></div>
-                                <div class="gray-circle"></div>
-                                <div class="gray-circle"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+
         </div>
     </div>
+
+    <script>
+
+        function quality(id) {
+            return document.getElementById(id)
+        }
+        function init() {
+            // 購物車減屌數量時
+            quality("btnMinus0").onclick = function (e) {
+                let qtyObj = e.target.nextElementSibling;
+                let qty = parseInt(qtyObj.value);
+                if (qty > 0) {
+                    qtyObj.value = qty - 1;
+                }
+            }
+            // 購物車增加數量時
+            quality("btnPlus0").onclick = function (e) {
+                let qtyObj = e.target.previousElementSibling;
+                let qty = parseInt(qtyObj.value);
+                qtyObj.value = qty + 1;
+            }
+        }
+
+        window.addEventListener("load", init, false);	
+    </script>
 
 </body>
 

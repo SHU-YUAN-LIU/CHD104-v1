@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* -------表格------- */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-group {
+            width: 800px;
+            margin: auto;
+        }
+
+        .form-btn {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid blue;
+        }
+
+        .form-btn a {
+            padding: 20px 30px;
+            background-color: #313131;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .table-group {
+            width: 100%;
+            /* box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.963); */
+        }
+
+        table {
+            border-collapse: collapse;
+            /* 相鄰的邊框會合併為一個單一邊框 */
+            background-color: rgb(0, 0, 0);
+            margin-bottom: 70px;
+        }
+
+        tr {
+            border-bottom: 1px solid #803300;
+            display: flex;
+            width: 800px;
+        }
+
+        tr:last-child {
+            border: none;
+        }
+
+        td {
+            color: white;
+            text-align: left;
+            padding: 30px;
+            flex: 1;
+        }
+
+        .first-column {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- -------規格表------- -->
+
+    <div class="form-group">
+        <div class="form-btn">
+            <div class=""><a href="">引擎變速箱</a></div>
+            <div class=""><a href="">車身規格</a></div>
+            <div class=""><a href="">尺寸重量</a></div>
+            <div class=""><a href="">燃油消耗 </a></div>
+        </div>
+
+        <div class="table-group">
+            <table>
+                <tr>
+                    <!-- 第一行 -->
+                    <td class="first-column">形式</td>
+                    <td>水冷四行程 並列雙缸</td>
+                </tr>
+                <tr>
+                    <!-- 第二行 -->
+                    <td>排氣量</td>
+                    <td>1200c.c.</td>
+                </tr>
+                <tr>
+                    <!-- 第三行 -->
+                    <td>缸勁x行程</td>
+                    <td>97.6 mm / 80 mm</td>
+                </tr>
+                <tr>
+                    <!-- 第四行 -->
+                    <td>燃料系統</td>
+                    <td>電子燃油噴射</td>
+                </tr>
+                <tr>
+                    <!-- 第五行 -->
+                    <td>變速機構</td>
+                    <td>往復式 6 檔</td>
+                </tr>
+                <tr>
+                    <!-- 第六行 -->
+                    <td>變速箱</td>
+                    <td>多片濕式離合器</td>
+                </tr>
+                <tr>
+                    <!-- 第七行 -->
+                    <td>最大馬力</td>
+                    <td>80 PS</td>
+                </tr>
+                <tr>
+                    <!-- 第八行 -->
+                    <td>最大扭力</td>
+                    <td>105 Nm</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

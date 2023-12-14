@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* body {
+            margin: 0;
+            overflow: hidden;
+        } */
+
+        .slide-in-image-container {
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            /* 初始位置在視窗外 */
+            transition: left 2s ease;
+            /* 定義動畫效果，2秒內從左邊移入，使用ease函數平滑過渡 */
+        }
+
+        .slide-in-image-container img {
+            width: 100%;
+            /* 讓圖片充滿容器 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-in-image-container">
+        <img src="/img/Product-last.png" alt="Sliding Image">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 當文檔加載完成後，選擇圖片容器
+            const imageContainer = document.querySelector('.slide-in-image-container');
+
+            // 將圖片容器的左邊位置設置為0，觸發滑進效果
+            imageContainer.style.left = '0';
+        });
+    </script>
+</body>
+
+</html>

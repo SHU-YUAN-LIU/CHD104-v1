@@ -7,6 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <style>
+        body {
+            position: relative;
+        }
+
         .title {
             width: 100%;
             display: flex;
@@ -35,14 +39,14 @@
         }
 
         .things-feature p {
-            width: 1200px;
+            width: 800px;
             text-align: justify;
             letter-spacing: 3px;
             line-height: 1.8em;
             font-family: 'Noto Sans TC', sans-serif;
             font-size: 20px;
             font-weight: 300;
-            margin: 50px;
+            padding: 50px 0px;
         }
 
         .big-pic {
@@ -53,18 +57,34 @@
             margin: auto;
         }
 
+        .big-pic div {
+            width: 800px;
+            height: 450px;
+            gap: 20px;
+        }
+
+        .big-pic div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .head-size {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin: auto;
-            width: 900px;
-            margin-top: 200px;
-            margin-bottom: 80px;
+            width: 800px;
+            margin-top: 80px;
+        }
+
+        .head-size div {
+            width: 400px;
         }
 
         .head-size img {
-            width: 500px;
+            width: 100%;
+            vertical-align: middle;
         }
 
         .head-size span {
@@ -78,7 +98,7 @@
         }
 
         .head-size-methed {
-            width: 47%;
+            width: 800px;
             text-align: justify;
             letter-spacing: 3px;
             line-height: 1.8em;
@@ -88,6 +108,150 @@
             margin: auto;
             margin-top: 80px;
             margin-bottom: 250px;
+
+        }
+
+        .head-size-methed ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .methedNumber {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* --------橘色icon-------- */
+        .things-btn-jump {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            animation: jump 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes jump {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .orange-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #ff6b00;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .things-btn-jump a {
+            text-decoration: none;
+            transition: transform 0.5s ease-in-out;
+        }
+
+
+        .group span {
+            padding: 6px;
+            text-align: center;
+            display: block;
+            color: #ffffff;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .inner {
+            width: 31px;
+            height: 21px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            padding: 3px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .inner::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 7px solid rgb(255, 255, 255);
+            border-top: 7px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            transform: rotate(35deg);
+            left: 3px;
+            top: 15px;
+        }
+
+        .inner .gray-circle {
+            content: "";
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 2px;
+        }
+
+        .things-btn-jump a .orange-circle:hover {
+            box-shadow: 1 1 10px 10px #ff6b00;
+            transform: scale(1.15);
+            transition: .5s;
+        }
+
+        @media screen and (max-width:768px) {
+            .things-feature p {
+                width: 300px;
+            }
+
+            .title strong {
+                width: 300px;
+            }
+
+            .big-pic div {
+                width: 300px;
+                height: 240px;
+            }
+
+            .big-pic div img {
+                object-position: 30% 30%;
+            }
+
+            .head-size-group {
+                width: 300px;
+                margin: auto;
+            }
+
+            .head-size {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .head-size div {
+                width: 300px;
+            }
+
+            .head-size-methed {
+                width: 300px;
+            }
+
+            .head-size-methed ul {
+                width: 300px;
+            }
 
         }
     </style>
@@ -112,24 +276,43 @@
         <div><img src="img/big-2.svg" alt="big-2"></div>
         <div><img src="img/big-3.svg" alt="big-3"></div>
     </div>
-    <div class="head-size">
-        <img src="img/head.svg" alt="head">
-        <span>
-            SINX 頭圍尺寸表<br>
-            M : 55~56 CM<br>
-            L :57~58 CM<br>
-            XL : 59~60 CM
-        </span>
+    <div class="head-size-group">
+        <div class="head-size">
+            <div><img src="img/head.svg" alt="head"></div>
+            <span>
+                SINX 頭圍尺寸表<br>
+                M : 55~56 CM<br>
+                L :57~58 CM<br>
+                XL : 59~60 CM
+            </span>
+        </div>
+        <div class="head-size-methed">
+            <ul>
+                <li>簡易頭圍尺寸測量方法:</li>
+                <div class="methedNumber">❶<li>以眉毛的眉峰上方約25mm處(如圖示)利用布捲尺或皮尺於後面經過枕骨粗隆最高處(後腦勺最突出的一點)繞頭部一圈至原點即可測量。</li>
+                </div>
+                <div class="methedNumber"> ❷<li>測量頭圍時布捲尺不宜刻意拉緊或太鬆而影響數據正確性。</li>
+                </div>
+                <div class="methedNumber">❸<li>沒有布捲尺可以利用手機充電線測量頭圍,再利用硬尺測量充電線即可.</li>
+                </div>
+            </ul>
+        </div>
     </div>
-    <div class="head-size-methed">
-        <span>
-            簡易頭圍尺寸測量方法:<br>
-            ❶以眉毛的眉峰上方約25mm處(如圖示)利用布捲尺或皮尺於後面經過枕骨粗隆最高處(後腦勺最突出的一點)繞頭部一圈至原點即可測量。<br>
-            ❷測量頭圍時布捲尺不宜刻意拉緊或太鬆而影響數據正確性。<br>
-            ❸沒有布捲尺可以利用手機充電線測量頭圍,再利用硬尺測量充電線即可.
-        </span>
+    <!-- 線上詢問 -->
+    <div class="things-btn-jump">
+        <a href="#">
+            <div class="orange-circle">
+                <div class="group">
+                    <span>線上詢問</span>
+                    <div class="inner">
+                        <div class="gray-circle"></div>
+                        <div class="gray-circle"></div>
+                        <div class="gray-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
-
 </body>
 
 </html>

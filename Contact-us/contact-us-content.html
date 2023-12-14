@@ -10,16 +10,17 @@
         body {
             width: 100%;
             background:
-                linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 40%)no-repeat,
-                linear-gradient(to right, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
-                linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 1))no-repeat,
+                linear-gradient(to bottom, rgba(0, 0, 0, 1)30%, transparent 40%)no-repeat, linear-gradient(to top, rgba(0, 0, 0, 1)10%, transparent 30%)no-repeat,
+                linear-gradient(to right, transparent 80%, rgba(0, 0, 0, 0.8))no-repeat,
+                linear-gradient(to left, transparent 80%, rgba(0, 0, 0, 0.8))no-repeat,
                 url(img/batthern.png),
-                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.7), transparent 25%)no-repeat,
+                radial-gradient(circle at 10% 90%, rgba(255, 85, 0, 0.6), transparent 25%)no-repeat,
                 linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
+            color: white;
         }
 
         .form-group {
-            width: 300px;
+            width: 520px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -44,7 +45,6 @@
             margin-top: 150px;
             margin-bottom: 150px;
             border: 1px solid#ff6a0070;
-            border-radius: 5px;
             background:
                 linear-gradient(to right bottom, rgba(0, 0, 0, 0.9)15%, rgb(21, 21, 21)40%, rgba(0, 0, 0, 1)90%);
             box-shadow: 10px 10px 70px 40px rgb(0, 0, 0);
@@ -76,13 +76,13 @@
         .name input {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
+            width: 520px;
+            height: 50px;
             border: none;
             outline: none;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
+            text-indent: 20px;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -106,13 +106,13 @@
         .tel input {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
+            width: 520px;
+            height: 50px;
             border: none;
             outline: none;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
+            text-indent: 20px;
 
         }
 
@@ -137,13 +137,13 @@
         .email input {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
+            width: 520px;
+            height: 50px;
             border: none;
             outline: none;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
+            text-indent: 20px;
         }
 
         /* :focus 選擇器調整輸入框在點擊的樣子 */
@@ -158,11 +158,10 @@
         #multiple {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
-            height: 40px;
+            width: 520px;
+            height: 50px;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
             padding: 10px;
             font-size: 15px;
             letter-spacing: 2px;
@@ -170,8 +169,9 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            text-indent: 1px;
+            text-indent: 10px;
             text-overflow: '';
+
         }
 
         #multiple:hover {
@@ -203,13 +203,14 @@
         .option textarea {
             box-sizing: border-box;
             color: rgb(255, 255, 255);
-            width: 300px;
+            width: 520px;
             height: 100px;
             border: none;
             outline: none;
             background-color: transparent;
             border: 1px solid gray;
-            border-radius: 3px;
+            padding: 20px;
+
 
         }
 
@@ -240,9 +241,8 @@
         .con-btn-group a {
             text-decoration: none;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 75px;
             margin: 10;
-            border-radius: 3px;
         }
 
         .con-btn-group a:first-child {
@@ -266,6 +266,42 @@
         .con-btn-group a:last-child:hover {
             border: 1px solid #ff6b00;
             background-color: rgba(255, 107, 0, 1);
+        }
+
+        @media screen and (max-width:992px) {
+            body {
+                background:
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.7)20%, transparent 70%)no-repeat,
+                    linear-gradient(to top, rgba(0, 0, 0, 0.7)20%, transparent 70%)no-repeat,
+                    linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.5))no-repeat,
+                    linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.5))no-repeat,
+                    url(img/batthern.png),
+                    radial-gradient(circle at 30% 90%, rgba(255, 85, 0, 0.6), transparent 20%)no-repeat,
+                    linear-gradient(to bottom, rgb(0, 0, 0), rgba(58, 58, 58, 0.9), rgb(0, 0, 0))no-repeat;
+            }
+
+            .contact-us {
+                width: 350px;
+                border: none;
+                background: none;
+                box-shadow: none;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .form-group,
+            .name input,
+            .tel input,
+            .email input,
+            #multiple,
+            .option textarea {
+                width: 300px;
+                border-radius: 0%;
+            }
+
+            .con-btn-group a {
+                padding: 15px 30px;
+            }
         }
     </style>
 </head>
