@@ -13,20 +13,32 @@
             background: url(img/square.svg);
         }
 
-        .things-intro-bread a {
+        /* --------麵包屑-------- */
+        .things-intro-all {
+            width: 100%;
+            top: 30px;
+
+        }
+
+        .things-intro-bread span {
             color: #000000;
             font-size: 16px;
             letter-spacing: 1.5px;
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 300;
-            text-decoration: none;
             display: inline-block;
             padding: 20px;
             margin-left: 277px;
-            margin-top: 83px;
+            margin-top: 90px;
         }
 
-        .things-intro-bread a:hover {
+        .things-intro-bread span a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 300;
+        }
+
+        .things-intro-bread span a:hover {
             color: #FF6B00;
         }
 
@@ -35,9 +47,9 @@
             display: flex;
             justify-content: center;
             margin: auto;
-            width: 1200px;
+            max-width: 800px;
             gap: 40px;
-            margin-top: 50px;
+            margin-top: 25px;
             margin-bottom: 100px;
         }
 
@@ -98,6 +110,12 @@
         /* --------地標-------- */
         .map {
             position: relative;
+
+
+        }
+
+        .landmark-group a {
+            position: absolute;
         }
 
         .landmark-group a img {
@@ -107,68 +125,114 @@
         }
 
         /* --------地標(新北)-------- */
-        .landmark-group .pic-1 img {
-            position: absolute;
-            top: 20px;
-            right: -100px;
+        .pic-1 {
+
+            top: 5%;
+            right: 25%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .landmark-group .pic-1 img:hover {
+        .pic-1:hover {
             transform: scale(1.15);
             transition: .5s;
         }
 
         /* --------地標(桃園)-------- */
-        .landmark-group .pic-2 img {
-            position: absolute;
-            top: 80px;
-            right: -60px;
+        .pic-2 {
+
+            top: 13%;
+            right: 35%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .landmark-group .pic-2 img:hover {
+        .pic-2:hover {
             transform: scale(1.15);
             transition: .5s;
         }
 
         /* --------地標(台中)-------- */
-        .landmark-group .pic-3 img {
-            position: absolute;
-            top: 200px;
-            right: 50px;
+        .pic-3 {
+
+            top: 35%;
+            right: 50%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .landmark-group .pic-3 img:hover {
+        .pic-3:hover {
             transform: scale(1.15);
             transition: .5s;
         }
 
         /* --------地標(花蓮)-------- */
-        .landmark-group .pic-4 img {
-            position: absolute;
-            top: 250px;
-            right: -140px;
+        .pic-4 {
+
+            top: 30%;
+            right: 15%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .landmark-group .pic-4 img:hover {
+        .pic-4:hover {
             transform: scale(1.15);
             transition: .5s;
         }
 
         /* --------地標(高雄)-------- */
-        .landmark-group .pic-5 img {
-            position: absolute;
-            top: 400px;
-            right: 40px;
+        .pic-5 {
+
+            top: 67%;
+            right: 50%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .landmark-group .pic-5 img:hover {
+        .pic-5:hover {
             transform: scale(1.15);
             transition: .5s;
+        }
+
+        @media screen and (max-width:768px) {
+            .things-intro-bread span {
+                margin-left: 25px;
+            }
+
+            .map-container {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                width: 350px;
+            }
+
+            .guide-box {
+                display: none;
+            }
+
+            .map-inf-left {
+                align-items: center;
+            }
+
+            .map-inf-right {
+                width: 350px;
+            }
+
+            .landmark-group .pic-1 img,
+            .landmark-group .pic-2 img,
+            .landmark-group .pic-3 img,
+            .landmark-group .pic-4 img,
+            .landmark-group .pic-5 img {
+                /* width: 350px; */
+                transform: scale(0.7, 0.7);
+            }
+
+            .map-inf-title span {
+                font-size: 25px;
+            }
+
+            .map-inf .map-inf-content {
+                font-size: 16px;
+            }
+
+            .map-inf .map-inf-content {
+                width: 350px;
+            }
         }
     </style>
 </head>
@@ -177,7 +241,7 @@
     <!-- --------麵包屑--------  -->
     <div class="things-intro-all">
         <div class="things-intro-bread">
-            <a href="#">車輛配件 / 安全帽 / 經銷商</a>
+            <span>車輛配件 / 安全帽 /<a href="#">經銷商</a></span>
         </div>
     </div>
     <div class="map-container">
@@ -211,18 +275,26 @@
                 <img src="img/Taiwan.svg" alt="Taiwan">
                 <div class="landmark-group">
                     <a class="pic-1" href="#">
-                        <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        <div>
+                            <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        </div>
                     </a>
                     <a class="pic-2" href="#">
-                        <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        <div>
+                            <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        </div>
                     </a>
                     <a class="pic-3" href="#"><img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
                     </a>
                     <a class="pic-4" href="#">
-                        <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        <div>
+                            <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        </div>
                     </a>
                     <a class="pic-5" href="">
-                        <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        <div>
+                            <img src="img/wolfer-landmark.svg" alt="wolfer-landmark">
+                        </div>
                     </a>
                 </div>
             </div>
