@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按鈕示範</title>
+    <style>
+        /* 添加一些基本樣式，可根據需要自行調整 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            display: none;
+            /* 初始隱藏所有產品圖片 */
+            max-width: 100%;
+            /* 圖片最大寬度為父容器的100% */
+            height: auto;
+            /* 自動調整高度以保持圖片比例 */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 點擊橘色按鈕時顯示橘色產品圖片
+            $('#orange-btn').click(function () {
+                $('.product-image').hide(); // 隱藏所有產品圖片
+                $('#orange-image').show(); // 顯示橘色產品圖片
+            });
+
+            // 點擊紅色按鈕時顯示紅色產品圖片
+            $('#red-btn').click(function () {
+                $('.product-image').hide(); // 隱藏所有產品圖片
+                $('#red-image').show(); // 顯示紅色產品圖片
+            });
+
+            // 點擊黃色按鈕時顯示黃色產品圖片
+            $('#yellow-btn').click(function () {
+                $('.product-image').hide(); // 隱藏所有產品圖片
+                $('#yellow-image').show(); // 顯示黃色產品圖片
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="button-container">
+        <!-- 橘色按鈕 -->
+        <button id="orange-btn">橘色</button>
+        <!-- 紅色按鈕 -->
+        <button id="red-btn">紅色</button>
+        <!-- 黃色按鈕 -->
+        <button id="yellow-btn">黃色</button>
+    </div>
+
+    <div class="product-images">
+        <!-- 橘色產品圖片 -->
+        <img id="orange-image" class="product-image" src="bobber-blue.png" alt="橘色產品">
+
+        <!-- 紅色產品圖片 -->
+        <img id="red-image" class="product-image" src="bobber-red.png" alt="紅色產品">
+
+        <!-- 黃色產品圖片 -->
+        <img id="yellow-image" class="product-image" src="bobber-yellow.png" alt="黃色產品">
+    </div>
+</body>
+
+</html>

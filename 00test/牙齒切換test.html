@@ -1,51 +1,281 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>New Web Project</title>
-    <style type="text/css">
-        #content {
-            width: 400px;
-            height: 200px;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        #tab_bar {
-            width: 400px;
-            height: 20px;
-            float: left;
+        /* -------牙齒們------- */
+        #content {
+            max-width: 800px;
         }
 
         #tab_bar ul {
-            padding: 0px;
-            margin: 0px;
-            height: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
         }
 
         #tab_bar li {
             list-style-type: none;
-            float: left;
-            width: 133.3px;
-            height: 20px;
+            text-align: center;
+            width: 266.6px;
+            height: 50px;
             background-color: gray;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .tab_css {
             width: 400px;
             height: 200px;
-            background-color: orange;
+            background-color: rgb(0, 0, 0);
             display: none;
-            float: left;
+        }
+
+        #tab1,
+        #tab2,
+        #tab3 {
+            font-size: 16px;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+
+        }
+
+        /* -------下面表格------- */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-group {
+            width: 800px;
+            margin: auto;
+        }
+
+        .form-btn {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid blue;
+        }
+
+        .form-btn a {
+            padding: 20px 30px;
+            background-color: #313131;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .table-group {
+            width: 100%;
+            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.963);
+        }
+
+        table {
+            border-collapse: collapse;
+            /* 相鄰的邊框會合併為一個單一邊框 */
+            background-color: rgb(0, 0, 0);
+            margin-bottom: 70px;
+        }
+
+        tr {
+            border-bottom: 1px solid #803300;
+            display: flex;
+            width: 800px;
+        }
+
+        tr:last-child {
+            border: none;
+        }
+
+        td {
+            color: white;
+            text-align: left;
+            padding: 30px;
+            flex: 1;
+        }
+
+        .first-column {
+            width: 50%;
         }
     </style>
+
+</head>
+
+<body>
+    <div id="content">
+        <!---------牙齒們--------->
+        <div id="tab_bar">
+            <ul>
+                <li id="tab1" onclick="myclick(1)" style="background-color: rgb(0, 0, 0)">
+                    引擎變速箱
+                </li>
+                <li id="tab2" onclick="myclick(2)">
+                    車身規格
+                </li>
+                <li id="tab3" onclick="myclick(3)">
+                    尺寸重量
+                </li>
+            </ul>
+        </div>
+        <!---------下面表格--------->
+        <div class="tab_css" id="tab1_content" style="display: block">
+            <div class="table-group">
+                <table>
+                    <!-- 第一頁 -->
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">形式</td>
+                        <td>水冷四行程 並列雙缸</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>排氣量</td>
+                        <td>1200c.c.</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>缸勁x行程</td>
+                        <td>97.6 mm / 80 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>燃料系統</td>
+                        <td>電子燃油噴射</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>變速機構</td>
+                        <td>往復式 6 檔</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>變速箱</td>
+                        <td>多片濕式離合器</td>
+                    </tr>
+                    <tr>
+                        <!-- 第七行 -->
+                        <td>最大馬力</td>
+                        <td>80 PS</td>
+                    </tr>
+                    <tr>
+                        <!-- 第八行 -->
+                        <td>最大扭力</td>
+                        <td>105 Nm</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab_css" id="tab2_content">
+            <div class="table-group">
+                <table>
+                    <!-- 第二頁 -->
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">輪圈-前</td>
+                        <td>36輻 21 x 2.15in</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>輪圈-後</td>
+                        <td>32輻 17 x 4.25in</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>輪胎尺寸-前</td>
+                        <td>90/90-21</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>輪胎尺寸-後</td>
+                        <td>150/50 R17</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>前懸吊</td>
+                        <td>Showa 47mm 可調式倒立式前叉,行程 250mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>剎車系統-前</td>
+                        <td>Brembo M50 320mm 雙浮動式碟盤，Brembo四活塞卡鉗</td>
+                    </tr>
+                    <tr>
+                        <!-- 第七行 -->
+                        <td>剎車系統 後</td>
+                        <td>Brembo 255mm ABS</td>
+                    </tr>
+                    <tr>
+                        <!-- 第八行 -->
+                        <td>最大扭力</td>
+                        <td>105 Nm</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab_css" id="tab3_content">
+            <div class="table-group">
+                <!-- 第三頁 -->
+                <table>
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">全寬</td>
+                        <td>905 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>全高</td>
+                        <td>1250 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>軸距</td>
+                        <td>1570 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>坐墊高</td>
+                        <td>870 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>乾重</td>
+                        <td>207kg</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>油箱容量</td>
+                        <td>16l</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript">
         var myclick = function (v) {
             var llis = document.getElementsByTagName("li");
             for (var i = 0; i < llis.length; i++) {
                 var lli = llis[i];
                 if (lli == document.getElementById("tab" + v)) {
-                    lli.style.backgroundColor = "orange";
+                    lli.style.backgroundColor = "black";
                 } else {
                     lli.style.backgroundColor = "gray";
                 }
@@ -65,33 +295,6 @@
 
         }  
     </script>
-</head>
-
-<body>
-    <div id="content">
-        <div id="tab_bar">
-            <ul>
-                <li id="tab1" onclick="myclick(1)" style="background-color: orange">
-                    tab1
-                </li>
-                <li id="tab2" onclick="myclick(2)">
-                    tab2
-                </li>
-                <li id="tab3" onclick="myclick(3)">
-                    tab3
-                </li>
-            </ul>
-        </div>
-        <div class="tab_css" id="tab1_content" style="display: block">
-            <div>页面一</div>
-        </div>
-        <div class="tab_css" id="tab2_content">
-            <div>页面二</div>
-        </div>
-        <div class="tab_css" id="tab3_content">
-            <div>页面三</div>
-        </div>
-    </div>
 </body>
 
 </html>

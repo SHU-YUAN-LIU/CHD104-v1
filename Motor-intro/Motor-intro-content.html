@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor-intro-content</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             width: 100%;
             background:
@@ -16,13 +21,15 @@
                 url(img/batthern.png),
                 radial-gradient(circle at 10% 80%, rgba(255, 85, 0, 0.7), transparent 25%),
                 linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(43, 43, 43, 0.9), rgb(0, 0, 0, 1))no-repeat;
+
+            font-family: 'Noto Sans TC', sans-serif;
         }
 
         .container-title strong {
             margin-top: 50px;
             margin-bottom: 20px;
             text-align: center;
-            width: 600px;
+            /* width: 600px; */
             display: block;
             color: #ffffff;
             letter-spacing: 3px;
@@ -38,7 +45,7 @@
         }
 
         .container-title {
-            width: 100%;
+            /* width: 100%; */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -102,11 +109,53 @@
 
         }
 
-        /* -------表格------- */
 
-        .form-btn a:hover {
-            background-color: #FF6800;
-            transition: .5s ease-in-out;
+        /* -------牙齒們------- */
+        #content {
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 500px;
+        }
+
+        #tab_bar ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #tab_bar li {
+            list-style-type: none;
+            text-align: center;
+            width: 266.6px;
+            height: 50px;
+            background-color: gray;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .tab_css {
+            /* width: 400px; */
+            height: 200px;
+            background-color: rgb(0, 0, 0);
+            display: none;
+        }
+
+        #tab1,
+        #tab2,
+        #tab3 {
+            font-size: 16px;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+
+        }
+
+        /* -------下面表格------- */
+        * {
+            margin: 0;
+            padding: 0;
         }
 
         .form-group {
@@ -118,6 +167,7 @@
             width: 800px;
             display: flex;
             justify-content: space-between;
+            border: 1px solid blue;
         }
 
         .form-btn a {
@@ -130,7 +180,6 @@
             font-weight: 400;
             text-decoration: none;
             text-align: center;
-            margin: 0px 2px;
             flex-grow: 1;
         }
 
@@ -163,11 +212,11 @@
             flex: 1;
         }
 
-        .first-column {
-            width: 50%;
-        }
 
         @media screen and (max-width:768px) {
+            #content {
+                max-width: 300px;
+            }
 
             .form-group {
                 width: 300px;
@@ -194,6 +243,25 @@
         }
 
         /* -------聲音區塊------- */
+        .sound-group {
+            display: flex;
+            margin: 180px;
+            /* padding-bottom: 100px; */
+        }
+
+        .motor-pic {
+            margin-left: -30%;
+            width: 83%;
+            /* transform: scale(1.3); */
+        }
+
+        .motor-pic img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+
         .play-group {
             width: 400px;
             height: 50px;
@@ -206,9 +274,8 @@
             margin-top: 30px;
         }
 
-        .sound-group-right .sound-title .unique {
+        .unique {
             text-align: center;
-            width: 600px;
             display: block;
             color: #ffffff;
             letter-spacing: 5px;
@@ -218,8 +285,8 @@
             margin: 20px 0px;
         }
 
-        .sound-title .sound-content {
-            width: 600px;
+        .sound-content {
+            width: 450px;
             color: rgb(255, 255, 255);
             font-size: 16px;
             letter-spacing: 2px;
@@ -231,8 +298,6 @@
         }
 
         .sound-group-right {
-
-            height: 300px;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -243,24 +308,7 @@
             margin-top: 30px;
         }
 
-        .sound-group {
-            display: flex;
-            margin: 160px;
-            gap: 50px;
 
-        }
-
-        .motor-pic {
-            margin-left: -575px;
-            /* transform: scale(1.3); */
-        }
-
-        .motor-pic img {
-            width: 100%;
-            height: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-        }
 
         @media screen and (max-width:1280px) {
             .sound-group-right {
@@ -282,6 +330,10 @@
                 width: 300px;
             }
 
+            #tab_bar li {
+                width: 100px;
+            }
+
             /* -------聲音區塊------- */
             .sound-group {
                 display: flex;
@@ -291,18 +343,14 @@
                 margin-bottom: 80px;
             }
 
-            .sound-group-right .sound-title .unique {
-                width: 250px;
-                font-size: 30px;
-            }
-
-            .sound-title .sound-content {
-                width: 250px;
+            .unique {
+                font-size: 28px;
             }
 
             .container-title strong {
                 width: 300px;
                 letter-spacing: 1px;
+                font-size: 35px;
             }
 
             .sound-group-right {
@@ -311,14 +359,31 @@
 
             .motor-pic {
                 margin: auto;
-                margin-top: 80px;
+                margin-top: 30px;
+                width: 300px;
             }
 
             .motor-pic img {
-                margin-left: -100px;
-                transform: scale(1.7);
+                margin-left: 0px;
+
             }
 
+            .sound-content {
+                width: 300px;
+                letter-spacing: 1px;
+                text-align: justify;
+            }
+
+            body {
+                background:
+                    linear-gradient(to bottom, rgb(0, 0, 0, 0.5)30%, transparent 80%)no-repeat,
+                    linear-gradient(to top, rgb(0, 0, 0, 0.5), transparent 50%)no-repeat,
+                    linear-gradient(to right, transparent 80%, rgba(0, 0, 0, 0.5))no-repeat,
+                    linear-gradient(to left, transparent 80%, rgba(0, 0, 0, 0.5))no-repeat,
+                    url(img/batthern.png),
+                    radial-gradient(circle at 10% 80%, rgba(255, 85, 0, 0.7), transparent 8%),
+                    linear-gradient(to bottom, rgb(0, 0, 0, 0.8), rgba(43, 43, 43, 0.9), rgb(0, 0, 0, 0.8))no-repeat;
+            }
         }
     </style>
 </head>
@@ -364,60 +429,157 @@
         <div class="container-bar"></div>
     </div>
     <!-- -------規格表------- -->
-
-    <div class="form-group">
-        <div class="form-btn">
-            <a href="">引擎變速箱</a>
-            <a href="">車身規格</a>
-            <a href="">尺寸重量</a>
-            <a href="">燃油消耗 </a>
+    <div id="content">
+        <!---------牙齒們--------->
+        <div id="tab_bar">
+            <ul>
+                <li id="tab1" class="teath" onclick="myclick(1)" style="background-color: rgb(0, 0, 0)">
+                    引擎變速箱
+                </li>
+                <li id="tab2" class="teath" onclick="myclick(2)">
+                    車身規格
+                </li>
+                <li id="tab3" class="teath" onclick="myclick(3)">
+                    尺寸重量
+                </li>
+            </ul>
         </div>
+        <!---------下面表格--------->
+        <div class="tab_css" id="tab1_content" style="display: block">
+            <div class="table-group">
+                <!-- 第一頁 -->
+                <table>
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">形式</td>
+                        <td>水冷四行程 並列雙缸</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>排氣量</td>
+                        <td>1200c.c.</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>缸勁x行程</td>
+                        <td>97.6 mm / 80 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>燃料系統</td>
+                        <td>電子燃油噴射</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>變速機構</td>
+                        <td>往復式 6 檔</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>變速箱</td>
+                        <td>多片濕式離合器</td>
+                    </tr>
+                    <tr>
+                        <!-- 第七行 -->
+                        <td>最大馬力</td>
+                        <td>80 PS</td>
+                    </tr>
+                    <tr>
+                        <!-- 第八行 -->
+                        <td>最大扭力</td>
+                        <td>105 Nm</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab_css" id="tab2_content">
+            <div class="table-group">
+                <!-- 第二頁 -->
+                <table>
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">輪圈-前</td>
+                        <td>36輻 21 x 2.15in</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>輪圈-後</td>
+                        <td>32輻 17 x 4.25in</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>輪胎尺寸-前</td>
+                        <td>90/90-21</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>輪胎尺寸-後</td>
+                        <td>150/50 R17</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>前懸吊</td>
+                        <td>Showa 47mm 可調式倒立式前叉,行程 250mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>剎車系統-前</td>
+                        <td>Brembo M50 320mm 雙浮動式碟盤，Brembo四活塞卡鉗</td>
+                    </tr>
+                    <tr>
+                        <!-- 第七行 -->
+                        <td>剎車系統 後</td>
+                        <td>Brembo 255mm ABS</td>
+                    </tr>
+                    <tr>
+                        <!-- 第八行 -->
+                        <td>最大扭力</td>
+                        <td>105 Nm</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab_css" id="tab3_content">
+            <div class="table-group">
+                <!-- 第三頁 -->
+                <table>
+                    <tr>
+                        <!-- 第一行 -->
+                        <td class="first-column">全寬</td>
+                        <td>905 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第二行 -->
+                        <td>全高</td>
+                        <td>1250 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第三行 -->
+                        <td>軸距</td>
+                        <td>1570 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第四行 -->
+                        <td>坐墊高</td>
+                        <td>870 mm</td>
+                    </tr>
+                    <tr>
+                        <!-- 第五行 -->
+                        <td>乾重</td>
+                        <td>207kg</td>
+                    </tr>
+                    <tr>
+                        <!-- 第六行 -->
+                        <td>油箱容量</td>
+                        <td>16l</td>
+                    </tr>
 
-        <div class="table-group">
-            <table>
-                <tr>
-                    <!-- 第一行 -->
-                    <td class="first-column">形式</td>
-                    <td>水冷四行程 並列雙缸</td>
-                </tr>
-                <tr>
-                    <!-- 第二行 -->
-                    <td>排氣量</td>
-                    <td>1200c.c.</td>
-                </tr>
-                <tr>
-                    <!-- 第三行 -->
-                    <td>缸勁x行程</td>
-                    <td>97.6 mm / 80 mm</td>
-                </tr>
-                <tr>
-                    <!-- 第四行 -->
-                    <td>燃料系統</td>
-                    <td>電子燃油噴射</td>
-                </tr>
-                <tr>
-                    <!-- 第五行 -->
-                    <td>變速機構</td>
-                    <td>往復式 6 檔</td>
-                </tr>
-                <tr>
-                    <!-- 第六行 -->
-                    <td>變速箱</td>
-                    <td>多片濕式離合器</td>
-                </tr>
-                <tr>
-                    <!-- 第七行 -->
-                    <td>最大馬力</td>
-                    <td>80 PS</td>
-                </tr>
-                <tr>
-                    <!-- 第八行 -->
-                    <td>最大扭力</td>
-                    <td>105 Nm</td>
-                </tr>
-            </table>
+                </table>
+            </div>
         </div>
     </div>
+
+
 
     <!-- 排氣管聲音區塊 -->
     <div class="sound-group">
@@ -437,14 +599,42 @@
                 <source src="img/SON-ECHAPPEMENT-STREET-BOBBER-POUR-TRIUMPH-2.mp3" type="audio/mp3">
                 Your browser does not support the audio tag.
             </audio>
-            <script>
-                var audio = new Audio('SON-ECHAPPEMENT-STREET-BOBBER-POUR-TRIUMPH-2.mp3');
-                audio.play();
-            </script>
+
 
         </div>
     </div>
+    <!-- 牙齒切換 -->
+    <script type="text/javascript">
+        var myclick = function (v) {
+            var llis = document.getElementsByClassName("teath");
+            // var llis = document.getElementsByTagName("li");
+            for (var i = 0; i < llis.length; i++) {
+                var lli = llis[i];
+                if (lli == document.getElementById("tab" + v)) {
+                    lli.style.backgroundColor = "black";
+                } else {
+                    lli.style.backgroundColor = "#808080";
+                }
+            }
 
+            var divs = document.getElementsByClassName("tab_css");
+            for (var i = 0; i < divs.length; i++) {
+
+                var divv = divs[i];
+
+                if (divv == document.getElementById("tab" + v + "_content")) {
+                    divv.style.display = "block";
+                } else {
+                    divv.style.display = "none";
+                }
+            }
+        }  
+    </script>
+    <!-- 聲音播放器 -->
+    <script>
+        var audio = new Audio('SON-ECHAPPEMENT-STREET-BOBBER-POUR-TRIUMPH-2.mp3');
+        audio.play();
+    </script>
 </body>
 
 </html>
