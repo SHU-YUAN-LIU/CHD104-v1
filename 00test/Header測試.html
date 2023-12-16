@@ -28,7 +28,7 @@
         }
 
         #header {
-            background-color: black;
+            background-color: rgb(95, 50, 50);
             border-bottom: 2px solid #a73917;
             justify-content: center;
             display: flex;
@@ -47,18 +47,12 @@
 
         }
 
-        /* 最大1440px,小於他要... */
-        @media screen and (max-width: 1440px) {
-            .nav {
-                width: 90.5%;
-            }
-        }
+
 
         .navbar {
             align-items: center;
             display: flex;
         }
-
 
         .navbar ul {
             display: flex;
@@ -103,21 +97,12 @@
         }
 
         /* -------漢堡------- */
-        #hamburgerMenu {
-            position: fixed;
-            top: 8.5px;
-            right: 15px;
-            z-index: 6;
-            padding: 5px 8px;
-            cursor: pointer;
+        .hb {
             display: none;
         }
 
-        .ham-bar {
-            width: 30px;
-            height: 3px;
-            background-color: #fff;
-            margin: 6px auto;
+        .hb-group {
+            display: none;
         }
 
         .ham-pull-menu {
@@ -130,13 +115,7 @@
             margin-top: 62px;
         }
 
-        .block {
-            display: block;
-        }
 
-        .ham-pull-menu.hidden {
-            display: none;
-        }
 
         .ham-pull-menu ul li a {
             text-decoration: none;
@@ -154,11 +133,15 @@
             border-top: 1px solid #fff;
         }
 
-        /* 最大1200px,小於他要... */
-        @media screen and (max-width:1200px) {
-            #hamburgerMenu {
-                display: block;
+        /* 最大1440px,小於他要... */
+        @media screen and (max-width: 1440px) {
+            .nav {
+                width: 90.5%;
             }
+        }
+
+        /* 最大1200px,小於他要... */
+        @media screen and (max-width <=1200px) {
 
             .navbar {
                 display: none;
@@ -172,6 +155,16 @@
                 width: 110px;
             }
         }
+
+        @media (width <=768px) {
+            .hb {
+                display: block;
+            }
+
+            .hb-group {
+                display: block
+            }
+        }
     </style>
 
 </head>
@@ -180,7 +173,7 @@
     <div id="header">
         <div class="nav">
             <!-- logo -->
-            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            <a href="index.html"><img src="/img/logo.svg" alt="logo"></a>
             <!-- 導覽列 -->
             <div class="navbar">
                 <ul>
@@ -200,47 +193,38 @@
                 </ul>
             </div>
         </div>
-        <!-- 漢堡 -->
-        <div id="hamburgerMenu">
-            <div class="ham-bar"></div>
-            <div class="ham-bar"></div>
-            <div class="ham-bar"></div>
-        </div>
 
-        <div class="ham-pull-menu" id="hamPullMenu">
-            <ul>
-                <li><a href="index.html" class="ham-item">首頁</a></li>
-                <li><a href="AboutUs.html" class="ham-item">關於我們</a></li>
-                <li><a href="Motor.html" class="ham-item">產品介紹</a></li>
-                <li><a href="Things.html" class="ham-item">車輛配件</a></li>
-                <li><a href="News.html" class="ham-item">最新消息</a></li>
-                <li><a href="Contact-us.html" class="ham-item">聯絡我們</a></li>
-                <li><a href="Reserve.html" class="ham-item">預約試乘</a></li>
-                <li><a href="Login.html" class="ham-item">登入</a></li>
-            </ul>
+
+        <!-- 漢堡 -->
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="hb-group">
+            <!-- -------------------------------- -->
+            <div class="logo">
+                <a href="#">
+                    <img src="/img/logo.svg">
+                </a>
+            </div>
+            <!-- -------------------------------- -->
+            <label for="menu-switch" class="hb">
+                <div class="ham-bar"></div>
+                <div class="ham-bar"></div>
+                <div class="ham-bar"></div>
+            </label>
+            <!-- -------------------------------- -->
+            <div class="ham-pull-menu" id="hamPullMenu">
+                <a href="index.html" class="ham-item">首頁</a>
+                <a href="AboutUs.html" class="ham-item">關於我們</a>
+                <a href="Motor.html" class="ham-item">產品介紹</a>
+                <a href="Things.html" class="ham-item">車輛配件</a>
+                <a href="News.html" class="ham-item">最新消息</a>
+                <a href="Contact-us.html" class="ham-item">聯絡我們</a>
+                <a href="Reserve.html" class="ham-item">預約試乘</a>
+                <a href="Login.html" class="ham-item">登入</a>
+                <!-- -------------------------------- -->
+            </div>
         </div>
     </div>
 
-    <!-- 以下卡很久好像有錯誤 -->
-    <!-- <script>
-        window.addEventListener("load", function () {
-            
-            document.getElementById("hamburgerMenu").onclick = () => {
-
-           
-                ham-pull-menu.classList.toggle("block");
-            };
-        });
-    </script> -->
-
-    <script>
-        $(function () {
-            $('#hamburgerMenu').click(function () {
-                $('#hamPullMenu').toggleClass('block');
-
-            })
-        })
-    </script>
 </body>
 
 </html>

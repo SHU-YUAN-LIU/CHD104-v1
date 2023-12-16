@@ -221,25 +221,16 @@
         </div>
     </div>
 
-    <!-- 以下卡很久好像有錯誤 -->
-    <!-- <script>
-        window.addEventListener("load", function () {
-            
-            document.getElementById("hamburgerMenu").onclick = () => {
-
-           
-                ham-pull-menu.classList.toggle("block");
-            };
-        });
-    </script> -->
 
     <script>
-        $(function () {
-            $('#hamburgerMenu').click(function () {
-                $('#hamPullMenu').toggleClass('block');
+        window.addEventListener("load", function () {
+            //------btnHam漢堡按鈕被點按時
+            document.getElementById("hamburgerMenu").onclick = () => {
 
-            })
-        })
+                // console.log("dog");
+                hamPullMenu.classList.toggle("block");
+            };
+        });
     </script>
 </body>
 
