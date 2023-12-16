@@ -201,6 +201,29 @@
             border: 1px solid #FF6B00;
         }
 
+        /* GO TO TOP */
+        .goToTop {
+            width: 45px;
+            height: 55px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 7;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .goToTop span:last-child {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+        }
+
         @media screen and (max-width:992px) {
 
             .things-container {
@@ -272,6 +295,7 @@
 </head>
 
 <body>
+    <div id="goToTop-a"></div>
     <!-- --------麵包屑--------  -->
     <div class="things-intro-all">
         <div class="things-intro-bread">
@@ -336,6 +360,15 @@
             </div>
         </div>
     </div>
+    <!-- go to top -->
+    <a href="#goToTop-a">
+        <div class="goToTop">
+            <span class="material-symbols-outlined">
+                expand_less
+            </span>
+            <span>TOP</span>
+        </div>
+    </a>
     <script>
         //小圖換大圖
         //--------------------------------------------------------
