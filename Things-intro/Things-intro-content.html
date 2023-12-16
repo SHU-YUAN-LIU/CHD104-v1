@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Things-intro</title>
     <link rel="stylesheet" href="reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     <style>
         /* --------麵包屑-------- */
         .things-intro-all {
@@ -75,14 +76,15 @@
             object-fit: cover;
         }
 
-        .things-tittle-pic {
+        .things-title-pic {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .things-tittle-pic img {
+        .things-title-pic img {
             width: 130px;
+            cursor: pointer;
         }
 
         .things-arrow img {
@@ -201,9 +203,6 @@
 
         @media screen and (max-width:992px) {
 
-
-            .things-intro-bread span {}
-
             .things-container {
                 width: 300px;
                 display: flex;
@@ -225,7 +224,7 @@
                 width: 300px;
             }
 
-            .things-tittle-pic img {
+            .things-title-pic img {
                 width: 100%;
             }
 
@@ -285,23 +284,20 @@
         <div class="things-pic">
 
             <div class="main-helmet">
-                <img src="img/helmet-1-1.svg" alt="helmet-1-1">
+                <img src="/img/helmet-1-1.svg" alt="helmet-1-1" id="large">
             </div>
 
-            <div class="things-tittle-pic">
+            <div class="things-title-pic">
 
-                <a href="#">
-                    <div><img src="img/little-1.svg" alt="little-1"></div>
-                </a>
-                <a href="#">
-                    <div><img src="img/little-2.svg" alt="little-2"></div>
-                </a>
-                <a href="#">
-                    <div><img src="img/little-3.svg" alt="little-3"></div>
-                </a>
+                <img src="/img/helmet-1-1.svg" alt="little-1" class="small">
+
+
+                <img src="/img/little-2.svg" alt="little-2" class="small">
+
+
+                <img src="/img/little-3.svg" alt="little-3" class="small">
 
             </div>
-
         </div>
         <div class="things-title">
             <div class="things-h1"><span>限定款 WOLFER MAN-曜石黑</span></div>
@@ -327,9 +323,9 @@
                     <option value="XL">XL</option>
                 </select>
                 <div class="btn-group">
-                    <input type="button" value="-" id="btnMinus0">
-                    <input type="text" value="0" id="qty0">
-                    <input type="button" value="+" id="btnPlus0">
+                    <input type="button" class="btnMinus" value="-">
+                    <input type="text" class="qty" size="4" value="0">
+                    <input type="button" class="btnPlus" value="+">
                 </div>
             </div>
             <div class="things-price">
@@ -338,33 +334,83 @@
                     <a href="Things-map.html">聯絡經銷</a>
                 </div>
             </div>
-
         </div>
     </div>
+    <script>
+        //小圖換大圖
+        //--------------------------------------------------------
+        // function showLarge(e) {
+        //     let small = e.target;
+        //     document.getElementById('large').src = small.src
+        // }
+        // function init() {
+        //     let smalls = document.getElementsByClassName("small");
+
+        //     for (let i = 0; i < smalls.length; i++) {
+        //         smalls[i].onclick = showLarge;
+        //     }
+        // }
+
+        // window.addEventListener("load", init, false);
+        //--------------------------------------------------------
+        $(function () {
+
+            function showLarge() {
+                let small = $(this);
+                $('#large').attr('src', small.attr('src'));
+                // $('#大圖').attr('屬性', '新的標題');
+            }
+
+            $('.small').click(showLarge);
+        })
+    </script>
 
     <script>
+        //數量按鈕(JavaScript)
+        //不知道為何js在總頁面不能執行,但用jQuery就行
+        // function init() {
+        //     let btnMinus = document.getElementsByClassName("btnMinus");
+        //     let btnPlus = document.getElementsByClassName("btnPlus");
+        //     let qty = document.getElementsByClassName("qty");
 
-        function quality(id) {
-            return document.getElementById(id)
-        }
-        function init() {
-            // 購物車減屌數量時
-            quality("btnMinus0").onclick = function (e) {
-                let qtyObj = e.target.nextElementSibling;
-                let qty = parseInt(qtyObj.value);
-                if (qty > 0) {
-                    qtyObj.value = qty - 1;
+        //     for (let i = 0; i <script btnMinus.length; i++) {
+
+        //         btnMinus[i].onclick = function (e) {
+        //             let qtyObj = qty[i];
+        //             let quantity = parseInt(qtyObj.value);
+        //             if (quantity > 0) {
+        //                 qtyObj.value = quantity - 1;
+        //             }
+        //         }
+
+        //         btnPlus[i].onclick = function (e) {
+        //             let qtyObj = qty[i];
+        //             let quantity = parseInt(qtyObj.value);
+        //             qtyObj.value = quantity + 1;
+        //         }
+        //     }
+        // }
+
+        // window.addEventListener("load", init, false);
+
+        //--------------------------------------------------------
+
+        //數量按鈕(jQuery)
+        $(document).ready(function () {
+            $(".btnMinus").click(function () {
+                let qtyObj = $(this).siblings(".qty");
+                let quantity = parseInt(qtyObj.val());
+                if (quantity > 0) {
+                    qtyObj.val(quantity - 1);
                 }
-            }
-            // 購物車增加數量時
-            quality("btnPlus0").onclick = function (e) {
-                let qtyObj = e.target.previousElementSibling;
-                let qty = parseInt(qtyObj.value);
-                qtyObj.value = qty + 1;
-            }
-        }
+            });
 
-        window.addEventListener("load", init, false);	
+            $(".btnPlus").click(function () {
+                let qtyObj = $(this).siblings(".qty");
+                let quantity = parseInt(qtyObj.val());
+                qtyObj.val(quantity + 1);
+            });
+        });
     </script>
 
 </body>
