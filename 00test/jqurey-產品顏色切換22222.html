@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按鈕示範</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 新增 .show 類別的樣式，控制顯示 */
+        .product-image.show {
+            display: block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 一開始顯示橘色產品圖片
+            $('#orange-image').addClass('show');
+
+            // 點擊紅色按鈕時顯示紅色產品圖片
+            $('#red-btn').click(function () {
+                $('.product-image').removeClass('show'); // 移除所有產品圖片的 .show 類別
+                $('#red-image').addClass('show'); // 顯示紅色產品圖片
+            });
+            // 點擊灰色按鈕時顯示灰色產品圖片
+            $('#gray-btn').click(function () {
+                $('.product-image').removeClass('show'); // 移除所有產品圖片的 .show 類別
+                $('#gray-image').addClass('show'); // 顯示灰色產品圖片
+            });
+            // 點擊橘色按鈕時顯示橘色產品圖片
+            $('#orange-btn').click(function () {
+                $('.product-image').removeClass('show'); // 移除所有產品圖片的 .show 類別
+                $('#orange-image').addClass('show'); // 顯示橘色產品圖片
+            });
+            // 點擊黃色按鈕時顯示黃色產品圖片
+            $('#yellow-btn').click(function () {
+                $('.product-image').removeClass('show'); // 移除所有產品圖片的 .show 類別
+                $('#yellow-image').addClass('show'); // 顯示黃色產品圖片
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="button-container">
+        <!-- 紅色按鈕 -->
+        <button id="red-btn">紅色</button>
+        <!-- 灰色按鈕 -->
+        <button id="gray-btn">灰色</button>
+        <!-- 橘色按鈕 -->
+        <button id="orange-btn">橘色</button>
+        <!-- 黃色按鈕 -->
+        <button id="yellow-btn">黃色</button>
+    </div>
+
+    <div class="product-images">
+        <!-- 紅色產品圖片 -->
+        <img id="red-image" class="product-image" src="test-img/bobber-red.png" alt="紅色產品">
+        <!-- 灰色產品圖片 -->
+        <img id="gray-image" class="product-image" src="test-img/bobber-gray.png" alt="灰色產品">
+        <!-- 橘色產品圖片 -->
+        <img id="orange-image" class="product-image" src="test-img/bobber-orange.png" alt="橘色產品">
+        <!-- 黃色產品圖片 -->
+        <img id="yellow-image" class="product-image" src="test-img/bobber-yellow.png" alt="黃色產品">
+    </div>
+</body>
+
+</html>
