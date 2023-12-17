@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .all {
+            width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
+        #image-container {
+            width: 900px;
+            overflow: hidden;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #image-list {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image {
+            width: 300px;
+            flex: 0 0 auto;
+        }
+
+        #prev-btn,
+        #next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        #prev-btn {
+            left: 0;
+        }
+
+        #next-btn {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <button id="prev-btn">&lt;</button>
+        <div id="image-container">
+            <div id="image-list">
+                <div class="card">
+                    <img src="/img/modern-1.svg" alt="Image 1" class="image">
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/modern-1.svg" alt="Image 1" class="image">
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/modern-1.svg" alt="Image 1" class="image">
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/modern-1.svg" alt="Image 1" class="image">
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/modern-1.svg" alt="Image 1" class="image">
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button id="next-btn">&gt;</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // 取得圖片列表和相關資訊
+            const imageList = $('#image-list');
+            const imageWidth = $('.image').width(); // 取得單張圖片的寬度
+            const totalImages = $('.image').length; // 取得總共的圖片數量
+            let currentIndex = 0; // 當前顯示的圖片索引
+
+            // 當按下左箭頭按鈕時
+            $('#prev-btn').click(function () {
+                if (currentIndex > 0) {
+                    currentIndex--; // 如果不是第一張圖，向前移動一張
+                } else {
+                    currentIndex = totalImages - 1; // 如果是第一張圖，跳到最後一張
+                }
+                updateImageList(); // 更新圖片列表的位置
+            });
+
+            // 當按下右箭頭按鈕時
+            $('#next-btn').click(function () {
+                if (currentIndex < totalImages - 1) {
+                    currentIndex++; // 如果不是最後一張圖，向後移動一張
+                } else {
+                    currentIndex = 0; // 如果是最後一張圖，跳到第一張
+                }
+                updateImageList(); // 更新圖片列表的位置
+            });
+
+            // 更新圖片列表的位置
+            function updateImageList() {
+                // 計算水平偏移值，使圖片列表在水平方向上移動
+                const newPosition = -currentIndex * imageWidth;
+                // 將計算得到的偏移值應用到圖片列表的 transform 屬性上，產生平滑的移動效果
+                imageList.css('transform', 'translateX(' + newPosition + 'px)');
+            }
+        });
+    </script>
+</body>
+
+</html>
