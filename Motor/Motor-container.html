@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor-container</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
@@ -19,6 +18,7 @@
         scroll-behavior: smooth;
     }
 
+    /* ----------最上面的按鈕---------- */
     .motor-btn-group {
         display: flex;
         justify-content: space-between;
@@ -57,44 +57,71 @@
         border-bottom: 1px solid #ff964b;
         width: 1000px;
         display: block;
-        padding: 10px;
+        padding: 30px 10px 10px;
         margin: auto;
 
     }
 
-    .card-group {
+    /* ----------左右輪播區---------- */
+    .all {
         width: 1200px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
+        gap: 40px;
         margin: auto;
         margin-bottom: 70px;
         margin-top: 70px;
 
     }
 
-    .card {
-        width: 450px;
+    #image-container {
+        width: 900px;
+        overflow: hidden;
+        margin: 20px 0px;
+        position: relative;
+    }
+
+    #image-list-1,
+    #image-list-2,
+    #image-list-3,
+    #image-list-4 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+    .cardImg {
+        width: 300px;
+        /* Flex 元素的彈性增長、彈性收縮和初始主軸尺寸 */
+        flex: 0 0 auto;
+        transition: opacity 0.5s;
+        overflow: hidden;
+        /* border: 1px solid blue; */
+    }
+
+    .cardImg img {
+        width: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    .cardRow1,
+    cardRow2,
+    cardRow3,
+    cardRow4 {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .card img {
-        width: 100%;
-        transition: opacity 0.5s;
-        /* 過度效果:平滑 */
-    }
-
-    .card img:hover {
-        opacity: 0.6;
-        /* 設置透明度 */
-    }
-
-
-    .card-group a {
+    .information a {
         text-decoration: none;
-        position: relative;
+    }
+
+    .information {
+        width: 250px;
     }
 
     .pro-title {
@@ -114,20 +141,18 @@
         font-weight: 400;
     }
 
-    @media screen and (max-width:768px) {
-        .motor-btn-group {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-        }
-
+    /* ----------左右箭頭---------- */
+    .right,
+    .left {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
     }
 
-    .right a .material-symbols-outlined {
-        color: #FF6B00;
-    }
-
-    .left a .material-symbols-outlined {
+    .left span,
+    .right span {
         color: #FF6B00;
     }
 </style>
@@ -140,170 +165,317 @@
         <a href="#street">STREET STYLE</a>
         <a href="#old">OLD SCHOOL</a>
     </div>
-
     <!-- MODERN CLASSIS -->
     <div id="modern" class="label-title "><span>MODERN CLASSIS</span></div>
 
-    <div class="card-group">
-        <!-- 箭頭 -->
-        <div class="left">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/modern-1.svg" alt="modern-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
-                <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+    <div class="all">
+        <!-- 箭頭左 -->
+        <button id="prev-btn-1" class="left"><span class="material-symbols-outlined">chevron_left</span></button>
+        <div id="image-container">
+            <div id="image-list-1">
+                <!-- 車子1-1-->
+                <div class="cardRow1">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-1.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <!-- 車子1-2-->
+                <div class="cardRow1">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-2.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                    </div>
+                </div>
+                <!-- 車子1-3-->
+                <div class="cardRow1">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-3.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子1-4-->
+                <div class="cardRow1">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-4.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子1-5-->
+                <div class="cardRow1">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-5.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/modern-2.svg" alt="modern-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
-                <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/modern-3.svg" alt="modern-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
-            </div>
-        </div>
-        <!-- 箭頭 -->
-        <div class="right">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_right </span>
-            </a>
-        </div>
-
-        <!-- 箭頭 -->
+        <!-- 箭頭右 -->
+        <button id="next-btn-1" class="right">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
     </div>
     <!-- URBANITY STYLE  -->
-    <div id="urbanity" class="label-title"><span>URBANITY STYLE</span></div>
+    <div id="urbanity" class="label-title "><span>URBANITY STYLE </span></div>
 
-    <div class="card-group">
-        <!-- 箭頭 -->
-        <div class="right">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/urbanity-1.svg" alt="urbanity-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">RETRO ROVER<br></span></a>
-                <a href="Motor-intro.html"><span class="content">經典外觀搭載先進科技，融會貫通的精湛設計</span></a>
+    <div class="all">
+        <!-- 箭頭左 -->
+        <button id="prev-btn-2" class="left"><span class="material-symbols-outlined">chevron_left</span></button>
+        <div id="image-container">
+            <div id="image-list-2">
+                <!-- 車子2-1-->
+                <div class="cardRow2">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-1.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <!-- 車子2-2-->
+                <div class="cardRow2">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-2.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                    </div>
+                </div>
+                <!-- 車子2-3-->
+                <div class="cardRow2">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-3.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子2-4-->
+                <div class="cardRow2">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-4.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子2-5-->
+                <div class="cardRow2">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-5.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/urbanity-2.svg" alt="urbanity-2"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">TIMELESS CRUISER<br></span></a>
-                <a href="Motor-intro.html"><span class="content">復古排氣管，散發獨特聲浪，締造典雅駕馭韻味</span></a>
+        <!-- 箭頭右 -->
+        <button id="next-btn-2" class="right">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </div>
+    <!-- STREET STYLE -->
+    <div id="street" class="label-title "><span>STREET STYLE</span></div>
+
+    <div class="all">
+        <!-- 箭頭左 -->
+        <button id="prev-btn-3" class="left"><span class="material-symbols-outlined">chevron_left</span></button>
+        <div id="image-container">
+            <div id="image-list-3">
+                <!-- 車子3-1-->
+                <div class="cardRow3">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-1.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <!-- 車子3-2-->
+                <div class="cardRow3">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-2.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                    </div>
+                </div>
+                <!-- 車子3-3-->
+                <div class="cardRow3">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-3.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子3-4-->
+                <div class="cardRow3">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-4.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子3-5-->
+                <div class="cardRow3">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-5.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/urbanity-3.svg" alt="urbanity-3"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">NTSOALGIA NOMAD<br></span></a>
-                <a href="Motor-intro.html"><span class="content">城市之光，復古外觀，將懷舊魅力注入現代駕馭</span></a>
+        <!-- 箭頭右 -->
+        <button id="next-btn-3" class="right">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </div>
+    <!-- OLD SCHOOL -->
+    <div id="old" class="label-title "><span>OLD SCHOOL</span></div>
+
+    <div class="all">
+        <!-- 箭頭左 -->
+        <button id="prev-btn-4" class="left"><span class="material-symbols-outlined">chevron_left</span></button>
+        <div id="image-container">
+            <div id="image-list-4">
+                <!-- 車子4-1-->
+                <div class="cardRow4">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-1.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                    </div>
+                </div>
+                <!-- 車子4-2-->
+                <div class="cardRow4">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-2.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                    </div>
+                </div>
+                <!-- 車子4-3-->
+                <div class="cardRow4">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-3.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子4-4-->
+                <div class="cardRow4">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-4.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
+                <!-- 車子4-5-->
+                <div class="cardRow4">
+                    <a href="Motor-intro.html">
+                        <div class="cardImg"><img src="img/modern-5.svg" alt="modern-1"></div>
+                    </a>
+                    <div class="information">
+                        <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
+                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- 箭頭 -->
-        <div class="left">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_right </span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
+        <!-- 箭頭右 -->
+        <button id="next-btn-4" class="right">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
     </div>
 
-    <!-- STREET STYLE  -->
-    <div id="street" class="label-title"><span>STREET STYLE</span></div>
 
-    <div class="card-group">
-        <!-- 箭頭 -->
-        <div class="right">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/street-1.png" alt="street-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">ANTIQUE CHARM<br></span></a>
-                <a href="Motor-intro.html"><span class="content">復古細節，散發城市街頭的時尚氛圍</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/street-2.png" alt="street-2"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">HERITAGE EXPLORER<br></span></a>
-                <a href="Motor-intro.html"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/street-3.png" alt="street-3"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">CONSTELLATION<br></span></a>
-                <a href="Motor-intro.html"><span class="content">越野魅力，攜手拓展城市邊緣的奇幻冒險</span></a>
-            </div>
-        </div>
-        <!-- 箭頭 -->
-        <div class="left">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_right </span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-    </div>
+    <script>
 
-    <!-- OLD SCHOOL  -->
-    <div id="old" class="label-title"><span>OLD SCHOOL</span></div>
+        $(function () {
+            // 總共有四行產品(所以跑回圈)，每次對應不同的 image-list 和相關變數
+            for (let i = 1; i <= 4; i++) {
+                // 取得圖片列表和相關資訊
+                const imageList = $(`#image-list-${i}`);//image-list-1,image-list-2,image-list-3,image-list-4
+                const imageWidth = $(`.cardRow${i} img`).width();//cardRow1,cardRow2,cardRow3,cardRow4
+                const totalImages = $(`.cardRow${i} img`).length;//同上
+                let currentIndex = 0;
 
-    <div class="card-group">
-        <!-- 箭頭 -->
-        <div class="right">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/oldschool-1.png" alt="oldschool-1"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">RETRO LEGENDS<br></span></a>
-                <a href="Motor-intro.html"><span class="content">越野車型，穿越城市山川，挑戰都市之外的極限地形</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/oldschool-2.png" alt="oldschool-2"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">DREAMERS<br></span></a>
-                <a href="Motor-intro.html"><span class="content">越野挑戰，復古風格，穿越都會與野地的無限可能</span></a>
-            </div>
-        </div>
-        <div class="card">
-            <a href="Motor-intro.html"><img src="img/oldschool-3.png" alt="oldschool-3"></a>
-            <div class="information">
-                <a href="Motor-intro.html"><span class="pro-title">NOSTALGIA NOMAD<br></span></a>
-                <a href="Motor-intro.html"><span class="content">都會底蘊，越野激情，城市與荒野的極致融合</span></a>
-            </div>
-        </div>
-        <!-- 箭頭 -->
-        <div class="left">
-            <a href="#">
-                <span class="material-symbols-outlined">chevron_right </span>
-            </a>
-        </div>
-        <!-- 箭頭 -->
-    </div>
+                // 當按下左箭頭按鈕時
+                $(`#prev-btn-${i}`).click(function () {
+                    // 如果不是第一張圖，向前移動一張
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    } else {
+                        // 如果是第一張圖，跳到最後一張
+                        currentIndex = totalImages - 3;
+                    }
+                    // 更新圖片列表的位置
+                    updateImageList();
+                });
+
+                // 當按下右箭頭按鈕時
+                $(`#next-btn-${i}`).click(function () {
+                    // 如果不是最後一張圖，向後移動一張
+                    if (currentIndex < totalImages - 3) {
+                        currentIndex++;
+                    } else {
+                        // 如果是最後一張圖，跳到第一張
+                        currentIndex = 0;
+                    }
+                    // 更新圖片列表的位置
+                    updateImageList();
+                });
+
+                // 更新圖片列表的位置
+                function updateImageList() {
+                    // 計算水平偏移值，使圖片列表在水平方向上移動
+                    const newPosition = -currentIndex * imageWidth;
+                    // 將計算得到的偏移值應用到圖片列表的 transform 屬性上，產生平滑的移動效果
+                    imageList.css('transform', 'translateX(' + newPosition + 'px)');
+                }
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
