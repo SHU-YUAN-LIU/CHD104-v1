@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* 影片 */
+        .video-container {
+            width: 100%;
+            height: 830px;
+            object-fit: cover;
+            z-index: 1;
+            position: relative;
+        }
+
+        .video-bg {
+            width: 100%;
+            position: relative;
+        }
+
+        /* 產品 */
+        .product-container {
+            position: absolute;
+            z-index: 3;
+            color: #fff;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product-container img {
+            width: 950px;
+        }
+
+
+        .pro-title {
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 2;
+            top: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+
+        .container-product-pic .img:nth-child(1) {
+            z-index: 1;
+        }
+
+
+        .icon .pic {
+            margin: 10px;
+        }
+
+        .words p {
+            color: rgb(255, 255, 255);
+            letter-spacing: 2px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            text-shadow: 0px 0px 80px black;
+            margin-bottom: 10px;
+        }
+
+        .words span {
+            color: rgb(255, 255, 255);
+            letter-spacing: 5px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 800;
+            font-size: 60px;
+            text-shadow: 0px 0px 90px 50px black;
+        }
+
+        .words span:last-child {
+            color: #FF6B00;
+        }
+
+        .btn-all {
+            width: 1000px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 780px;
+            display: flex;
+            z-index: 4;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(255, 255, 255);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 100;
+            letter-spacing: 3px;
+        }
+
+        @media screen and (max-width: 1400px) {
+
+            .pro-title {
+                width: 800px;
+            }
+
+            .btn-all {
+                width: 800px;
+            }
+
+            .product-container img {
+                width: 900px;
+            }
+        }
+
+        .btn div {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .btn-red {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            margin: 0px 5px;
+
+        }
+
+        .btn-gray {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(143, 143, 143);
+            margin: 0px 5px;
+        }
+
+        .btn-orange {
+            width: 40px;
+            height: 40px;
+            background-color: #bb561d;
+            margin: 0px 20px 0px 5px;
+        }
+
+        .home-btn-more a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .home-btn-more a:hover {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .home-btn-more {
+            padding: 12px 20px;
+            border: 1px solid white;
+            border-radius: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+
+        }
+
+        .home-btn-more:hover {
+            background-color: #FF6B00;
+            border: 1px solid #FF6B00;
+            border-radius: 3px;
+            color: rgb(0, 0, 0);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .container-product-bg {
+            height: 800px;
+            background-color: black;
+        }
+
+
+        /* --------------------漸層-------------------- */
+        .video-bg {
+            position: relative;
+        }
+
+        .video-bg::after {
+            content: "";
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)70%);
+            mix-blend-mode: multiply;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .video-bg::before {
+            content: "";
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(to left, transparent, rgb(0, 0, 0)100%);
+            /* filter: saturate(200%); */
+            mix-blend-mode: overlay;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .pro-title {
+                width: 600px;
+            }
+
+            .btn-all {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .btn div {
+                margin-bottom: 10px
+            }
+
+            .product-container img {
+                width: 680px;
+            }
+
+            .home-btn-more {
+                width: 300px;
+                box-sizing: border-box;
+            }
+
+            .btn {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+            }
+
+            .btn-words {
+                font-weight: 200;
+                font-size: 15px;
+                text-wrap: wrap;
+            }
+
+            .pic img {
+                /* width: 35px; */
+                display: none;
+            }
+
+            .btn-red,
+            .btn-gray,
+            .btn-orange {
+                width: 35px;
+                height: 35px;
+                margin: 0px 0px;
+                margin-right: 15px
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .video-container {
+                height: 680px;
+            }
+
+            .pro-title {
+                width: 300px;
+                top: 120px;
+            }
+
+            .btn-all {
+                top: 580px;
+
+            }
+
+            .product-container img {
+                width: 380px;
+            }
+
+            .product-container {
+                top: 55%;
+            }
+
+            .home-btn-more {
+                box-sizing: border-box;
+            }
+
+            .words span {
+                font-weight: 800;
+                font-size: 50px;
+            }
+
+            .btn-words {
+                line-height: 1.3em;
+            }
+
+            .pic img {
+                display: none;
+            }
+
+            .btn-red,
+            .btn-gray,
+            .btn-orange {
+                width: 30px;
+                height: 6px;
+                margin: 0px 0px;
+                margin-right: 15px
+            }
+        }
+
+        /* GO TO TOP */
+        .goToTop {
+            width: 45px;
+            height: 55px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 7;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .goToTop span:last-child {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 400;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="goToTop-a"></div>
+    <div class="container">
+        <div class="videoPro">
+            <!-- 影片 -->
+            <div class="video-bg">
+                <video class="video-container" autoplay muted loop>
+                    <source src="img/pexels_videos_2297636 (2160p).mp4" type="video/mp4">
+                </video>
+                <!-- 產品 -->
+                <div class="product-container">
+                    <img src="img/bobber-orange.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-title">
+            <!-- 主標題 -->
+            <div class="words">
+                <p>全新經典指標</p>
+                <span>FCR</span><br><span>BOBBER</span>
+            </div>
+            <!-- icon -->
+            <div class="icon">
+                <a href="">
+                    <div class="pic"><img src="img/fb-black.svg" alt="fb"></div>
+                </a>
+                <a href="">
+                    <div class="pic"><img src="img/ig-black.svg" alt="ig"></div>
+                </a>
+                <a href="">
+                    <div class="pic"><img src="img/line-black.svg" alt="line"></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- 產品下半部 -->
+    <div class="btn-all">
+
+        <div class="btn">
+            <div>
+                <a href="#">
+                    <div class="btn-red"></div>
+                </a>
+                <a href="#">
+                    <div class="btn-gray"></div>
+                </a>
+                <a href="#">
+                    <div class="btn-orange"></div>
+                </a>
+            </div>
+            <div class="btn-words">全新經典指標，重新詮釋何謂傑出的當代經典</div>
+        </div>
+        <div class="home-btn-more">
+            <a href="Motor-intro.html">了解更多</a>
+        </div>
+    </div>
+
+    <!-- go to top -->
+    <a href="#goToTop-a">
+        <div class="goToTop">
+            <span class="material-symbols-outlined">
+                expand_less
+            </span>
+            <span>TOP</span>
+        </div>
+    </a>
+
+</body>
+
+</html>
