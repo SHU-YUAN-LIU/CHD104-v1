@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body {
+            position: relative;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #loginOk {
+            width: 550px;
+            height: 380px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 30px rgb(197, 197, 197);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* display: none; */
+            border: 2px solid#b44b00;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6)15%, transparent, rgba(255, 255, 255, 0.6)90%);
+            box-shadow: 10px 10px 70px 40px rgb(173, 173, 173);
+        }
+
+        .loginBar {
+            height: 40px;
+            background:
+                url(/img/batthern.png),
+                linear-gradient(to bottom, rgb(0, 0, 0, 1), rgb(0, 0, 0, 1))no-repeat;
+
+            margin: auto;
+        }
+
+        .success {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* #loginOk.block {
+            display: block;
+        }
+
+        #loginOk.hidden {
+            display: none;
+        } */
+        #cross {
+            color: rgb(191, 191, 191);
+            margin-left: 0px;
+            padding: 7px;
+            margin-left: 500px;
+            cursor: pointer;
+        }
+
+        .success span:last-child {
+            font-size: 32px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        #successIcon {
+            color: #ff6b00;
+            font-size: 80px;
+            margin-top: 85px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loginOk">
+        <div class="loginBar">
+            <buttom>
+                <span class="material-symbols-outlined" id="cross">
+                    close
+                </span>
+                </button>
+        </div>
+        <div class="success">
+            <span class="material-symbols-outlined" id="successIcon">
+                task_alt
+            </span>
+            <span>成功登入</span>
+        </div>
+    </div>
+
+    <!-- <script>
+        $('.things-btn-jump').click(function () {
+            console.log('dooog')
+            $('#helpWindow').toggleClass('block');
+        })
+    </script> -->
+</body>
+
+</html>
