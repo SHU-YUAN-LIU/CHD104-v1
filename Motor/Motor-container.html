@@ -23,7 +23,7 @@
         display: flex;
         justify-content: space-between;
         margin: auto;
-        max-width: 65%;
+        max-width: 53%;
         padding: 70px;
         text-align: center;
         gap: 20px;
@@ -72,7 +72,6 @@
         margin: auto;
         margin-bottom: 70px;
         margin-top: 70px;
-
     }
 
     #image-container {
@@ -106,10 +105,15 @@
         object-fit: cover;
     }
 
+    .cardImg img:hover {
+        opacity: 0.7;
+        transition: .4s ease-in-out;
+    }
+
     .cardRow1,
-    cardRow2,
-    cardRow3,
-    cardRow4 {
+    .cardRow2,
+    .cardRow3,
+    .cardRow4 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -142,6 +146,10 @@
     }
 
     /* ----------左右箭頭---------- */
+    .material-symbols-outlined {
+        font-size: 28px;
+    }
+
     .right,
     .left {
         background-color: transparent;
@@ -149,11 +157,61 @@
         padding: 0;
         margin: 0;
         cursor: pointer;
+        width: 30px;
     }
 
     .left span,
     .right span {
         color: #FF6B00;
+    }
+
+    @media screen and (max-width:1280px) {
+        .motor-btn-group {
+            max-width: 79%;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .label-title {
+            width: 650px;
+        }
+
+        .all {
+            width: 700px;
+            gap: 25px;
+        }
+
+        #image-container {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width:576px) {
+        .label-title {
+            width: 350px;
+        }
+
+        .all {
+            width: 350px;
+            gap: 0px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #image-container {
+            width: 300px;
+        }
+
+        .motor-btn-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right,
+        .left {
+            width: 28px;
+        }
     }
 </style>
 
@@ -180,7 +238,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古之美，都會風采，展現經典座駕獨特迷人之處</span></a>
                     </div>
                 </div>
                 <!-- 車子1-2-->
@@ -190,7 +248,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古魅影，時尚都會，經典外觀散發都會風格精髓</span></a>
                     </div>
                 </div>
                 <!-- 車子1-3-->
@@ -210,7 +268,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">都會復古，線條流暢，尊榮感十足，成就騎行新標竿</span></a>
                     </div>
                 </div>
                 <!-- 車子1-5-->
@@ -220,7 +278,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古座駕將你帶入獨特魅力之旅</span></a>
                     </div>
                 </div>
             </div>
@@ -245,7 +303,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">RETRO ROVER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                        <a href="Motor-intro.html"><span class="content">精緻雕琢，復古造型，經典之選</span></a>
                     </div>
                 </div>
                 <!-- 車子2-2-->
@@ -255,7 +313,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">TIMELESS CRUISER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                        <a href="Motor-intro.html"><span class="content">經典風格，傳承悠久，展現復古車款獨特魅力</span></a>
                     </div>
                 </div>
                 <!-- 車子2-3-->
@@ -265,7 +323,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">NOSTLGIA NNMAD<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">搭載先進科技，融合懷舊與現代風格</span></a>
                     </div>
                 </div>
                 <!-- 車子2-4-->
@@ -275,7 +333,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">RETRO ROVER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">優雅外觀，質感工藝，經典車型，重現昔日榮耀</span></a>
                     </div>
                 </div>
                 <!-- 車子2-5-->
@@ -285,7 +343,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">NOSTIA NOMAD<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">細緻工藝，尊榮騎乘體驗，散發獨特韻味</span></a>
                     </div>
                 </div>
             </div>
@@ -310,7 +368,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                        <a href="Motor-intro.html"><span class="content">悠久歷史，經典車型，奢華質感，尊榮感十足</span></a>
                     </div>
                 </div>
                 <!-- 車子3-2-->
@@ -320,7 +378,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古車款，極致駕馭，優雅外型，風格獨樹一幟</span></a>
                     </div>
                 </div>
                 <!-- 車子3-3-->
@@ -330,7 +388,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">古典風格，豐富色彩，展現復古車款獨特風采</span></a>
                     </div>
                 </div>
                 <!-- 車子3-4-->
@@ -340,7 +398,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">精緻工藝，經典外觀，融合時尚元素，令人傾心</span></a>
                     </div>
                 </div>
                 <!-- 車子3-5-->
@@ -350,7 +408,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古魅力，結合現代科技，經典車型擁有卓越性能</span></a>
                     </div>
                 </div>
             </div>
@@ -375,7 +433,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">BOBBER<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">復古風情，經典美學，散發懷舊氛圍</span></a>
+                        <a href="Motor-intro.html"><span class="content">迷人外表，經典車架，奢華質感</span></a>
                     </div>
                 </div>
                 <!-- 車子4-2-->
@@ -385,7 +443,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">THRUXTON RS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">五零年代經典，時代韻味的代表之一</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古佳作，搭載高效動力，輕鬆掌控街頭風情</span></a>
                     </div>
                 </div>
                 <!-- 車子4-3-->
@@ -395,7 +453,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">細膩設計，經典造型，優雅騎乘，極致復古風格</span></a>
                     </div>
                 </div>
                 <!-- 車子4-4-->
@@ -405,7 +463,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">高雅外觀，細膩雕琢，復古騎士風範</span></a>
                     </div>
                 </div>
                 <!-- 車子4-5-->
@@ -415,7 +473,7 @@
                     </a>
                     <div class="information">
                         <a href="Motor-intro.html"><span class="pro-title">CLASSICS<br></span></a>
-                        <a href="Motor-intro.html"><span class="content">義大利小巧精緻，擁抱復古浪漫</span></a>
+                        <a href="Motor-intro.html"><span class="content">復古之選，品味騎乘樂趣，經典韻味，引領風尚</span></a>
                     </div>
                 </div>
             </div>
@@ -473,7 +531,6 @@
                 }
             }
         });
-
 
     </script>
 </body>
