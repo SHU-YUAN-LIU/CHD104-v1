@@ -120,6 +120,22 @@
             color: #FF6B00;
         }
 
+        .words span:last-child.orange {
+            color: #FF6B00;
+        }
+
+        .words span:last-child.red {
+            color: red;
+        }
+
+        .words span:last-child.gray {
+            color: rgb(143, 143, 143);
+        }
+
+        .words span:last-child.yellow {
+            color: #d6d300;
+        }
+
         .btn-all {
             width: 1000px;
             position: absolute;
@@ -408,31 +424,36 @@
     <script>
         $(function () {
             // 一開始顯示橘色產品圖片
-            $('#gray-img').addClass('show');
+            $('#orange-img').addClass('show');
             console.log("yoyoyoyoyy")
 
             // 點擊橘色按鈕時顯示橘色產品圖片
             $('#btn-orange').click(function () {
                 $('.product-img').removeClass('show')//"移除"所有產品圖有.show的屬性
                 $('#orange-img').addClass('show')//"顯示"橘色產品圖
+                $('.words span:last-child').addClass('orange')//把bobber+顏色
+
             })
 
             // 點擊紅色按鈕時顯示紅色產品圖片
             $('#btn-red').click(function () {
                 $('.product-img').removeClass('show')//"移除"所有產品圖有.show的屬性
                 $('#red-img').addClass('show')//"顯示"紅色產品圖
+                $('.words span:last-child').addClass('red')//把bobber+顏色
             })
 
             // 點擊灰色按鈕時顯示灰色產品圖片
             $('#btn-gray').click(function () {
                 $('.product-img').removeClass('show')//"移除"所有產品圖有.show的屬性
                 $('#gray-img').addClass('show')//"顯示"灰色產品圖
+                $('.words span:last-child').addClass('gray')//把bobber+顏色
             })
 
             // 點擊黃色按鈕時顯示黃色產品圖片
             $('#btn-yellow').click(function () {
                 $('.product-img').removeClass('show')//"移除"所有產品圖有.show的屬性
                 $('#yellow-img').addClass('show')//"顯示"黃色產品圖
+                $('.words span:last-child').addClass('yellow')//把bobber+顏色
             })
         })
     </script>
