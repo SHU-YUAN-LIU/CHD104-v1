@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             position: relative;
             font-family: 'Noto Sans TC', sans-serif;
@@ -233,23 +241,19 @@
 
         }
 
-        /* @keyframes helpWindow {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        } */
+        .material-symbols-outlined {
+            color: white;
+        }
 
         #helpWindow.block {
             display: block;
         }
 
         #helpWindow.hidden {
+            display: none;
+        }
+
+        #helpcross.block {
             display: none;
         }
 
@@ -356,6 +360,14 @@
             border: none;
             outline: none;
             padding: 20px;
+        }
+
+        #helpcross {
+            color: rgb(191, 191, 191);
+            /* margin-left: 0px;
+            padding: 7px;
+            margin-left: 750px; */
+            cursor: pointer;
         }
 
         /* ----------線上詢問視窗---------- */
@@ -467,8 +479,8 @@
     <div id="helpWindow">
         <div class="helpTitle">
             <span>WOLFER 小幫手</span>
-            <span class="material-symbols-outlined">
-                close_small
+            <span class="material-symbols-outlined" id="helpcross">
+                close
             </span>
         </div>
         <div class="helpContent">
@@ -491,10 +503,32 @@
     </div>
 
     <script>
-        $('.things-btn-jump').click(function () {
-            console.log('dooog')
-            $('#helpWindow').toggleClass('block');
-        })
+        // $('.things-btn-jump').click(function () {
+        //     console.log('dooog')
+        //     $('#helpWindow').toggleClass('block');
+        //     $('#helpcross').addClass('hidden');
+
+        // })
+
+        $(function () {
+            $('.things-btn-jump').click(function () {
+                // 添加 'block' 
+                $('#helpWindow').addClass('block');
+            });
+
+            $('#helpcross').click(function () {
+                // 移除 'block' 
+                $('#helpWindow').removeClass('block');
+                console.log('dog');
+            });
+
+            ('.things-btn-jump').click(function () {
+                // 移除 'block' 
+                $('#helpWindow').removeClass('block');
+                console.log('dog');
+
+            });
+        });
     </script>
 </body>
 
